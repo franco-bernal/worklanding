@@ -1,0 +1,106 @@
+:root {
+    --head-primary: rgb(255, 255, 255);
+}
+
+.menu-header {
+    width: 100%;
+    /* position: fixed; */
+    position: absolute;
+    top: 0;
+    transition: background-color 0.2s;
+    background-color: rgba(24, 56, 163, 0);
+    z-index: 9999;
+}
+
+.menu-header:hover {
+    background-color: rgba(26, 47, 117, 0);
+    transition: background-color 0.2s;
+}
+
+.menu-header * {
+    display: inline-block;
+    color: var(--head-primary) !important;
+}
+
+.header-logo {
+    float: left;
+    text-align: left;
+}
+
+.header-logo * {
+    width: 200px;
+    margin: 0 !important;
+}
+
+.header-links {
+    float: right;
+    text-align: right;
+    width: 100%;
+}
+
+.header-links * {
+    margin: 0.2vw;
+    font-size: 12px;
+}
+
+.ico {
+    width: 36px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: -7px;
+}
+
+.burge-ico {
+    display: none;
+    width: 50px;
+    float: right;
+    margin: 24px 29px;
+    content: url(../img/burger.png);
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    filter: drop-shadow(0 9px 0px rgba(0, 0, 0, 0.7));
+}
+
+.burge-ico:hover {
+    content: url(../img/burguer-hover.png);
+}
+
+@media (min-width: 1000px) {
+    .header-links {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .menu-header {
+        width: 100%;
+        position: fixed;
+        /* position: absolute; */
+        top: 0;
+        transition: background-color 0.2s;
+        z-index: 9999;
+    }
+    .header-logo * {
+        width: 200px;
+    }
+    .burge-ico {
+        display: inline-block;
+    }
+    .header-links {
+        background-color: rgba(0, 0, 0, 0.918);
+        width: 100%;
+        text-align: center;
+        display: none;
+        border-bottom: 10px solid red;
+    }
+    .header-links li {
+        display: block;
+        clear: left;
+        margin-bottom: 20px;
+    }
+    .header-links a {
+        color: white !important;
+    }
+}
