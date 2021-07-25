@@ -137,7 +137,7 @@ class ProductController extends Controller
                 "description" => $request->input('description'),
                 "img_logo" => $nameLogo,
                 "img_back" => $nameBack,
-                "link" => "asdas",
+                "link" => $request->input('link'),
                 "tecnology" => $request->input('tecnology'),
                 "active" => 1,
                 "order" => 1,

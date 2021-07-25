@@ -39,7 +39,7 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::group(['middleware' => 'admin'], function () {
+// Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/zonavendedor', [App\Http\Controllers\Portafolio\SellerController::class, 'index'])->name('seller');
     Route::get('/productPageEdit', [App\Http\Controllers\Portafolio\SellerController::class, 'editProduct'])->name('pageProedit');
@@ -82,4 +82,4 @@ Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/editStadistic', [App\Http\Controllers\StadisticsController::class, 'editDetails'])->name('stadistic.edit');
     Route::post('/sumStadistic', [App\Http\Controllers\StadisticsController::class, 'sumStadistic'])->name('stadistic.sum');
-});
+// });
