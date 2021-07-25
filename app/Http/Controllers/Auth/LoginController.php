@@ -42,7 +42,7 @@ class LoginController extends Controller
     public function redirectPath()
     {
         if (Auth::user()->tipo_usuario == 1) {
-            return route('seller');
+            return route('dashboard');
             // return redirect('seller');
         }
         if (Auth::user()->tipo_usuario == 0) {

@@ -1,15 +1,19 @@
-:root {
+/* :root {
     --color-a: white !important;
-    --color-b: red;
+    --color-b: rgb(199, 0, 0);
     --color-ab: black !important;
-    --color-bb: white;
+    --radio: 3px;
+} */
+
+.shadow {
+    box-shadow: 0px 0px 9px 1px rgb(43, 43, 43);
 }
 
 .btn-transparent {
     background-color: transparent;
     border: 1px solid var(--color-a);
     color: var(--color-a);
-    border-radius: 40px;
+    border-radius: var(--radio);
     padding: 2px 31px;
     transition: background-color 0.4s;
 }
@@ -25,7 +29,7 @@
     background-color: var(--color-b);
     color: var(--color-a);
     border: 1px solid var(--color-b) !important;
-    border-radius: 40px;
+    border-radius: var(--radio);
     padding: 2px 31px;
     transition: background-color 0.4s;
     cursor: pointer;
@@ -35,7 +39,7 @@
 .btn-solid:hover {
     background-color: var(--color-ab);
     color: var(--color-a) !important;
-    border: 1px solid var(--color-a);
+    border: 1px solid var(--color-a) !important;
     transition: background-color 0.4s;
 }
 
@@ -47,7 +51,6 @@
     cursor: pointer !important;
     outline: none !important;
     border: 1px solid var(--color-b) !important;
-
 }
 
 .btn-square:hover {
@@ -126,6 +129,10 @@
 
 .text-center {
     text-align: center;
+}
+
+.subraya {
+    border-bottom: 5px solid var(--color-b);
 }
 
 @media(max-width:700px) {

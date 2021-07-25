@@ -1,0 +1,27 @@
+.updatePage {
+    background-color: white;
+    padding: 10px 300px !important;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.updatePage input {}
+
+@media (max-width: 768px) {
+    .updatePage {
+        background-color: white;
+        padding: 10px 10px;
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .updatePage input {
+        width: 100%;
+    }
+}

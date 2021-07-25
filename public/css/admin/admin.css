@@ -1,0 +1,50 @@
+.frb-nav {
+    background-color: var(--color-b);
+}
+
+.frb-nav * {
+    background-color: var(--color-b);
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--color-a) !important;
+}
+
+.menu-list a, .menu-label {
+    color: var(--color-ab);
+}
+
+.menu-list a.is-active {
+    background-color: var(--color-b) !important;
+    color: var(--color-a) !important;
+}
+
+#app {
+    background-color: rgb(241, 241, 241);
+    color: var(--color-ab) !important;
+}
+
+.space-x {
+    background-color: var(--color-bc);
+    padding: 1vw 3vw !important;
+    border-radius: 5px;
+}
+
+.admin-img-form {
+    background-color: rgb(179, 179, 179);
+    padding: 2px !important;
+}
+
+.is-info {
+    background-color: var(--color-b) !important;
+}
+
+.is-primary {
+    background-color: var(--color-b) !important;
+    color: var(--color-a) !important;
+}
+
+.navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
+    background-color: rgb(241, 241, 241);
+    color: var(--color-ab) !important;
+    transition:background-color 0.3s;
+}

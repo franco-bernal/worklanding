@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
 <div class="targetSession">
 
     <form method="POST" action="{{ route('register') }}" class="form">
         @csrf
-        <img class="center" src="{{ url('img/logo-2.png') }}" alt="">
+        <img class="center" src="{{ asset('img/logo-franco-blanco.png') }}"  alt="">
 
 
         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>

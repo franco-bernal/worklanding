@@ -1,0 +1,28 @@
+footer {
+    width: 100%;
+    background-color: rgb(34, 34, 34);
+    border-right: 50px solid var(--color-b);
+}
+
+footer a, footer h4 {
+    color: white;
+}
+
+footer a:hover {
+    color: aqua;
+}
+
+@media (max-width:769px){
+    footer {
+        border-right: 0px solid var(--color-b);
+    }
+    
+    footer .my-2 {
+        color: white;
+        margin: 40px 0 !important;
+    }
+    
+    footer a:hover {
+        color: aqua;
+    }
+}
