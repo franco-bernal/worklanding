@@ -34,7 +34,7 @@ class TecnologiesController extends Controller
         if ($request->input('urllogo') != "") {
             $nameLogo = $request->input('urllogo');
         }
-        DB::table('Tecnologies')->insert([
+        DB::table('tecnologies')->insert([
             "name" => $request->input('name'),
             "description" => $request->input('description'),
             "img_logo" => $nameLogo,
@@ -50,9 +50,9 @@ class TecnologiesController extends Controller
     public function deleteTecnology(Request $request)
     {
         $idDelete = $request->input('idDelete');
-        $resp = DB::table('Tecnologies')
-            ->select('Tecnologies.*')
-            ->Where('Tecnologies.id', '=', $idDelete)->delete();
+        $resp = DB::table('tecnologies')
+            ->select('tecnologies.*')
+            ->Where('tecnologies.id', '=', $idDelete)->delete();
 
         if ($resp == 1) {
             $resp == "borrado";
@@ -80,7 +80,7 @@ class TecnologiesController extends Controller
         if ($request->input('urllogo') != "") {
             $nameLogo = $request->input('urllogo');
         }
-        $resp =   DB::table('Tecnologies')
+        $resp =   DB::table('tecnologies')
             ->where('id', '=', $id)
             ->update([
                 // "id" => $id,
