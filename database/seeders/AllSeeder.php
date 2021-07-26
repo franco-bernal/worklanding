@@ -66,79 +66,7 @@ class AllSeeder extends Seeder
             "updated_at" => Carbon::now(),
         ]);
 
-        DB::table('Tecnologies')->insert([
-            "name" => "html",
-            "description" => "HTML es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpretar tanto por humanos como por máquinas.",
-            "img_logo" => "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/230px-HTML5_logo_and_wordmark.svg.png",
-            "active" => 1,
-            "order" => 1,
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
-        DB::table('Tecnologies')->insert([
-            "name" => "css",
-            "description" => "El CSS (hojas de estilo en cascada) es un lenguaje que define la apariencia de un documento escrito en un lenguaje de marcado (por ejemplo, HTML).",
-            "img_logo" => "https://c0.klipartz.com/pngpicture/893/87/gratis-png-hojas-de-estilo-en-cascada-logo-css3-html-css3-logo.png",
-            "active" => 1,
-            "order" => 1,
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
-        DB::table('Tecnologies')->insert([
-            "name" => "javascript",
-            "description" => "JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. ",
-            "img_logo" => "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
-            "active" => 1,
-            "order" => 1,
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
-        DB::table('Tecnologies')->insert([
-            "name" => "jquery",
-            "description" => "Framework Javascript (abreviado comúnmente)",
-            "img_logo" => "https://blog.artegrafico.net/wp-content/uploads/2019/02/jQuery-logo.png",
-            "active" => 1,
-            "order" => 1,
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
-        DB::table('Tecnologies')->insert([
-            "name" => "bulma.io",
-            "description" => "Framework Css (abreviado comúnmente)",
-            "img_logo" => "https://shuffle.dev/vendor/shuffle/img/logos/bulma.svg",
-            "active" => 1,
-            "order" => 1,
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
 
-        DB::table('Tecnologies')->insert([
-            "name" => "php",
-            "description" => "Lenguaje de programación",
-            "img_logo" => "https://kinsta.com/es/wp-content/uploads/sites/8/2018/05/qu%C3%A9-es-php-1-1024x512.png",
-            "active" => 1,
-            "order" => 1,
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
-        DB::table('Tecnologies')->insert([
-            "name" => "laravel",
-            "description" => "Framework php (abreviado comúnmente)",
-            "img_logo" => "https://cms-assets.tutsplus.com/uploads/users/769/posts/25334/preview_image/get-started-with-laravel-6-400x277.png",
-            "active" => 1,
-            "order" => 1,
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
-        DB::table('Tecnologies')->insert([
-            "name" => "Wordpress",
-            "description" => "creador de páginas",
-            "img_logo" => "https://rockcontent.com/es/wp-content/uploads/sites/3/2020/06/Gu%C3%ADa-completa-de-Wordpress.png",
-            "active" => 1,
-            "order" => 1,
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
 
         DB::table('products')->insert([
             "name" => "los galaxticos del humor",
@@ -235,6 +163,81 @@ class AllSeeder extends Seeder
             'name' => "contacts",
             'detalles' => "contador para los botones de contactos de la landing",
             'numbers' => json_encode($j_numbers, true),
+        ]);
+
+
+        DB::table('tecnologies')->insert([
+            "name" => "html",
+            "description" => "HTML es un lenguaje de marcado que nos permite indicar la estructura de nuestro documento mediante etiquetas. Este lenguaje nos ofrece una gran adaptabilidad, una estructuración lógica y es fácil de interpretar tanto por humanos como por máquinas.",
+            "img_logo" => "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/230px-HTML5_logo_and_wordmark.svg.png",
+            "active" => 1,
+            "order" => 1,
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+        ]);
+        DB::table('tecnologies')->insert([
+            "name" => "css",
+            "description" => "El CSS (hojas de estilo en cascada) es un lenguaje que define la apariencia de un documento escrito en un lenguaje de marcado (por ejemplo, HTML).",
+            "img_logo" => "https://c0.klipartz.com/pngpicture/893/87/gratis-png-hojas-de-estilo-en-cascada-logo-css3-html-css3-logo.png",
+            "active" => 1,
+            "order" => 1,
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+        ]);
+        DB::table('tecnologies')->insert([
+            "name" => "javascript",
+            "description" => "JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. ",
+            "img_logo" => "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+            "active" => 1,
+            "order" => 1,
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+        ]);
+        DB::table('tecnologies')->insert([
+            "name" => "jquery",
+            "description" => "Framework Javascript (abreviado comúnmente)",
+            "img_logo" => "https://blog.artegrafico.net/wp-content/uploads/2019/02/jQuery-logo.png",
+            "active" => 1,
+            "order" => 1,
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+        ]);
+        DB::table('tecnologies')->insert([
+            "name" => "bulma.io",
+            "description" => "Framework Css (abreviado comúnmente)",
+            "img_logo" => "https://shuffle.dev/vendor/shuffle/img/logos/bulma.svg",
+            "active" => 1,
+            "order" => 1,
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+        ]);
+
+        DB::table('tecnologies')->insert([
+            "name" => "php",
+            "description" => "Lenguaje de programación",
+            "img_logo" => "https://kinsta.com/es/wp-content/uploads/sites/8/2018/05/qu%C3%A9-es-php-1-1024x512.png",
+            "active" => 1,
+            "order" => 1,
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+        ]);
+        DB::table('tecnologies')->insert([
+            "name" => "laravel",
+            "description" => "Framework php (abreviado comúnmente)",
+            "img_logo" => "https://cms-assets.tutsplus.com/uploads/users/769/posts/25334/preview_image/get-started-with-laravel-6-400x277.png",
+            "active" => 1,
+            "order" => 1,
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
+        ]);
+        DB::table('tecnologies')->insert([
+            "name" => "Wordpress",
+            "description" => "creador de páginas",
+            "img_logo" => "https://rockcontent.com/es/wp-content/uploads/sites/3/2020/06/Gu%C3%ADa-completa-de-Wordpress.png",
+            "active" => 1,
+            "order" => 1,
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
         ]);
     }
 }
