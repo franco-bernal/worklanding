@@ -11,6 +11,7 @@ use App\Models\Product;
 use App\Models\Stadistics;
 use App\Models\Tecnologies;
 use App\Models\User;
+use App\Models\Visitas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -27,13 +28,16 @@ class SellerController extends Controller
         $stadistics = json_decode($stadistics->numbers);
         $emails = Email::get();
 
+        $visitas = Visitas::orderBy('created_at', 'desc')->get();
+
         return view('admin/dashboard', compact(
             'data',
             'tecnologies',
             'users',
             'page',
             'emails',
-            'stadistics'
+            'stadistics',
+            'visitas'
         ));
     }
 
@@ -77,7 +81,7 @@ class SellerController extends Controller
         $contactos = json_decode($usuario->contactos);
 
 
-        return view('update', compact('edit', 'type', 'page','contactos'));
+        return view('update', compact('edit', 'type', 'page', 'contactos'));
     }
     public function editTecnology(Request $request)
     {

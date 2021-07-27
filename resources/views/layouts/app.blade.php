@@ -293,6 +293,28 @@
             });
         }
     </script>
+    <script>
+        visita();
+    function visita() {
+            $.ajax({
+                type: 'post',
+                url: "{{ route('visitas.add') }}",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    sum: 1,
+                },
+                success: function(data) {
+                },
+                error: function(error) {
+                }
+            }).fail(function(jqXHR, textStatus, error) {
+             
+            });
+        }
+    </script>
+
 </body>
 
 </html>

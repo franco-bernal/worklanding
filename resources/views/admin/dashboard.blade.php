@@ -31,8 +31,8 @@
         </div>
         <div class="tile is-parent">
             <article class="tile is-child box">
-                <p class="title">3.4k</p>
-                <p class="subtitle">Open Orders</p>
+                <p class="title">{{ count($visitas) }}</p>
+                <p class="subtitle">Visitas</p>
             </article>
         </div>
     </div>
@@ -85,10 +85,10 @@
         </div>
     </div>
     <div class="column is-6">
-        <div class="card">
+        <div class="card events-card">
             <header class="card-header">
                 <p class="card-header-title">
-                    Inventory Search
+                    Mensajes
                 </p>
                 <a href="#" class="card-header-icon" aria-label="more options">
                     <span class="icon">
@@ -96,44 +96,23 @@
                     </span>
                 </a>
             </header>
-            <div class="card-content">
-                <div class="content">
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input is-large" type="text" placeholder="">
-                        <span class="icon is-medium is-left">
-                            <i class="fa fa-search"></i>
-                        </span>
-                        <span class="icon is-medium is-right">
-                            <i class="fa fa-check"></i>
-                        </span>
-                    </div>
+            <div class="card-table">
+                <div class="content" style="overflow-y:auto; max-height:200px">
+                    <table class="table is-fullwidth is-striped" >
+                        <tbody>
+                            @forelse($visitas as $visita)
+                            <tr>
+                                <td width="5%"><i class="fa fa-bell-o"></i></td>
+                                <td>{{ $visita->created_at }}</td>
+                            </tr>
+                            @empty
+                            <p>Sin visitas</p>
+                            @endforelse
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    User Search
-                </p>
-                <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                </a>
-            </header>
-            <div class="card-content">
-                <div class="content">
-                    <div class="control has-icons-left has-icons-right">
-                        <input class="input is-large" type="text" placeholder="">
-                        <span class="icon is-medium is-left">
-                            <i class="fa fa-search"></i>
-                        </span>
-                        <span class="icon is-medium is-right">
-                            <i class="fa fa-check"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </div>

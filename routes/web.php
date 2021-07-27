@@ -35,6 +35,8 @@ Route::get('/', function () {
     return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos'));
 })->name('welcome');
 
+// addVisita
+Route::post('/addvisita', [App\Http\Controllers\visitasController::class, 'addVisita'])->name('visitas.add');
 
 Auth::routes();
 
@@ -80,6 +82,8 @@ Route::group(['middleware' => 'admin'], function () {
 
     Route::POST('/addEmail', [App\Http\Controllers\Portafolio\EmailsController::class, 'addEmail'])->name('email.add');
 
+
+    //estadisticas
     Route::get('/editStadistic', [App\Http\Controllers\StadisticsController::class, 'editDetails'])->name('stadistic.edit');
     Route::post('/sumStadistic', [App\Http\Controllers\StadisticsController::class, 'sumStadistic'])->name('stadistic.sum');
 });
