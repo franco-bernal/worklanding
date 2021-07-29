@@ -125,7 +125,7 @@
         <footer class="py-6 ">
             <div class='columns is-mobile is-gapless is-multiline'>
                 <div class='column centrar-full is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
-                    <a href="{{ route('welcome') }}"><img src="{{ asset('img/logo-franco-blanco.png') }}" class="centrar" style="width:70px !important" alt=""></a>
+                    <a href="{{ route('welcome') }}"><img src="{{ json_decode($page->img)->logo_img }}" class="centrar" style="width:25% !important" alt=""></a>
                 </div>
                 <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
                     <h4 class='my-2 py-2 subraya'>Contactos</h4>   
