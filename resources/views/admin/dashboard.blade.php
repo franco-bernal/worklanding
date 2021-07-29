@@ -31,7 +31,7 @@
         </div>
         <div class="tile is-parent">
             <article class="tile is-child box">
-                <p class="title">{{ count($visitas) }}</p>
+                <p class="title">{{ $visitasAll }}</p>
                 <p class="subtitle">Visitas</p>
             </article>
         </div>

@@ -29,7 +29,7 @@ class SellerController extends Controller
         $emails = Email::get();
 
         $visitas = Visitas::orderBy('created_at', 'desc')->limit(15)->get();
-
+        $visitasAll = count(Visitas::orderBy('created_at', 'desc')->get());
         return view('admin/dashboard', compact(
             'data',
             'tecnologies',
@@ -37,7 +37,8 @@ class SellerController extends Controller
             'page',
             'emails',
             'stadistics',
-            'visitas'
+            'visitas',
+            'visitasAll'
         ));
     }
 
