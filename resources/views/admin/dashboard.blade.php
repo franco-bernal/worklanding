@@ -88,7 +88,7 @@
         <div class="card events-card">
             <header class="card-header">
                 <p class="card-header-title">
-                    Mensajes
+                    Visitas
                 </p>
                 <a href="#" class="card-header-icon" aria-label="more options">
                     <span class="icon">
