@@ -10,9 +10,7 @@ function todayDate($date)
     if ($max_date->diff($today)->days == 0) {
         return "hoy - " . $date;
     }
-    if ($max_date->diff($today)->days > 1) {
-        return "ayer - ".$date;
-    }
+  
 
     return $date;
 }
