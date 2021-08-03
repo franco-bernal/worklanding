@@ -8,10 +8,10 @@ function todayDate($date)
 
     $today = Carbon::now();
     if ($max_date->diff($today)->days == 0) {
-        return "hoy";
+        return "hoy - " . $date;
     }
     if ($max_date->diff($today)->days > 1) {
-        return "ayer";
+        return "ayer - ".$date;
     }
 
     return $date;

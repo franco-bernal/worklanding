@@ -28,7 +28,7 @@ class SellerController extends Controller
         $stadistics = json_decode($stadistics->numbers);
         $emails = Email::get();
 
-        $visitas = Visitas::orderBy('created_at', 'desc')->limit(15)->get();
+        $visitas = Visitas::orderBy('created_at', 'desc')->limit(40)->get();
         $visitasAll = count(Visitas::orderBy('created_at', 'desc')->get());
         return view('admin/dashboard', compact(
             'data',
