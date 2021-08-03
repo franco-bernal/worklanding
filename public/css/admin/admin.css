@@ -1,3 +1,21 @@
+html {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.726)), url('https://i.pinimg.com/originals/0f/f3/1e/0ff31e2d75805eecae4e174beee8b426.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+* {
+    color: white !important;
+}
+
+input[type="file"] {
+    color: white !important;
+}
+
+.tile {
+    background: rgba(255, 255, 255, 0.034);
+}
+
 .frb-nav {
     background-color: var(--color-b);
 }
@@ -24,7 +42,7 @@
 }
 
 .space-x {
-    background-color: var(--color-bc);
+    background-color: transparent;
     padding: 1vw 3vw !important;
     border-radius: 5px;
 }
@@ -46,5 +64,91 @@
 .navbar-link.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, a.navbar-item.is-active, a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover {
     background-color: rgb(241, 241, 241);
     color: var(--color-ab) !important;
-    transition:background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+.vermensaje {
+    min-height: 20px;
+    width: 100%;
+    background-color: rgb(187, 187, 187);
+    border: 1px solid var(--color-b);
+}
+
+.fbg_table {
+    background-color: rgba(255, 255, 255, 0.192);
+    height: 400px;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.fbg_table_item {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.493);
+    clear: both;
+    display: flow-root;
+}
+
+.fbg_tag1 {
+    font-size: 10px;
+    background-color: rgba(1, 0, 32, 0.5);
+    padding: 2px 5px;
+    margin: 1px;
+    width: max-content;
+    border-radius: 4px;
+}
+
+.fbg_coment {
+    font-size: 14px;
+    padding: 3px;
+}
+
+.fbg_coment::first-letter {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.fbg_vermensaje {
+    clear: both;
+    border-top: 1px solid rgba(255, 255, 255, 0.26) !important;
+    padding: 5px;
+    display: none;
+    position: relative;
+}
+
+.fbg_delete {
+    width: max-content;
+    background-color: rgb(116, 0, 0);
+    padding: 14px 11px;
+    line-height: 0;
+    font-size: 12px;
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.fbg_delete:hover {
+    background-color: white;
+    color: red !important;
+    font-weight: bolder !important;
+    transition: background-color 0.3s;
+}
+
+.visitas {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 255, 255, 0.151);
+    overflow-y: auto;
+    padding: 4px;
+}
+
+.visitas p {
+    padding: 4px;
+    text-align:center;
 }

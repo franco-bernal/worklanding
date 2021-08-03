@@ -54,65 +54,38 @@
 </section>
 <div class="columns">
     <div class="column is-6">
-        <div class="card events-card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    Mensajes
-                </p>
-                <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                </a>
-            </header>
-            <div class="card-table">
-                <div class="content">
-                    <table class="table is-fullwidth is-striped">
-                        <tbody>
-                            @forelse($emails as $mail)
-                            <tr>
-                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                <td>{{ $mail->mensaje }}</td>
-                                <td class="level-right"><a class="button is-small is-primary" href="#" onclick="verMensaje('{{ json_encode($mail) }}')">Ver</a></td>
-                            </tr>
-                            @empty
-                            @endforelse
-                        </tbody>
-                    </table>
+        <h3>Mensajes</h3>
+        <div class="fbg_table">
+
+            @forelse($emails as $mail)
+            <div class="fbg_table_item" id="item-mensaje{{ $mail->id }}">
+                <p class="fbg_tag1">{{ $mail->created_at }}</p>
+                <p style="float:left" class="fbg_coment">{{ $mail->name }}</p>
+                <a style="float:right" class="btn btn-solid" onclick="vermensaje('#vermensaje{{ $mail->id }}')">Mensaje</a>
+                <div class="fbg_vermensaje" id="vermensaje{{ $mail->id }}">
+                    <span class="fbg_delete" onclick="deleteMensaje('{{ $mail->id }}')">borrar</span>
+                    <p class="m-email"><strong>Email:</strong> {{ $mail->email }}</p>
+                    <p class="m-numero"><strong>Numero:</strong> {{ $mail->numero }}</p>
+                    <hr style="margin: 3px;height: 0.1px;">
+                    <p class="m-mensajes"><strong>Mensaje:</strong> {{ $mail->mensaje }}</p>
                 </div>
             </div>
+            @empty
+            <div class="fbg_table_item">
+                vacio
+            </div>
+            @endforelse
 
         </div>
     </div>
     <div class="column is-6">
-        <div class="card events-card">
-            <header class="card-header">
-                <p class="card-header-title">
-                    Visitas
-                </p>
-                <a href="#" class="card-header-icon" aria-label="more options">
-                    <span class="icon">
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                </a>
-            </header>
-            <div class="card-table">
-                <div class="content" style="overflow-y:auto; max-height:200px">
-                    <table class="table is-fullwidth is-striped" >
-                        <tbody>
-                            @forelse($visitas as $visita)
-                            <tr>
-                                <td width="5%"><i class="fa fa-bell-o"></i></td>
-                                <td>{{ $visita->created_at }}</td>
-                            </tr>
-                            @empty
-                            <p>Sin visitas</p>
-                            @endforelse
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
+        <h3>Visitas</h3>
+        <div class="visitas">
+            @forelse($visitas as $visita)
+            <p> {{ todayDate($visita->created_at) }}</p>
+            @empty
+            <p>Sin visitas</p>
+            @endforelse
         </div>
     </div>
 </div>

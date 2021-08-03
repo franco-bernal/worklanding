@@ -81,6 +81,7 @@ Route::group(['middleware' => 'admin'], function () {
 
 
     Route::POST('/addEmail', [App\Http\Controllers\Portafolio\EmailsController::class, 'addEmail'])->name('email.add');
+    Route::get('/deleteEmail', [App\Http\Controllers\Portafolio\EmailsController::class, 'deleteEmail'])->name('email.delete');
 
 
     //estadisticas

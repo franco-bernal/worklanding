@@ -138,6 +138,12 @@
             <!-- END NAV -->
             <div class="container mt-2">
                 <div class="columns">
+                    <div class="column is-9">
+
+
+                        @yield('content')
+                    </div>
+
                     <div class="column is-3 mt-6">
                         <aside class="menu is-hidden-mobile">
                             <p class="menu-label">
@@ -180,11 +186,6 @@
                                 <li><a>Reports</a></li>
                             </ul> -->
                         </aside>
-                    </div>
-                    <div class="column is-9">
-
-
-                        @yield('content')
                     </div>
 
                 </div>
@@ -323,19 +324,30 @@
     </script>
 
     <script>
-        function verMensaje(json) {
-            let data = JSON.parse(json);
-            $('#nameInfo').text(data.name);
-            $('#desInfo').text(data.numero);
-            $('#linkInfo').text(data.created_at);
-            $('#tecInfo').text(data.mensaje);
+        function vermensaje(elem) {
+            // alert(elem);
+            $('.fbg_vermensaje').slideUp();
+            $(elem).slideToggle();
+        }
 
-            clearModal();
-            let info = $('#productInfo');
-            if (info.css("display") == "none") {
-                info.css("display", "block");
-            }
-            eg1OpenModal('eg1_modal');
+        function deleteMensaje(id) {
+            var opcion = confirm("Clicka en Aceptar o Cancelar");
+            $.ajax({
+                type: 'get',
+                url: "{{ route('email.delete') }}",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    id: id,
+                },
+                success: function(data) {
+                    $('#item-mensaje' + id).slideUp();
+                },
+                error: function(error) {}
+            }).fail(function(jqXHR, textStatus, error) {
+
+            });
 
         }
     </script>

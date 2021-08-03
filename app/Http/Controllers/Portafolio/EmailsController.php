@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Portafolio;
 
 use App\Http\Controllers\Controller;
 use App\Models\Email;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -23,7 +24,7 @@ class EmailsController extends Controller
     public function addEmail(Request $request)
     {
         DB::table('emails')->insert([
-            'user_id' =>1,
+            'user_id' => 1,
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'numero' => $request->input('numero'),
@@ -32,18 +33,20 @@ class EmailsController extends Controller
             'estado' => "active",
             'fijar' => 0,
             'extras' => "[]",
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now(),
         ]);
         return redirect()->back()->with('message', "Gracias por contactarse")->with('submessage', 'Se le contactará a la brevedad');
     }
 
     public function deleteEmail(Request $request)
     {
-        $idDelete = $request->input('idDelete');
+        $idDelete = $request->input('id');
         $resp = DB::table('emails')
             ->select('emails.*')
             ->Where('emails.id', '=', $idDelete)->delete();
 
-        return redirect()->back();
+        return true;
     }
 
     public function editNoticia(Request $request)
