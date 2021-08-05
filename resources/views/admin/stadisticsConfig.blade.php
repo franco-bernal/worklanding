@@ -3,7 +3,7 @@
 @section('content')
 
 
-
+<!-- 
 <form method='post' action="{{ route('page.edit') }}" class="form space-x" id="formProduct" enctype="multipart/form-data">
     @csrf
 
@@ -21,7 +21,7 @@
     </div>
 
     <button type="submit" class="btn-solid centrar mb-6">Agregar</button>
-</form>
+</form> -->
 
 
 @endsection

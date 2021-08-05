@@ -7,7 +7,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Franco Bernal - desarrollador web</title>
+    <meta name="keywords"
+    content="Analista programador, Análisis y programación de software, Técnico informatico, chile, Diseño Web,,Desarrollo Aplicaciones,Desarrollo APP,Desarrollo Aplicación Web,Desarrollo Web,Diseño Sitio Web,Desarrollo Sitio Web,Diseño Aplicaciones,Diseño APP,Diseño Aplicación Web,Diseño Android,Diseño Ios,Diseño Apple,Diseño Iphone,Diseño Ecommerce,Diseño Comercio Electrónico,Diseño Programas Web" />
+<meta name="description"
+    content="Desarrollador de páginas web responsive, one page, landing, páginas con administrador, sistemas. Página de contacto y muestra.">
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/click.js') }}" defer></script>

@@ -99,7 +99,7 @@
                             <a href=" {{ route('pageConfig') }}" class="navbar-item">Page Config</a></li>
                             <a href="{{ route('slidersConfig') }}" class="navbar-item">Sliders Config</a></li>
                             <a href="{{ route('profileConfig') }}" class="navbar-item">profile Config</a></li>
-                            <a href="{{ route('stadisticsConfig') }}" class="navbar-item">stadistics Config</a></li>
+                            <!-- <a href="{{ route('stadisticsConfig') }}" class="navbar-item">stadistics Config</a></li> -->
 
 
 
@@ -154,7 +154,7 @@
                                 <li><a href=" {{ route('pageConfig') }}" class=" {{(request()->is('pageConfig')) ? 'is-active' : '' }}">Page Config</a></li>
                                 <li><a href="{{ route('slidersConfig') }}" class=" {{(request()->is('slidersConfig')) ? 'is-active' : '' }}">Sliders Config</a></li>
                                 <li><a href="{{ route('profileConfig') }}" class=" {{(request()->is('profileConfig')) ? 'is-active' : '' }}">profile Config</a></li>
-                                <li><a href="{{ route('stadisticsConfig') }}" class=" {{(request()->is('stadisticsConfig')) ? 'is-active' : '' }}">stadistics Config</a></li>
+                                <!-- <li><a href="{{ route('stadisticsConfig') }}" class=" {{(request()->is('stadisticsConfig')) ? 'is-active' : '' }}">stadistics Config</a></li> -->
                             </ul>
                             <!-- 
                             <p class="menu-label">
@@ -326,8 +326,11 @@
     <script>
         function vermensaje(elem) {
             // alert(elem);
-            $('.fbg_vermensaje').slideUp();
+            // $('.fbg_vermensaje').slideUp();
             $(elem).slideToggle();
+        }
+        function minMensajes(){
+            $('.fbg_vermensaje').slideUp();
         }
 
         function deleteMensaje(id) {

@@ -150,5 +150,31 @@ input[type="file"] {
 
 .visitas p {
     padding: 4px;
-    text-align:center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.visitas p:hover {
+    background-color: white;
+    color: black !important;
+    font-weight: bolder !important;
+}
+
+.contadores {
+}
+
+.contadores div {
+    background-color: rgba(245, 222, 179, 0.096);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.contadores div:hover {
+    background-color: rgba(245, 222, 179, 0.274);
+}
+
+.conftext label{
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.486) !important;
 }

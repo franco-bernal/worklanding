@@ -3,58 +3,42 @@
 @section('content')
 
 
-<section class="hero is-info welcome is-small my-5">
-    <div class="hero-body">
-        <div class="container">
-            <h1 class="title">
-                Hello, Franco.
-            </h1>
-            <h2 class="subtitle">
-                Espero que tengas un buen día!
-            </h2>
-        </div>
-    </div>
-</section>
-<section class="info-tiles">
-    <div class="tile is-ancestor has-text-centered">
-        <div class="tile is-parent">
-            <article class="tile is-child box">
-                <p class="title">{{ $users }}</p>
-                <p class="subtitle">Users</p>
-            </article>
-        </div>
-        <div class="tile is-parent">
-            <article class="tile is-child box">
-                <p class="title">{{ count($emails) }}</p>
-                <p class="subtitle">Mensaje</p>
-            </article>
-        </div>
-        <div class="tile is-parent">
-            <article class="tile is-child box">
-                <p class="title">{{ $visitasAll }}</p>
-                <p class="subtitle">Visitas</p>
-            </article>
-        </div>
-    </div>
-</section>
-<h3 class="my-4">Clics</h3>
-<section class="info-tiles">
-    <div class="tile is-ancestor has-text-centered">
+    <h1>Contadores</h1>
+
+
+
+
+    <div class='columns is-mobile is-gapless is-multiline contadores' style='margin-top:20px; margin-bottom: 20px;'>
         @forelse($stadistics as $key => $value)
-        <div class="tile is-parent">
-            <article class="tile is-child box">
-                <p class="title">{{ $value }}</p>
-                <p class="subtitle">{{ $key }}</p>
-            </article>
+        <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
+            <p>{{ $value }}</p>
+            <p>{{ $key }}</p>
         </div>
         @empty
-
         @endforelse
+        <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
+            <p>{{ $users }}</p>
+            <p>Users</p>
+        </div>
+        <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
+            <p>{{ count($emails) }}</p>
+            <p>Mensaje</p>
+        </div>
+        <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
+            <p>{{ $visitasAll }}</p>
+            <p>Visitas</p>
+        </div>
     </div>
+
+
+
+
 </section>
+
 <div class="columns">
-    <div class="column is-6">
+    <div class="column is-8">
         <h3>Mensajes</h3>
+        <a onclick="minMensajes()">Minimizar mensajes</a>
         <div class="fbg_table">
 
             @forelse($emails as $mail)
@@ -64,8 +48,9 @@
                 <a style="float:right" class="btn btn-solid" onclick="vermensaje('#vermensaje{{ $mail->id }}')">Mensaje</a>
                 <div class="fbg_vermensaje" id="vermensaje{{ $mail->id }}">
                     <span class="fbg_delete" onclick="deleteMensaje('{{ $mail->id }}')">borrar</span>
-                    <p class="m-email"><strong>Email:</strong> {{ $mail->email }}</p>
-                    <p class="m-numero"><strong>Numero:</strong> {{ $mail->numero }}</p>
+                    <a href="mailto:{{ $mail->email }}" class="m-email"><strong>Email:</strong> {{ $mail->email }}</a>
+                    <br>
+                    <a href="tel:{{ $mail->numero }}" class="m-numero"><strong>Numero:</strong> {{ $mail->numero }}</a>
                     <hr style="margin: 3px;height: 0.1px;">
                     <p class="m-mensajes"><strong>Mensaje:</strong> {{ $mail->mensaje }}</p>
                 </div>
@@ -78,8 +63,10 @@
 
         </div>
     </div>
-    <div class="column is-6">
+    <div class="column is-4">
         <h3>Visitas</h3>
+        <p>Desde la última</p>
+
         <div class="visitas">
             @forelse($visitas as $visita)
             <p> {{ todayDate($visita->created_at) }}</p>
