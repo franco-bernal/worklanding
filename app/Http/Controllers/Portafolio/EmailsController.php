@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Portafolio;
 use App\Http\Controllers\Controller;
 use App\Models\Email;
 use Carbon\Carbon;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class EmailsController extends Controller
 {
@@ -23,7 +25,7 @@ class EmailsController extends Controller
 
     public function addEmail(Request $request)
     {
-        DB::table('emails')->insert([
+        $exec =  DB::table('emails')->insert([
             'user_id' => 1,
             'name' => $request->input('name'),
             'email' => $request->input('email'),
@@ -36,6 +38,29 @@ class EmailsController extends Controller
             "created_at" => Carbon::now(),
             "updated_at" => Carbon::now(),
         ]);
+        $_email = $request->input('email');
+        $_name = $request->input('name');
+        try { //try por si no quiere agregarle creadenciales
+            if ($exec) {
+                Mail::send('email.email', $request->all(), function ($message) {
+                    $message->from('franco9bernal@gmail.com', 'Franco');
+                    $message->sender('franco9bernal@gmail.com', 'Franco');
+                    $message->to('franco9bernal@gmail.com', 'franco');
+                    $message->subject('Formulario portafolio');
+                    $message->priority(3);
+                    // $message->attach('pathToFile');
+                });
+                Mail::send('email.email_interesed', $request->all(), function ($message) use ($_email, $_name) {
+                    $message->from('franco9bernal@gmail.com', 'Franco');
+                    $message->sender('franco9bernal@gmail.com', 'Franco');
+                    $message->to($_email, $_name);
+                    $message->subject('inndev mensaje recibido');
+                    $message->priority(3);
+                    // $message->attach('pathToFile');
+                });
+            }
+        } catch (Exception $e) {
+        }
         return redirect()->back()->with('message', "Gracias por contactarse")->with('submessage', 'Se le contactará a la brevedad');
     }
 

@@ -10,7 +10,5 @@ function todayDate($date)
     if ($max_date->diff($today)->days == 0) {
         return "hoy - " . $date;
     }
-  
-
     return $date;
 }

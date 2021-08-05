@@ -23,7 +23,8 @@
 </form>
 
 <h4 class="py-6"><strong>Contraseña</strong></h4>
-<form method='post' action="{{ route('user.edit') }}" class="form space-x" id="formProduct">
+<form method='post' action="{{ route('password.edit') }}" class="form space-x" id="formProduct">
+    @csrf
     <p class="mt-5"><strong>Password</strong></p>
     <input type="password" name="" required> <br>
     <p class="mt-5"><strong>Confirmar</strong></p>
@@ -45,9 +46,9 @@
         </div>
         @else
         <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile ' style='padding:20px !important;'>
-        <p class="mt-5"><a href="{{ asset($text) }}">{{ $name }}: {{ $text }}</a></p>
-           
-        
+            <p class="mt-5"><a href="{{ asset($text) }}">{{ $name }}: {{ $text }}</a></p>
+
+
             <input type="file" name="{{ $name . 'file_img' }}" value="{{ $text }}" class="pb-3">
             <input type="hidden" value="{{ $text }}" name="{{ $name.'_copy' }}" placeholder="{{ $name }}*"> <br>
         </div>

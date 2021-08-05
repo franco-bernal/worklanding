@@ -71,7 +71,7 @@
         <h1><strong>{{ json_decode($page->text)->header_text }}</strong></h1> -->
         <img src="{{ asset(json_decode($page->img)->tarjeta_pre_img) }}" alt="tarjeta-pre" width="90%" class="shadow">
     </div>
-    <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile promo' id="promo" >
+    <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile promo' id="promo">
         <h2>{{ json_decode($page->text)->necesitas_title_text }}</h2>
         <p>{!! json_decode($page->text)->necesitas_sub_text !!}</p>
     </div>
@@ -169,15 +169,15 @@
 
             <div class='columns is-mobile is-gapless is-multiline'>
                 <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
-                    <input type="text" name="name" placeholder="nombre*" maxlength="50"> <br>
+                    <input type="text" name="name" placeholder="nombre*" maxlength="50" required> <br>
                 </div>
                 <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
                 </div>
                 <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
-                    <input type="email" name="email" placeholder="email*" maxlength="50"> <br>
+                    <input type="email" name="email" placeholder="email*" maxlength="50" required> <br>
                 </div>
                 <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
-                    <input type="number" name="numero" placeholder="numero*" maxlength="9">
+                    <input type="number" name="numero" placeholder="numero*" maxlength="9" required>
                 </div>
                 <div class='column is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
                     <textarea name="mensaje" placeholder="Mensaje" width="100%" rows="10" maxlength="200"></textarea>

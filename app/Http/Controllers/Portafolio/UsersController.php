@@ -89,4 +89,16 @@ class UsersController extends Controller
 
         return redirect()->back();
     }
+
+    public function editPassword(Request $request)
+    {
+        $req = DB::table('users')
+            ->where('id', '=', Auth::user()->id)
+            ->update([
+                'password' => Hash::make($request->input('password'))  ?: null,
+            ]);
+
+            dd($req);
+        return $req;
+    }
 }

@@ -40,6 +40,9 @@ Route::post('/addvisita', [App\Http\Controllers\visitasController::class, 'addVi
 
 Auth::routes();
 
+Route::POST('/addEmail', [App\Http\Controllers\Portafolio\EmailsController::class, 'addEmail'])->name('email.add');
+Route::post('/sumStadistic', [App\Http\Controllers\StadisticsController::class, 'sumStadistic'])->name('stadistic.sum');
+
 
 Route::group(['middleware' => 'admin'], function () {
 
@@ -73,18 +76,16 @@ Route::group(['middleware' => 'admin'], function () {
 
     //profiles
     Route::post('/editUser', [App\Http\Controllers\Portafolio\UsersController::class, 'editUser'])->name('user.edit');
-
+    Route::post('/editPassword', [App\Http\Controllers\Portafolio\UsersController::class, 'editPassword'])->name('password.edit');
 
 
     Route::post('/editNotice', [App\Http\Controllers\Portafolio\NoticiasController::class, 'editNoticia'])->name('notice.edit');
     Route::get('/deleteNotice', [App\Http\Controllers\Portafolio\NoticiasController::class, 'deleteNoticia'])->name('notice.delete');
 
 
-    Route::POST('/addEmail', [App\Http\Controllers\Portafolio\EmailsController::class, 'addEmail'])->name('email.add');
     Route::get('/deleteEmail', [App\Http\Controllers\Portafolio\EmailsController::class, 'deleteEmail'])->name('email.delete');
 
 
     //estadisticas
     Route::get('/editStadistic', [App\Http\Controllers\StadisticsController::class, 'editDetails'])->name('stadistic.edit');
-    Route::post('/sumStadistic', [App\Http\Controllers\StadisticsController::class, 'sumStadistic'])->name('stadistic.sum');
 });
