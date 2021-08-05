@@ -1,2 +1,8 @@
-User-agent: *
-Disallow:
+User-Agent: *
+Disallow: /carrusel/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /js/
+Disallow: /images/
+Allow: /img/
+Sitemap: https://inndev.cf/sitemap.xml
