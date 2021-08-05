@@ -332,6 +332,9 @@
 
         function deleteMensaje(id) {
             var opcion = confirm("Clicka en Aceptar o Cancelar");
+
+            if(opcion){
+
             $.ajax({
                 type: 'get',
                 url: "{{ route('email.delete') }}",
@@ -348,6 +351,7 @@
             }).fail(function(jqXHR, textStatus, error) {
 
             });
+        }
 
         }
     </script>
