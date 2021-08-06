@@ -16,6 +16,15 @@
         /* background-image: url('{{ json_decode($page->img)->necesitas_back_img }}'); */
         background-attachment: fixed;
     }
+    .ciudad{
+        background-image: linear-gradient(rgba(2, 0, 1, 0.966), rgba(27, 27, 27, 0.555)),
+        url('{{ json_decode($page->img)->necesitas_back_img }}');
+        /* background-image: url('{{ json_decode($page->img)->necesitas_back_img }}'); */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
     .viewTecnologies {
         background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
@@ -32,7 +41,7 @@
 
 <div class="noticias" style="    margin-top: -5px;">
     @forelse ($noticias as $notice)
-    <div class="noticia" style="background:linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)), url('{{ $notice->background }}');">
+    <div class="noticia" style="    background:linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.658)), url('{{ $notice->background }}');">
         <h3>{{ $notice->title }}</h3>
         <p>{{ $notice->subtitle }}</p>
         @if($notice->btn_link!="")
@@ -66,7 +75,7 @@
 
 </div>
 <div class='columns is-mobile is-gapless is-multiline promo-block'>
-    <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile block1 centrar-full'>
+    <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile block1 promo centrar-full'>
         <!-- <h2>{{ json_decode($page->text)->header_sub_text }} - <img src="https://www.frontec.cl/images/icono_web.png" width="30px"></h2>
         <h1><strong>{{ json_decode($page->text)->header_text }}</strong></h1> -->
         <img src="{{ asset(json_decode($page->img)->tarjeta_pre_img) }}" alt="tarjeta-pre" width="90%" class="shadow">
@@ -78,7 +87,7 @@
 </div>
 
 
-<div class='columns is-mobile is-gapless is-multiline ' id="productos">
+<div class='columns is-mobile is-gapless is-multiline ciudad' id="productos">
 
     <div class='column centrar-full is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile ' style="color: white;">
         <h2>Produc<span class="subraya">tos</span></h2>
