@@ -34,9 +34,22 @@
             url('{{ json_decode($page->img)->tecnologias_img }}');
 
         }
-        html{
+
+        html {
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
             url('{{ json_decode($page->img)->header_back_img }}') !important;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        @media(max-width:769px) {
+            html {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
+                url('{{ json_decode($page->img)->header_back_img }}') !important;
+                background-size: auto 100vh !important;
+            }
         }
     </style>
 
@@ -333,32 +346,33 @@
             // $('.fbg_vermensaje').slideUp();
             $(elem).slideToggle();
         }
-        function minMensajes(){
+
+        function minMensajes() {
             $('.fbg_vermensaje').slideUp();
         }
 
         function deleteMensaje(id) {
             var opcion = confirm("Clicka en Aceptar o Cancelar");
 
-            if(opcion){
+            if (opcion) {
 
-            $.ajax({
-                type: 'get',
-                url: "{{ route('email.delete') }}",
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                data: {
-                    id: id,
-                },
-                success: function(data) {
-                    $('#item-mensaje' + id).slideUp();
-                },
-                error: function(error) {}
-            }).fail(function(jqXHR, textStatus, error) {
+                $.ajax({
+                    type: 'get',
+                    url: "{{ route('email.delete') }}",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {
+                        id: id,
+                    },
+                    success: function(data) {
+                        $('#item-mensaje' + id).slideUp();
+                    },
+                    error: function(error) {}
+                }).fail(function(jqXHR, textStatus, error) {
 
-            });
-        }
+                });
+            }
 
         }
     </script>
