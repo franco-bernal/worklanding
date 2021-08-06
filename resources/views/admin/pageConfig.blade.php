@@ -26,8 +26,8 @@
         <div class='column is-3-fullhd is-3-desktop  is-12-tablet  is-12-mobile ' style='padding:20px !important;'>
             <img src="{{ asset($imagen) }}" style="height:100px;" class="mt-5 admin-img-form" alt="{{ $name }}">
             <p style="color:white">{{ $name }}</p>
-            <input type="text" value="{{ $imagen }}" name="{{ $name }}" placeholder="{{ $name }}*"> <br>
-            <input type="file" name="{{ $name . 'file_img' }}" value="{{ $imagen }}" class="pb-3">
+            <input  type="text" value="{{ $imagen }}" name="{{ $name }}" placeholder="{{ $name }}*"> <br>
+            <input  type="file" name="{{ $name . 'file_img' }}" value="{{ $imagen }}" class="pb-3" accept="image/*">
             <input required type="hidden" value="{{ $imagen }}" name="{{ $name.'_copy' }}" placeholder="{{ $name }}*" style="color:white;"> <br>
         </div>
 
@@ -41,8 +41,8 @@
     <div class='columns is-mobile is-gapless is-multiline conftext'>
         @foreach(json_decode($page->text) as $name => $text)
         <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile ' style='padding:20px !important;'>
-            <p class="mt-5"><strong>{{ $name }}</strong> <span class="subraya">(actual)</span>:<br></p>
-            <label> {{ $text }}</label>
+            <p class="mt-5"><strong>{{ $name }}</strong>  <span class="subraya">(actual)</span>:<br></p>
+            <label> {{ $text }}</p>
             <input required type="text" name="{{ $name }}" placeholder="cambiar {{ $name }}*" value="{{ $text }}"> <br>
         </div>
         @endforeach

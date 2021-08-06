@@ -25,7 +25,6 @@
     border: none;
     background-color: transparent;
     margin-bottom: 1vw;
-    color: black !important;
 }
 
 .form input[type="text"], .form input[type="number"], .form input[type="email"], .form textarea,.form input[type="password"] {
