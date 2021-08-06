@@ -8,6 +8,12 @@ html {
     color: white !important;
 }
 
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
 input[type="file"] {
     color: white !important;
 }
@@ -81,6 +87,16 @@ input[type="file"] {
     width: 100%;
     box-sizing: border-box;
     word-wrap: break-word;
+}
+
+@media (max-width:769px) {
+    .fbg_table {
+        height: auto;
+        max-height: 400px;
+    }
+    .visitas{
+        max-height: 200px;
+    }
 }
 
 .fbg_table_item {
@@ -160,8 +176,7 @@ input[type="file"] {
     font-weight: bolder !important;
 }
 
-.contadores {
-}
+.contadores {}
 
 .contadores div {
     background-color: rgba(245, 222, 179, 0.096);
@@ -174,7 +189,7 @@ input[type="file"] {
     background-color: rgba(245, 222, 179, 0.274);
 }
 
-.conftext label{
+.conftext label {
     font-size: 11px;
     color: rgba(255, 255, 255, 0.486) !important;
 }
