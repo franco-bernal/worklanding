@@ -93,9 +93,9 @@
         @if (Auth::user()!= null && Auth::user()->tipo_usuario ==1)
         <nav class="menu-header">
             <ul class="header-links burge" id="burge">
-                <li class="header-logo">
+                <!-- <li class="header-logo">
                     <a href="{{ route('welcome') }}"><img src="{{ asset('img/logo-franco-blanco.png') }}" style="width:70px !important" alt=""></a>
-                </li>
+                </li> -->
                 <!--  <li><a class="btn-normal" href="Noticias.php#contenido">Noticias</a></li>
 -->
 
@@ -107,10 +107,10 @@
                 @endif
 
                 @if (Route::has('register'))
-                <li>
+                <!-- <li>
                     <a class="btn-solid" href="{{ route('register') }}">{{ __('Register') }}</a>
                 </li>
-                @endif
+                @endif -->
                 @else
                 <li>
                     <a class="btn-solid" href="{{ route('dashboard') }}" target="_blank">dashboard</a>
@@ -123,14 +123,14 @@
 
                 </li>
                 <li>
-                    <a class="btn-transparent" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <!-- <a class="btn-transparent" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
 
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
-                    </form>
+                    </form> -->
                 </li>
                 @endguest
 
