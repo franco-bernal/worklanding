@@ -44,7 +44,7 @@
     <div class="noticia" style="    background:linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.658)), url('{{ $notice->background }}');">
         <h3>{{ $notice->title }}</h3>
         <p>{{ $notice->subtitle }}</p>
-        @if($notice->btn_link!="")
+        @if($notice->btn_link!="no" )
         <a href="{{ $notice->btn_link }}" class="btn-solid">{{ $notice->btn_text }}</a>
         @endif
     </div>
