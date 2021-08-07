@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link id="shor" rel="shortcut icon" href="{{ asset('img/logo-franco-blanco.png') }}">
+    <link id="shor" rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <title>Franco Bernal - desarrollador web</title>
     <meta name="keywords"
     content="Desarrollador web, Analista programador, Análisis y programación de software, Técnico informatico, chile, Diseño Web,,Desarrollo Aplicaciones,Desarrollo APP,Desarrollo Aplicación Web,Desarrollo Web,Diseño Sitio Web,Desarrollo Sitio Web,Diseño Aplicaciones,Diseño APP,Diseño Aplicación Web,Diseño Android,Diseño Ios,Diseño Apple,Diseño Iphone,Diseño Ecommerce,Diseño Comercio Electrónico,Diseño Programas Web" />
@@ -153,7 +153,7 @@
         <footer class="py-6 ">
             <div class='columns is-mobile is-gapless is-multiline'>
                 <div class='column centrar-full is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
-                    <a href="{{ route('welcome') }}"><img src="{{ json_decode($page->img)->logo_img }}" class="centrar" style="width:25% !important" alt=""></a>
+                    <a href="{{ route('welcome') }}"><img src="{{ json_decode($page->img)->logo_img }}" class="centrar" style="width:70% !important" alt=""></a>
                 </div>
                 <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
                     <h4 class='my-2 py-2 subraya'>Contactos</h4>   

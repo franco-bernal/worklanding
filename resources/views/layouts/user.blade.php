@@ -13,11 +13,7 @@
     <script src="{{ asset('js/click.js') }}" defer></script>
     <script src="{{ asset('js/modal.js') }}" defer></script>
 
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link id="shor" rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <!-- Styles -->
     <link href="{{ asset('css/bulma.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">

@@ -36,6 +36,7 @@
         }
 
         html {
+            background-color: black !important;
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
             url('{{ json_decode($page->img)->header_back_img }}') !important;
             background-position: bottom;
@@ -52,7 +53,7 @@
             }
         }
     </style>
-
+<link id="shor" rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
@@ -64,10 +65,7 @@
     <script src="{{ asset('js/modal.js') }}" defer></script>
 
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+  
     <!-- Styles -->
     <link href="{{ asset('css/bulma.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin/reset.css') }}" rel="stylesheet">

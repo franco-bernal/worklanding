@@ -78,7 +78,8 @@
     <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile block1 promo centrar-full'>
         <!-- <h2>{{ json_decode($page->text)->header_sub_text }} - <img src="https://www.frontec.cl/images/icono_web.png" width="30px"></h2>
         <h1><strong>{{ json_decode($page->text)->header_text }}</strong></h1> -->
-        <img src="{{ asset(json_decode($page->img)->tarjeta_pre_img) }}" alt="tarjeta-pre" width="90%" class="shadow">
+        <!-- <img src="{{ asset(json_decode($page->img)->tarjeta_pre_img) }}" alt="tarjeta-pre" width="90%" class="shadow"> -->
+        <img src="{{ json_decode($page->img)->logo_img }}" class="centrar" style="width:70% !important" alt="">
     </div>
     <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile promo' id="promo">
         <h2>{{ json_decode($page->text)->necesitas_title_text }}</h2>
