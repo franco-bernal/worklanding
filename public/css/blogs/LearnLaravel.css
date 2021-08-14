@@ -1,0 +1,71 @@
+.m {
+    border: 1px dashed burlywood;
+}
+
+.codigo {
+    background: rgba(255, 0, 0, 0.199);
+    color: white !important;
+    border: 1px dashed rgb(255, 0, 0);
+    width: max-content;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.cmd {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255) !important;
+    border: 1px dashed rgb(255, 255, 255);
+    width: max-content;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-right: 10px;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.nota {
+    font-size: 8px;
+}
+
+strong {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+.titulos {
+    font-size: 36px;
+    padding-top: 10px;
+}
+
+.comandos {
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.233);
+    font-family: monospace;
+    border: 1px dashed white
+}
+
+/*_-----------------------------*/
+
+@media (max-width: 768px) {
+    .codigo {
+        width: auto;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 12px;
+    }
+    .cmd {
+        font-size: 12px;
+        width: 99%;
+    }
+}

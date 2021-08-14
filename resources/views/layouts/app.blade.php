@@ -38,7 +38,6 @@
     </script>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/click.js') }}" defer></script>
     <script src="{{ asset('js/modal.js') }}" defer></script>
 
 

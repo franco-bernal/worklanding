@@ -81,16 +81,20 @@
     background-attachment: fixed;
     color: white;
 }
-#tecnologias{
-    padding: 70px 0;
+
+#tecnologias {
+    /* padding: 70px 0; */
+    padding: 12vw 0;
 }
+
 .viewTecnologies {
-    color: white;
+    color: black;
     height: auto;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+ 
 }
 
 .viewTecnologies2 {
@@ -162,6 +166,7 @@
     transition: opacity 0.4s;
     opacity: 1;
 }
+
 #promo {
     padding: 200px 10px !important;
 }
@@ -188,9 +193,11 @@
     font-size: 30px;
     line-height: 40px;
 }
+
 #productos {
     padding: 80px 0;
 }
+
 .productTarget {
     padding: 30px 50px;
     height: auto;
@@ -278,7 +285,7 @@
         padding: 80px 20px !important;
     }
     #tecnologias {
-        padding: 30px 0 !important;
+        padding: 20vw 0 !important;
     }
     .tecnyTarget span {
         font-size: 10px;
@@ -466,4 +473,79 @@
 
 .curriculum:hover div {
     opacity: 1 !important;
+}
+
+.blog_noticias {
+    background-color: black;
+    padding: 4vw 10vw;
+    padding-bottom: 10vw;
+    clear: both !important;
+    float: left;
+    width: 100%;
+}
+
+.blog_noticias h2 {
+    text-align: center !important;
+    margin:50px  0 !important;
+    margin-bottom:10px !important;
+    font-weight: bolder !important;
+    color: white;
+}
+
+.blog_noticias a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.blog_noticia {
+    padding: 20px;
+    color: white;
+    word-break: break-all;
+    hyphens: auto !important;
+    min-height: 200px;
+    position: relative !important;
+    background-position: center center;
+    background-repeat: no-repeat !important;
+    background-size: cover;
+    overflow: hidden !important;
+    border-radius: 5px !important;
+}
+.blog_noticia p {
+   /* text-decoration: underline !important; */
+   border-bottom:1px solid var(--color-b) !important;
+}
+.blog_noticia h5 {
+    font-size: 25px !important;
+    font-weight: bolder !important;
+    word-break: break-word;
+    position: absolute;
+    top: 60px;
+    padding-right: 0.6vw;
+    transition: top 0.2s ;
+}
+.blog_noticia:hover h5 {
+    top: 50px;
+    transition: top 0.4s ;
+
+}
+
+@media (max-width:769px) {
+    
+.blog_noticia {
+    padding: 20px;
+    min-height: 150px;
+}
+.blog_noticia p {
+    font-size: 12px;
+}
+.blog_noticia h5 {
+    font-size: 16px !important;
+    top: 50px;
+}
+.blog_noticia:hover h5 {
+    top: 40px;
+
+}
 }

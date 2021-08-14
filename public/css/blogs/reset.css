@@ -1,0 +1,82 @@
+html {
+    height: 100%;
+    width: 100%;
+    background-color: #363636 !important;
+}
+
+body {
+    /*
+     padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    */
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+    width: 100%;
+    color: white;
+    padding-bottom: 100px;
+}
+
+p, strong {
+    font-size: 14px;
+}
+
+input {
+    outline: none;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+}
+
+a:hover {
+    color: turquoise;
+    text-shadow: 0 0 20px turquoise;
+    transition: text-shadow 0.3s;
+}
+
+.hero-head {}
+
+.hero-body {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.columns {
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+    width: auto;
+}
+
+.column {
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+}
+
+.hero-section {
+    width: auto;
+    height: auto;
+}
+
+.centrar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centrar-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.m {
+    border: 3px solid red;
+}

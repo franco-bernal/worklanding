@@ -124,6 +124,15 @@
     border-bottom: 5px solid var(--color-b);
 }
 
+
+.spaceDiv {
+    background-color: rgba(245, 222, 179, 0.096);
+}
+
+.spaceDiv:hover {
+    background-color: rgba(245, 222, 179, 0.274);
+}
+
 @media(max-width:700px) {
     ._title-1 {
         font-size: 30px;

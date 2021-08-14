@@ -16,7 +16,8 @@
         /* background-image: url('{{ json_decode($page->img)->necesitas_back_img }}'); */
         background-attachment: fixed;
     }
-    .ciudad{
+
+    .ciudad {
         background-image: linear-gradient(rgba(2, 0, 1, 0.966), rgba(27, 27, 27, 0.555)),
         url('{{ json_decode($page->img)->necesitas_back_img }}');
         /* background-image: url('{{ json_decode($page->img)->necesitas_back_img }}'); */
@@ -41,7 +42,7 @@
 
 <div class="noticias" style="    margin-top: -5px;">
     @forelse ($noticias as $notice)
-    <div class="noticia" style="    background:linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.658)), url('{{ $notice->background }}');">
+    <div class="noticia" style="    background:linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.747)), url('{{ $notice->background }}');">
         <h3>{{ $notice->title }}</h3>
         <p>{{ $notice->subtitle }}</p>
         @if($notice->btn_link!="no" )
@@ -159,6 +160,28 @@
     </div>
 
 
+</div>
+
+<div class="blog_noticias">
+    <h2>NOTI<span class="subraya">CIAS</span></h2>
+    <a class="text-center" style="color: white !important;
+    position: static;
+    width: 100%;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    display: block;" href="{{ route('blog.search') }}">Ir a busqueda de blogs</a>
+    <div class='columns is-mobile is-gapless is-multiline'>
+        @forelse($blog_noticias as $noticia)
+        <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile'>
+            <div class="blog_noticia" style="background-image:linear-gradient(rgba(15, 15, 15, 0.493), rgba(27, 27, 27, 0.555)), url('{{ $noticia->header_img }}') !important; margin: 5px;">
+                <p>{{ $noticia->created_at }}</p>
+                <h5>{{ $noticia->title }}</h5>
+                <a class="btn-solid" href="{{ url('blog/'.$noticia->id) }}">Ver</a>
+            </div>
+        </div>
+        @empty
+        @endforelse
+    </div>
 </div>
 
 <div class='columns is-mobile is-gapless is-multiline promo' id="formulario">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Blogs;
 use App\Models\Noticias;
 use App\Models\Page;
 use App\Models\Product;
@@ -29,10 +30,13 @@ Route::get('/', function () {
         ->get();
     $usuario = User::select('contactos')
         ->where('id', '=', 1)->first();
+    $blog_noticias = Blogs::where('related', 'like', "%" . "noticia" . "%")
+        ->where('private', '=', 0)->orderBy('created_at', 'desc')->limit(3)->get();
+
 
 
     $contactos = json_decode($usuario->contactos);
-    return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos'));
+    return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos','blog_noticias'));
 })->name('welcome');
 
 // addVisita
@@ -43,7 +47,11 @@ Auth::routes();
 Route::POST('/addEmail', [App\Http\Controllers\Portafolio\EmailsController::class, 'addEmail'])->name('email.add');
 Route::post('/sumStadistic', [App\Http\Controllers\StadisticsController::class, 'sumStadistic'])->name('stadistic.sum');
 
+Route::get('/blog/{value}', [App\Http\Controllers\Portafolio\BlogsController::class, 'blogView'])->name('blog.view');
+Route::get('/search', [App\Http\Controllers\Portafolio\BlogsController::class, 'blogSearch'])->name('blog.search');
 
+
+//bajo login
 Route::group(['middleware' => 'admin'], function () {
 
     Route::get('/zonavendedor', [App\Http\Controllers\Portafolio\SellerController::class, 'index'])->name('seller');
@@ -88,4 +96,14 @@ Route::group(['middleware' => 'admin'], function () {
 
     //estadisticas
     Route::get('/editStadistic', [App\Http\Controllers\StadisticsController::class, 'editDetails'])->name('stadistic.edit');
+
+    //blogs
+
+
+    Route::get('/blogsConfig', [App\Http\Controllers\Portafolio\BlogsController::class, 'blogsView'])->name('blogs.home');
+    Route::get('/deleteBlog', [App\Http\Controllers\Portafolio\BlogsController::class, 'deleteBlog'])->name('delete.blog');
+    Route::get('/getBlog', [App\Http\Controllers\Portafolio\BlogsController::class, 'getBlog'])->name('get.blog');
+    Route::post('/addblog', [App\Http\Controllers\Portafolio\BlogsController::class, 'addBlog'])->name('add.blog');
+    Route::post('/updateblog', [App\Http\Controllers\Portafolio\BlogsController::class, 'updateBlog'])->name('update.blog');
+    Route::post('/privateblog', [App\Http\Controllers\Portafolio\BlogsController::class, 'privateBlog'])->name('private.blog');
 });

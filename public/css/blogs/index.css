@@ -1,0 +1,354 @@
+body {
+    height: 100vh;
+}
+
+html {
+    background-color: rgba(255, 255, 255, 0.507);
+}
+
+.img-principal {
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+}
+
+.img-principal img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.content-section {
+    width: 100%;
+    height: auto;
+    padding: 20px 20vw;
+    float: left;
+}
+
+.content-section h3 {
+    font-size: 27px;
+    padding: 4px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-left: 20px;
+    font-weight: bolder;
+    border-bottom: 1px solid;
+    border-bottom-left-radius: 13px;
+    border-left: 9px solid;
+}
+
+.content-section h4 {
+    font-size: 24px;
+    padding: 4px;
+    color: black;
+    /* background-color: #363636; */
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-left: 20px;
+    font-weight: bolder;
+    border-bottom: 1px solid;
+    border-bottom-left-radius: 13px;
+    border-left: 9px solid;
+}
+
+.content-section h2 {
+    font-size: 16px;
+    padding: 0.5vw;
+    color: white;
+    background-color: #ba9f7b;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.content-section i {
+    color: turquoise;
+    text-shadow: 0 0 1px turquoise;
+    border-bottom: 1px solid #363636;
+}
+
+.content-section h1 {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-weight: bolder;
+
+}
+
+@media(max-width:769px) {
+    .content-section {
+        width: 100%;
+        height: auto;
+        padding: 5vw 5vw;
+        float: left;
+    }
+    .content-section h4 {
+        font-size: 20px;
+        padding: 1vw;
+        color: white;
+        background-color: #363636;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}
+
+/**/
+
+/**/
+
+/**/
+
+@media(max-width:767px) {
+    .cuerpo-form {
+        padding-left: 20px;
+        padding-right: 20px;
+        display: block;
+        color: black;
+    }
+}
+
+.scrol::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.scrol::-webkit-scrollbar:vertical {
+    width: 4px;
+}
+
+.scrol::-webkit-scrollbar-button:increment, .contenedor::-webkit-scrollbar-button {
+    display: none;
+}
+
+.scrol::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+
+.scrol::-webkit-scrollbar-thumb {
+    background-color: #b9e8ee;
+    border-radius: 20px;
+}
+
+.scrol::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff4b;
+    border: 5px solid #ffffff52;
+}
+
+.scrol::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: black;
+}
+
+/*SCROLL FIN*/
+
+@media(max-width:769px) {
+    .logo-central {
+        width: 90%;
+        height: auto;
+    }
+}
+
+.home-section {
+    background-image: url(../img/pexels-eberhard-grossgasteiger-4067873.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    float: left;
+    width: 100%;
+}
+
+.home-section div {
+    position: relative;
+    top: 30%;
+}
+
+.home-section h1 {
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    background-color: #36363634;
+    width: max-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1vw;
+    text-shadow: 0px 0px 3px #363636;
+}
+
+.home-section p {
+    color: white;
+    font-size: 3vw;
+    text-align: center;
+    text-shadow: 0px 0px 3px #363636;
+}
+
+@media(max-width:769px) {
+    .home-section p {
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        text-shadow: 0px 0px 3px #363636;
+    }
+}
+
+textarea {
+    resize: none;
+    background-color: #363636;
+    color: white;
+}
+
+.no-option .lista .first {
+    margin: 5px;
+    background-color: rgb(64, 64, 64);
+    padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.no-option .lista .first:hover {
+    background-color: rgb(118, 118, 118);
+    transition: background-color 0.3s;
+}
+
+.blog_header {
+    height: auto;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 5vw;
+    color: white;
+}
+
+.blog_header h1 {
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.blog_header p {
+    font-size: 18px;
+    padding-bottom: 15px;
+    word-break: break-all;
+    margin-top: 10px;
+    text-align: left;
+    /* padding-right: 6vw; */
+    width: 700px;
+    display: block;
+}
+
+.blog_header a {
+    background-color: #FFD700;
+    color: black;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bolder !important;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+@media(max-width:769px) {
+    .blog_header h1 {
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .blog_header p {
+        font-size: 14px;
+        width: 97%;
+        
+    }
+}
+
+
+.header-links {
+    background: #1d1d1d;
+    float: none;
+}
+
+footer {
+    float: left;
+}
+
+.search-section {
+    padding: 2vw 10vw;
+    
+}
+
+.search-section a {
+    font-weight: bolder;
+}
+
+.search-section .description {
+    font-size: 18px;
+}
+
+.search-section .created_at {
+    font-size: 12px;
+    font-weight: bolder;
+    color: black;
+}
+
+.formu{
+    
+}
+.formu input{
+    width: 61%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+.formu button{
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 3px;
+    padding: 6px;
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+    margin-top: 6px;
+}
+.formu h4{
+    text-align: center;
+    font-size: 88px;
+    display: block;
+    line-height: 89px;
+    font-weight: bolder;
+    color: white;
+}
+.formu p{
+    text-align: center;
+    padding: 14px;
+    font-weight: bolder;
+    color: white;
+
+}
+@media(max-width:768px){
+    
+    .formu h4{
+        font-size: 40px;
+    }
+    .formu input{
+        width: 91%;
+    }
+    
+.search-section a {
+    font-size: 18px !important;
+}
+
+.search-section .description {
+    font-size: 14px;
+}
+
+.search-section .created_at {
+    font-size: 12px;
+}
+
+}
+.searched{
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.904);
+    padding: 5px;
+    border-radius: 10px;
+}

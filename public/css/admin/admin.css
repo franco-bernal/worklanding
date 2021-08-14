@@ -1,11 +1,12 @@
-html {
- 
-}
+html {}
 
 * {
     color: white !important;
 }
 
+body {
+    height: 100vh;
+}
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -92,7 +93,7 @@ input[type="file"] {
         height: auto;
         max-height: 400px;
     }
-    .visitas{
+    .visitas {
         max-height: 200px;
     }
 }
@@ -190,4 +191,95 @@ input[type="file"] {
 .conftext label {
     font-size: 11px;
     color: rgba(255, 255, 255, 0.486) !important;
+}
+
+.relatedTags {
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.relatedTags span {
+    font-size: 12px;
+    border-radius: 3px;
+    display: flex;
+    width: max-content;
+    padding: 2px 5px;
+    padding-right: 25px;
+    background: var(--color-b) !important;
+    color: white;
+    position: relative;
+    margin: 2px;
+    font-weight: ;
+}
+
+.relatedTags a {
+    color: rgb(0, 0, 0) !important;
+    font-size: 15px;
+    position: absolute;
+    right: 0;
+    background: none;
+    line-height: 1.1;
+    cursor: pointer;
+    padding: 0px 5px;
+    border-radius: 3px;
+}
+
+.relatedTags a:hover {
+    color: rgb(0, 0, 0) !important;
+    background: white;
+}
+
+.agregarBlog {
+    width: 50%;
+    height: 40px;
+    background-color: var(--color-b);
+    color: white;
+    font-weight: bolder;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.listBlogs {
+    width: 100%;
+    max-height: 500px;
+    padding: 1vw;
+    border: 1px solid white;
+    background-color: transparent;
+}
+.listBlogs td{
+    border: 1px solid white;
+    padding: 3px;
+    text-align: center !important
+}
+.listBlogs button{
+    background-color:var(--color-b);
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.listBlogs button:hover{
+    box-shadow: 0px 1px 2px white;
+}
+
+
+.listBlogs th{
+    text-align: center !important;
+}
+@media(max-width:769px){
+    .listBlogs{
+        font-size: 12px;
+    }
+}
+.updateBlog{
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: rgb(31, 31, 31) !important;
 }
