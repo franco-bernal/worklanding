@@ -176,7 +176,7 @@
             <div class="blog_noticia" style="background-image:linear-gradient(rgba(15, 15, 15, 0.493), rgba(27, 27, 27, 0.555)), url('{{ $noticia->header_img }}') !important; margin: 5px;">
                 <p>{{ $noticia->created_at }}</p>
                 <h5>{{ $noticia->title }}</h5>
-                <a class="btn-solid" href="{{ url('blog/'.$noticia->id) }}">Ver</a>
+                <a class="btn-solid" href="{{ url('blog/'.$noticia->title) }}">Ver</a>
             </div>
         </div>
         @empty
