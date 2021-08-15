@@ -26,7 +26,36 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin fb</title>
+    <title>{{ $blogs->title }} - Franco Bernal</title>
+    <meta name="keywords"
+    content="{{ $blogs->title }},{{ $blogs->related }}" />
+<meta name="description"
+    content="{{ $blogs->description }}">
+
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+    <meta name="robots" content="all" />
+
+    <!--Open Graph data-->
+    <meta property="og:title" content="{{ $blogs->title }}" />
+    <meta property="og:url" content="https://inndev.cf/blog/{{ $blogs->title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ $blogs->description }}" />
+    <meta property="og:image" content="{{ asset($blogs->header_img) }}" />
+
+    <!--Twitter-->
+    <meta name=" twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ $blogs->title }}">
+    <meta name="twitter:description" content="{{ $blogs->description }}">
+    <meta name="twitter:url" content="https://inndev.cf/blog/{{ $blogs->title }}">
+    <meta name="twitter:image" content="{{ asset($blogs->header_img) }}">
+
+    <script type="application/ld+json">
+        {
+            "name": "inndev.cf",
+            "homepage": "https://www.inndev.cf/blog"
+        }
+    </script>
+
 
     <!-- Scripts -->
     <!-- <script src="{{ asset('js/modal.js') }}" defer></script> -->

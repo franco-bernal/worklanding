@@ -32,8 +32,8 @@
 
     <script type="application/ld+json">
         {
-            "name": "appic.one",
-            "homepage": "https://www.appic.one"
+            "name": "inndev.cf",
+            "homepage": "https://www.inndev.cf",
         }
     </script>
 
