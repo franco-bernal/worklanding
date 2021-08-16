@@ -92,7 +92,7 @@ class TecnologiesController extends Controller
                 // "order" => $request->input('order'),
             ]);
 
-        return redirect('zonavendedor');
+        return redirect()->back();
     }
     public function checkTecno(Request $request)
     {
