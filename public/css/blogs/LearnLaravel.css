@@ -1,12 +1,13 @@
 .m {
-    border: 1px dashed burlywood;
+    border: 1px dashed rgb(163, 184, 108);
 }
 
 .codigo {
-    background: rgba(255, 0, 0, 0.199);
+    background: repeating-linear-gradient(
+        45deg
+        , black, transparent 100px);
     color: white !important;
     border: 1px dashed rgb(255, 0, 0);
-    width: max-content;
     height: auto;
     margin-top: 20px;
     margin-bottom: 10px;

@@ -167,13 +167,13 @@
     <a class="text-center" style="color: white !important;
     position: static;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-decoration: underline;
     display: block;" href="{{ route('blog.search') }}">Ir a busqueda de blogs</a>
     <div class='columns is-mobile is-gapless is-multiline'>
         @forelse($blog_noticias as $noticia)
         <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile'>
-            <div class="blog_noticia" style="background-image:linear-gradient(rgba(15, 15, 15, 0.493), rgba(27, 27, 27, 0.555)), url('{{ $noticia->header_img }}') !important; margin: 5px;">
+            <div class="blog_noticia" style="background-image:linear-gradient(rgba(15, 15, 15, 0.493), rgba(27, 27, 27, 0.555)), url('{{ $noticia->header_img }}') !important;">
                 <p>{{ $noticia->created_at }}</p>
                 <h5>{{ $noticia->title }}</h5>
                 <a class="btn-solid" href="{{ url('blog/'.$noticia->title) }}">Ver</a>
