@@ -30,7 +30,7 @@
     <meta name="twitter:title" content="Franco bernal desarrollo de Sitio web">
     <meta name="twitter:description" content="Desarrollador web, junior ,Desarrollador de páginas web responsive, one page, landing, páginas con administrador, sistemas. Página de contacto y muestra.">
     <meta name="twitter:url" content="https://inndev.cf">
-    <!-- <meta name="twitter:image" content="{{ json_decode($page->img)->tarjeta_pre_img }}"> -->
+    <meta name="twitter:image" content="{{ json_decode($page->img)->tarjeta_pre_img }}">
 
     <script type="application/ld+json">
         {
