@@ -94,4 +94,28 @@ class TecnologiesController extends Controller
 
         return redirect('zonavendedor');
     }
+    public function checkTecno(Request $request)
+    {
+        $id = $request->id;
+
+        $toCheck = $request->private;
+        if ($toCheck == 1) {
+            $toCheck = 0;
+        } else {
+            if ($toCheck == 0)
+                $toCheck = 1;
+        }
+        $resp = DB::table('tecnologies')
+            ->where('id', '=', $id)
+            ->update([
+                "active" => $toCheck,
+                "updated_at" => Carbon::now(),
+            ]);
+        // dd($resp);
+        if ($resp == 1) {
+            return $toCheck;
+        } else {
+            return -1;
+        }
+    }
 }

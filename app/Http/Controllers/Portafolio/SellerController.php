@@ -89,7 +89,10 @@ class SellerController extends Controller
         $edit = Tecnologies::where('id', '=', $request->id)->first();
         $type = "tecnology";
         $page = Page::where('user', '=', 1)->first();
+        $usuario = User::select('contactos')
+        ->where('id', '=', 1)->first();
+        $contactos = json_decode($usuario->contactos);
 
-        return view('update', compact('edit', 'type', 'page'));
+        return view('update', compact('edit', 'type', 'page','contactos'));
     }
 }

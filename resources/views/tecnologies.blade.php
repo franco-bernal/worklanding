@@ -1,44 +1,51 @@
+<h2>Tecnologias</h2>
+
 <div class='columns is-mobile is-gapless is-multiline '>
-    <div class='column is-8-fullhd is-8-desktop  is-12-tablet  is-12-mobile viewTecnologies'>
+    <div class='column centrar-full is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile ' style="color: white;">
+        <table class="listBlogs">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Borrar</th>
+                    <th>Modificar</th>
+                    <th>Activo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr onclick="formTecnology(true); eg1OpenModal('eg1_modal');">
+                    <td>Agregar [+]</td>
+                </tr>
+                @forelse ($tecnologies as $tecny)
 
+                <tr id="itemTec{{ $tecny->id }}">
+                    <td>{{ $tecny->name }}</td>
+                    <td><img width="30px" src="{{  $tecny->img_logo }}" alt=""></td>
+                    <td>
+                        <button onclick="deleteTecny('{{ $tecny->id }}')">Borrar</a>
 
+                    </td>
+                    <td>
+                        <!-- <a href="">Modificar</a> -->
+                        <a href="{!! route('pageTecedit', ['id'=>$tecny->id]) !!}">Modificar</a>
+                    </td>
+                    <td>
+                        <form action="">
+                            <input onchange="checkTecno('{{ $tecny->id }}','checkTecno{{ $tecny->id }}')" type="checkbox" value="{{ $tecny->active }}" id="checkTecno{{ $tecny->id }}" {{ $tecny->active==1 ? 'checked' : '' }}>
+                        </form>
+                    </td>
+                </tr>
+                @empty
+                @endforelse
 
-        @forelse ($tecnologies as $tecny)
-        <div class="tecnyTarget">
-            <div>
-                <img class="centrar" src="{{ $tecny->img_logo }}" style="height:60px !important;" alt="">
-                <p class="text-center">{{ $tecny->name }}</p>
-                <!-- <span class="centrar-full tecnyspam">
-                    <p>{{ $tecny->description }}</p>
-                </span> -->
-                @if (Auth::user()->tipo_usuario==1)
-                <form method='get' action="{{ route('tecnology.del') }}">
-                    @csrf
-                    <input type="hidden" name="idDelete" value="{{ $tecny->id }}"> <br>
-                    <button type="submit" class="btn-square" style="width:100% !important;display:block;"> Borrar</button>
-                </form>
-                <a class="btn-square" style="width:100% !important;display:block;" href="{!! route('pageTecedit', ['id'=>$tecny->id]) !!}">Modificar</a>
-                <a class="btn-square" style="width:100% !important;display:block;" onclick="cargarVerTec('{{ $tecny->id }}','{{ $tecny->name }}','{{ $tecny->img_logo }}',)">Ver</a>
-                @endif
-            </div>
-        </div>
-
-
-
-        @empty
-        @endforelse
-
-
-    </div>
-
-    <div class='column centrar-full is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile viewTecnologies2'>
-        <div class='column is-2-fullhd is-2-desktop  is-6-tablet  is-6-mobile  product-add'>
-            <div class='centrar-full text-center' onclick="formTecnology(true); eg1OpenModal('eg1_modal');">
-                <p class='_title-1' style="cursor:pointer; "><span class="subraya">Agregar</span> tecnología</p>
-            </div>
-        </div>
+            </tbody>
+        </table>
     </div>
 </div>
+
+
+
+
 
 
 
@@ -53,50 +60,29 @@
 </div>
 
 <script>
-    // var toAdd = [];
+    function deleteTecny(id) {
 
-    // localStorage.setItem("carrito", JSON.stringify(toAdd));
+        var opcion = confirm("Eliminar producto?");
+        if (opcion) {
+            $.ajax({
+                type: 'get',
+                url: "{{ route('tecnology.del') }}",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    idDelete: id,
+                },
+                success: function(data) {
+                    $("#itemTec" + id).remove();
+                },
+                error: function(error) {}
+            }).fail(function(jqXHR, textStatus, error) {
 
-    // var lleno = JSON.parse(localStorage.getItem("carrito"));
-
-
-    function cargarVerTec(id) {
-        // $.ajax({
-        //     type: 'GET',
-        //     url: "{{ route('tecnology.get') }}",
-        //     data: {
-        //         id: id,
-        //     },
-        //     success: function(data) {
-        //         console.log(data);
-        //         $('#nameInfoTec').text(data[0].name);
-        //         $('#descriptionInfoTec').text(data[0].description);
-        //         $('#imgInfoTec').attr('src', data[0].img_logo);
-
-        //         $('#btnModificar').attr('onclick', "editTecnology(true,'" +
-        //             data[0].id + "','" +
-        //             data[0].name + "','" +
-        //             data[0].description + "','" +
-        //             data[0].img_logo + "');eg1OpenModal('eg1_modal');")
-
-        //         $('#idedit').attr('value', id);
-
-        //         clearModal();
-        //         let info = $('#tecnologyInfo');
-        //         if (info.css("display") == "none") {
-        //             info.css("display", "block");
-        //         }
-        //         eg1OpenModal('eg1_modal');
-        //     },
-        //     error: function(error) {
-        //         console.log(error);
-        //     }
-        // }).fail(function(jqXHR, textStatus, error) {
-        //     // Handle error here
-        //     console.log(jqXHR.responseText);
-        // });
-
+            });
+        }
     }
+
 
     function formTecnology(active = true) {
         clearModal();
@@ -126,4 +112,35 @@
 
 
     }
+    function checkTecno(id, idCheck) {
+            let valueActual = $("#" + idCheck).val();
+            $.ajax({
+                type: 'post',
+                url: "{{ route('tecnology.active') }}",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    id: id,
+                    private: valueActual,
+                },
+                success: function(data) {
+                    console.log(data);
+                    if (data != -1) {
+                        if (valueActual != 1) {
+                            $("#" + idCheck).removeAttr('checked');
+                        } else {
+                            $("#" + idCheck).attr('checked', 'checked');
+                        }
+                        $("#" + idCheck).val(data);
+                    }else{
+                        alert('error al actualizar');
+                    }
+
+                },
+                error: function(error) {}
+            }).fail(function(jqXHR, textStatus, error) {
+
+            });
+        }
 </script>

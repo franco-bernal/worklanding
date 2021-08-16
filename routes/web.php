@@ -22,8 +22,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = Product::orderBy('order', 'desc')->get();
-    $tecnologies = Tecnologies::orderBy('order', 'desc')->get();
+    $data = Product::orderBy('order', 'desc')->where('active', '1')->get();
+    $tecnologies = Tecnologies::orderBy('order', 'desc')->where('active', '1')->get();
     $page = Page::where('user', '=', 1)->first();
     $noticias = Noticias::where('id_user', '=', 1)
         ->where('active', '=', 1)
@@ -32,9 +32,6 @@ Route::get('/', function () {
         ->where('id', '=', 1)->first();
     $blog_noticias = Blogs::where('related', 'like', "%" . "noticia" . "%")
         ->where('private', '=', 0)->orderBy('created_at', 'desc')->limit(3)->get();
-
-
-
     $contactos = json_decode($usuario->contactos);
     return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos','blog_noticias'));
 })->name('welcome');
@@ -66,11 +63,13 @@ Route::group(['middleware' => 'admin'], function () {
     Route::post('/productadd', [App\Http\Controllers\Portafolio\ProductController::class, 'addProduct'])->name('product.add');
     Route::get('/productget', [App\Http\Controllers\Portafolio\ProductController::class, 'getProduct'])->name('product.get');
     Route::POST('/productedit', [App\Http\Controllers\Portafolio\ProductController::class, 'editProduct'])->name('product.edit');
+    Route::POST('/productactive', [App\Http\Controllers\Portafolio\ProductController::class, 'checkActive'])->name('product.active');
 
     Route::post('/tecnologyadd', [App\Http\Controllers\Portafolio\TecnologiesController::class, 'addTecnology'])->name('tecnology.add');
     Route::get('/tecnologydel', [App\Http\Controllers\Portafolio\TecnologiesController::class, 'deleteTecnology'])->name('tecnology.del');
     Route::get('/tecnologyget', [App\Http\Controllers\Portafolio\TecnologiesController::class, 'getTecnology'])->name('tecnology.get');
     Route::POST('/tecnologyedit', [App\Http\Controllers\Portafolio\TecnologiesController::class, 'editTecnology'])->name('tecnology.edit');
+    Route::POST('/tecnoactive', [App\Http\Controllers\Portafolio\TecnologiesController::class, 'checkTecno'])->name('tecnology.active');
 
     //admin
     Route::get('/dashboard', [App\Http\Controllers\Portafolio\SellerController::class, 'dashboard'])->name('dashboard');

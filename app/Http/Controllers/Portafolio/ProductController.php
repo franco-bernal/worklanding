@@ -144,4 +144,28 @@ class ProductController extends Controller
             ]);
         return redirect()->back();
     }
+    public function checkActive(Request $request)
+    {
+        $id = $request->id;
+
+        $toCheck = $request->private;
+        if ($toCheck == 1) {
+            $toCheck = 0;
+        } else {
+            if ($toCheck == 0)
+                $toCheck = 1;
+        }
+        $resp = DB::table('products')
+            ->where('id', '=', $id)
+            ->update([
+                "active" => $toCheck,
+                "updated_at" => Carbon::now(),
+            ]);
+        // dd($resp);
+        if ($resp == 1) {
+            return $toCheck;
+        } else {
+            return -1;
+        }
+    }
 }
