@@ -1,0 +1,148 @@
+<div class='hero-section'>
+    <h1>Plantilla html con bulma</h1>
+    <p>bulma activado solo con cdn</p>
+
+
+<textarea disabled style="width:100%;" rows='10'>
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https: //cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css'>
+    <title>hola</title>
+    <link rel='stylesheet' href='../css/index.css'>
+    </head>
+    <body>
+        <div class='hero'>
+            <div class='hero-body'>
+                <div class='hero-section'>
+        <!--contenido-->
+        <!--contenido-->
+        <!--contenido-->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+</textarea>
+    <!--TEXTAREA-->
+    <!--TEXTAREA-->
+    <!--TEXTAREA-->
+    <hr>
+    <h1>Plantilla Css modificando bullma</h1>
+    <!--TEXTAREA--> <textarea disabled style="width:100%;" rows='10'> 
+        html {}
+
+        body {
+            /*                  
+            padding-top: 10px;
+            padding-left: 10px;                            
+            padding-right: 10px;                            
+            padding-bottom: 20px;                           
+             */
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .hero {
+            height: 100%;
+            width: 100%;
+        }
+
+        .hero-head {}
+
+        .hero-body {
+            height: auto;
+            width: 100%;
+            padding: 0px;
+        }
+
+        .columns {
+            padding: 0px;
+            margin: 0px;
+            height: auto;
+            width: auto;
+        }
+
+        .column {
+            padding: 0px;
+            margin: 0px;
+            height: auto;
+        }
+
+        .hero-section {
+            width: auto;
+            height: auto;
+            background-color: seagreen;
+        }
+
+        .centrar {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .centrar-full {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .m {
+            border: 3px solid red;
+        }
+
+        </textarea> <!--TEXTAREA-->
+    <hr>
+    <h1>tamaños de mediaquery´s @media </h1> <textarea disabled style="width:100%;"
+        rows='10'> 
+        @media (max-width: 768px) {}
+
+        /*/ Tablets en horizonal y escritorios normales                    ------------------------------------------------------------------------- /*/
+        
+        @media (max-width: 1024px) {}
+        
+        /*/ Escritorios muy anchos                    Otros   ------------------------------------------------------------------------- */
+        
+        @media (max-width: 1200px) {}
+        
+        @media (max-width: 1300px) {}
+        
+        @media(max-width: 370px) {}          
+    </textarea>
+    <hr>
+    <h1>Columns</h1> <textarea name='' id='' style="width:100%;"
+        rows='10'>          
+        <div class='columns is-gapless  is-multiline'>
+            <div class='column letras  is-10-fullhd is-10-desktop  is-12-tablet  is-12-mobile '> </div>
+            <div class='column naveg is-2-fullhd is-2-desktop  is-12-tablet  is-12-mobile '> </div>
+        </div>       
+    </textarea>
+    <hr>
+    <hr>
+    <h1>Notas de diseño</h1>
+    <p>para posicionar un objeto absolute dentro de un div <br> es necesario que el div padre esté en position:relative;
+        así se puede posicionar con left: 0 por ejemplo. </p>
+    <p>para centrar con absolute sólo se necesita que tenga</p> <textarea name='' id='' style="width:100%;"
+        rows='10'>             
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+      </textarea>
+    <p>y otra forma es con flex</p>
+     <textarea name='' id='' style="width:100%;"
+        rows='10'>                    
+        display: flex;                    
+        align-items: center;                    
+        justify-content: center;                    
+    </textarea>
+    <p>La forma más simple</p> <textarea name='' id='' style="width:100%;"
+        rows='10'>                    
+        display: block;                    
+        margin-left: auto;                    
+        margin-right: auto;                    </textarea>
+    <p>acortado margin: 0 auto;</p>
+</div>

@@ -28,7 +28,7 @@
 
     <title>{{ $blogs->title }} - Franco Bernal</title>
     <meta name="keywords"
-    content="{{ $blogs->title }},{{ $blogs->related }}" />
+    content="{{ $blogs->related }}" />
 <meta name="description"
     content="{{ $blogs->description }}">
 
