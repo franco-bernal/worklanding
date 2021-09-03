@@ -110,7 +110,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/proyects', [App\Http\Controllers\Portafolio\TasksController::class, 'homeProyects'])->name('task.home');
     Route::get('/proyect', [App\Http\Controllers\Portafolio\TasksController::class, 'viewProyect'])->name('task.proyect');
     Route::post('/proyectAdd', [App\Http\Controllers\Portafolio\TasksController::class, 'addProyect'])->name('task.add');
-    Route::post('/favoriteProyect', [App\Http\Controllers\Portafolio\TasksController::class, 'favoriteProyect'])->name('favorite.proyect');
+    Route::get('/favoriteProyect', [App\Http\Controllers\Portafolio\TasksController::class, 'favoriteProyect'])->name('favorite.proyect');
     Route::get('/deleteProyect', [App\Http\Controllers\Portafolio\TasksController::class, 'deleteProyect'])->name('proyect.delete');
 
 
