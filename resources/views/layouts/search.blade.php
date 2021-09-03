@@ -15,6 +15,7 @@
 
         .blog_header {
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)), url('');
+
         }
     </style>
 
@@ -26,7 +27,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Admin fb</title>
+    <title>Go Blog</title>
 
     <!-- Scripts -->
     <!-- <script src="{{ asset('js/modal.js') }}" defer></script> -->
@@ -46,14 +47,22 @@
 
     <style>
         body {
-            background-image: url(https://images.pexels.com/photos/1252872/pexels-photo-1252872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            /* background-image: url(https://images.pexels.com/photos/1252872/pexels-photo-1252872.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
+            url('{{ json_decode($page->img)->header_back_img }}');
+            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
+            height: auto;
+            min-height: 100vh;
         }
 
         h4 {
-            -webkit-text-stroke: 2px white;
+            /* -webkit-text-stroke: 2px white; */
         }
     </style>
 
@@ -97,11 +106,16 @@
                     @forelse ($blogs as $blog)
                     <div class='column is-8-fullhd is-8-desktop  is-12-tablet  is-12-mobile'>
                         <div class='searched'>
+                            <a href="{{ url('blog/'.$blog->title) }}" class="mb-4">
+                                <img src="{{ asset('img/star-off.png') }}" alt="">
+                                {{ $blog->title }}
+                                <p class='url-description'>{{ url('blog/'.$blog->title) }}</p>
+                            </a>
 
-                            <a href="{{ url('blog/'.$blog->title) }}" class="mb-4" style="font-size:30px">{{ $blog->title }}</a>
                             <p class="created_at">{{ $blog->created_at }}</p>
                             <p class="description" style="word-break: break-all;">{{ substr($blog->description, 0, 80)  }}</p>
                         </div>
+                        <hr style="opacity:0">
                     </div>
                     @empty
                     <h4 style=" width: 100%;">No se encontraron coincidencias</h4>
@@ -126,7 +140,3 @@
 </body>
 
 </html>
-
-
-
-

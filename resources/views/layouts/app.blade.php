@@ -183,7 +183,6 @@
 
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('carrusel/slick.js') }}"></script>
-
     <script>
         function cargarVer(id, name, description, link, tecnology, img_logo, img_back) {
             $('#nameInfo').text(name);

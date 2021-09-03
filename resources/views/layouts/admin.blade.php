@@ -5,13 +5,14 @@
 
 
     <style>
-        :root {
+      :root {
             --color-a:{{ json_decode($page->color)->a_color }} !important;
             --color-b:{{ json_decode($page->color)->b_color }} !important;
             --color-ab: {{ json_decode($page->color)->ab_color }} !important;
             --color-bc: {{ json_decode($page->color)->bc_color }} !important;
             --radio: 3px;
         }
+        //
 
         .block1 {
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
@@ -34,6 +35,7 @@
             url('{{ json_decode($page->img)->tecnologias_img }}');
 
         }
+
 
         html {
             background-color: black !important;
@@ -85,6 +87,8 @@
     <link href="{{ asset('css/form.css') }}" rel="stylesheet">
     <link href="{{ asset('carrusel/slick-theme.css') }}" rel="stylesheet">
 
+    <link href="{{ asset('css/tasks/home.css') }}" rel="stylesheet">
+
 
 </head>
 
@@ -118,6 +122,7 @@
                             <a href="{{ route('slidersConfig') }}" class="navbar-item">Sliders</a></li>
                             <a href="{{ route('profileConfig') }}" class="navbar-item">profile</a></li>
                             <a href="{{ route('blogs.home') }}" class="navbar-item">blogs</a></li>
+                            <a href="{{ route('task.home') }}" class="navbar-item">Proyectos</a></li>
                             <!-- <a href="{{ route('stadisticsConfig') }}" class="navbar-item">stadistics Config</a></li> -->
 
 
@@ -162,6 +167,7 @@
 
 
                         @yield('content')
+
                     </div>
 
                     <div class="column is-3 mt-6">
@@ -175,8 +181,6 @@
                                 <li><a href="{{ route('slidersConfig') }}" class=" {{(request()->is('slidersConfig')) ? 'is-active' : '' }}">Sliders</a></li>
                                 <li><a href="{{ route('profileConfig') }}" class=" {{(request()->is('profileConfig')) ? 'is-active' : '' }}">profile</a></li>
                                 <li><a href="{{ route('blogs.home') }}" class=" {{(request()->is('blogs.home')) ? 'is-active' : '' }}">Blogs</a></li>
-
-                                <!-- <li><a href="{{ route('stadisticsConfig') }}" class=" {{(request()->is('stadisticsConfig')) ? 'is-active' : '' }}">stadistics Config</a></li> -->
                             </ul>
                             <!-- 
                             <p class="menu-label">
@@ -223,6 +227,8 @@
 
     <script src="{{ asset('js/jquery-3.5.1.min.js') }}"></script>
     <script src="{{ asset('carrusel/slick.js') }}"></script>
+    @yield('js')
+
     <script language="javascript">
         //  BLOQUEAR ENTER EN FORMULARIO
         $(document).ready(function() {
@@ -331,6 +337,26 @@
             rows: 1,
             prevArrow: '<button type="button" class="slick-prev"></button>',
             nextArrow: '<button type="button" class="slick-next"></button>',
+        });
+        $(".process").slick({
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            adaptiveHeight: true,
+            autoplay: false,
+            autoplaySpeed: 2000,
+            arrows: true,
+            slidesToScroll: 1,
+            rows: 1,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            responsive: [{
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            }, ],
         });
 
         function clearModal() {
@@ -476,7 +502,7 @@
         $("body").on("click", "#cancelUpdate", function(e) {
             e.preventDefault();
             $(".updateBlog").slideUp();
-            relatedUpdate=[];
+            relatedUpdate = [];
             $("#relatedInputUpdate").val('');
 
             $("#updateBlog")[0].reset();
@@ -586,7 +612,7 @@
                             $("#" + idCheck).attr('checked', 'checked');
                         }
                         $("#" + idCheck).val(data);
-                    }else{
+                    } else {
                         alert('error al actualizar');
                     }
 

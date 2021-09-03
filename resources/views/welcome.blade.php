@@ -42,7 +42,8 @@
 
 <div class="noticias" style="    margin-top: -5px;">
     @forelse ($noticias as $notice)
-    <div class="noticia" style="    background:linear-gradient(rgba(0, 0, 0, 0.781), rgba(0, 0, 0, 0.747)), url('{{ $notice->background }}');">
+    <div class="noticia" style="background: rgb(2,0,2);
+background: linear-gradient(144deg, rgba(2,0,2,0.919502835313813) 51%, rgba(70,131,205,0) 100%, rgba(167,67,132,1) 9985%), url('{{ $notice->background }}');">
         <h3>{{ $notice->title }}</h3>
         <p>{{ $notice->subtitle }}</p>
         @if($notice->btn_link!="no" )

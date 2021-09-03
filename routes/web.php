@@ -33,7 +33,7 @@ Route::get('/', function () {
     $blog_noticias = Blogs::where('related', 'like', "%" . "noticia" . "%")
         ->where('private', '=', 0)->orderBy('created_at', 'desc')->limit(3)->get();
     $contactos = json_decode($usuario->contactos);
-    return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos','blog_noticias'));
+    return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos', 'blog_noticias'));
 })->name('welcome');
 
 // addVisita
@@ -105,4 +105,20 @@ Route::group(['middleware' => 'admin'], function () {
     Route::post('/addblog', [App\Http\Controllers\Portafolio\BlogsController::class, 'addBlog'])->name('add.blog');
     Route::post('/updateblog', [App\Http\Controllers\Portafolio\BlogsController::class, 'updateBlog'])->name('update.blog');
     Route::post('/privateblog', [App\Http\Controllers\Portafolio\BlogsController::class, 'privateBlog'])->name('private.blog');
+
+    //Tasks
+    Route::get('/proyects', [App\Http\Controllers\Portafolio\TasksController::class, 'homeProyects'])->name('task.home');
+    Route::get('/proyect', [App\Http\Controllers\Portafolio\TasksController::class, 'viewProyect'])->name('task.proyect');
+    Route::post('/proyectAdd', [App\Http\Controllers\Portafolio\TasksController::class, 'addProyect'])->name('task.add');
+    Route::post('/favoriteProyect', [App\Http\Controllers\Portafolio\TasksController::class, 'favoriteProyect'])->name('favorite.proyect');
+    Route::get('/deleteProyect', [App\Http\Controllers\Portafolio\TasksController::class, 'deleteProyect'])->name('proyect.delete');
+
+
+    //task from Json
+    Route::get('/addTask', [App\Http\Controllers\Portafolio\TasksController::class, 'addTask'])->name('task.addtask');
+    Route::get('/getTask', [App\Http\Controllers\Portafolio\TasksController::class, 'getTask'])->name('task.getTask');
+    Route::get('/deleteFromJson', [App\Http\Controllers\Portafolio\TasksController::class, 'deleteFromJson'])->name('task.deleteFromJson');
+    Route::POST('/addToJson', [App\Http\Controllers\Portafolio\TasksController::class, 'addToJson'])->name('task.addToJson');
+    Route::get('/checkFromJson', [App\Http\Controllers\Portafolio\TasksController::class, 'checkFromJson'])->name('task.checkFromJson');
+    Route::POST('/editTaskDescription', [App\Http\Controllers\Portafolio\TasksController::class, 'editTaskDescription'])->name('task.editTaskDescription');
 });

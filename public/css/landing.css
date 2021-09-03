@@ -10,9 +10,10 @@
     background-size: cover !important;
     width: 100% !important;
     height: 100vh !important;
-    background-color: aqua;
     padding: 15vw;
 }
+  
+
 
 .noticia h3 {
     font-size: 5vw;
@@ -24,6 +25,12 @@
     display: block;
     font-weight: bolder;
     border-bottom: 10px solid var(--color-b);
+    background: rgb(175,88,255);
+    background: linear-gradient(87deg, rgba(175,88,255,0.9755252442773985) 23%, rgba(255,231,85,1) 91%, rgba(167,67,132,1) 9985%);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+ 
 }
 
 .noticia p {
@@ -95,7 +102,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
- 
 }
 
 .viewTecnologies2 {
@@ -190,6 +196,7 @@
 .promo p {
     font-size: 30px;
     line-height: 40px;
+    opacity: 0.7;
 }
 
 #productos {
@@ -486,8 +493,8 @@
 
 .blog_noticias h2 {
     text-align: center !important;
-    margin:50px  0 !important;
-    margin-bottom:40px !important;
+    margin: 50px 0 !important;
+    margin-bottom: 40px !important;
     font-weight: bolder !important;
     color: white;
 }
@@ -497,7 +504,6 @@
     bottom: 0;
     right: 0;
 }
-
 
 .blog_noticia {
     padding: 20px;
@@ -512,10 +518,12 @@
     overflow: hidden !important;
     /* border-radius: 5px !important; */
 }
+
 .blog_noticia p {
-   /* text-decoration: underline !important; */
-   border-bottom:1px solid var(--color-b) !important;
+    /* text-decoration: underline !important; */
+    border-bottom: 1px solid var(--color-b) !important;
 }
+
 .blog_noticia h5 {
     font-size: 25px !important;
     font-weight: bolder !important;
@@ -523,29 +531,27 @@
     position: absolute;
     top: 60px;
     padding-right: 0.6vw;
-    transition: top 0.2s ;
+    transition: top 0.2s;
 }
+
 .blog_noticia:hover h5 {
     top: 50px;
-    transition: top 0.4s ;
-
+    transition: top 0.4s;
 }
 
 @media (max-width:769px) {
-    
-.blog_noticia {
-    padding: 20px;
-    min-height: 150px;
-}
-.blog_noticia p {
-    font-size: 12px;
-}
-.blog_noticia h5 {
-    font-size: 16px !important;
-    top: 50px;
-}
-.blog_noticia:hover h5 {
-    top: 40px;
-
-}
+    .blog_noticia {
+        padding: 20px;
+        min-height: 150px;
+    }
+    .blog_noticia p {
+        font-size: 12px;
+    }
+    .blog_noticia h5 {
+        font-size: 16px !important;
+        top: 50px;
+    }
+    .blog_noticia:hover h5 {
+        top: 40px;
+    }
 }
