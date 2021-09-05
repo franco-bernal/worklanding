@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class visitasController extends Controller
@@ -11,12 +12,13 @@ class visitasController extends Controller
     public function addVisita(Request $request)
     {
         // dd($request, $nameLogo, $nameBack);
-        DB::table('visitas')->insert([
-            "ip" => $request->ip(),
-            "created_at" => Carbon::now(),
-            "updated_at" => Carbon::now(),
-        ]);
-        return $request->ip();
+        if (Auth::guest()) {
+            DB::table('visitas')->insert([
+                "ip" => $request->ip(),
+                "created_at" => Carbon::now(),
+                "updated_at" => Carbon::now(),
+            ]);
+        }
     }
 
     public function deleteVisita(Request $request)
