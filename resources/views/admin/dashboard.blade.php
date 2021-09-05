@@ -3,32 +3,32 @@
 @section('content')
 
 
-    <h1>Contadores</h1>
+<h1>Contadores</h1>
 
 
 
 
-    <div class='columns is-mobile is-gapless is-multiline contadores' style='margin-top:20px; margin-bottom: 20px;'>
-        @forelse($stadistics as $key => $value)
-        <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
-            <p>{{ $value }}</p>
-            <p>{{ $key }}</p>
-        </div>
-        @empty
-        @endforelse
-        <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
-            <p>{{ $users }}</p>
-            <p>Users</p>
-        </div>
-        <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
-            <p>{{ count($emails) }}</p>
-            <p>Mensaje</p>
-        </div>
-        <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
-            <p>{{ $visitasAll }}</p>
-            <p>Visitas</p>
-        </div>
+<div class='columns is-mobile is-gapless is-multiline contadores' style='margin-top:20px; margin-bottom: 20px;'>
+    @forelse($stadistics as $key => $value)
+    <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
+        <p>{{ $value }}</p>
+        <p>{{ $key }}</p>
     </div>
+    @empty
+    @endforelse
+    <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
+        <p>{{ $users }}</p>
+        <p>Users</p>
+    </div>
+    <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
+        <p>{{ count($emails) }}</p>
+        <p>Mensaje</p>
+    </div>
+    <div class='column is-3-fullhd is-3-desktop  is-3-tablet  is-3-mobile ' style='padding:20px !important;'>
+        <p>{{ $visitasAll }}</p>
+        <p>Visitas</p>
+    </div>
+</div>
 
 
 
@@ -66,10 +66,10 @@
     <div class="column is-4">
         <h3>Visitas</h3>
         <p>Desde la última</p>
-
+        <a class="btn-solid" onclick="deleteVisita(-1,true)">Limpiar todas</a>
         <div class="visitas">
             @forelse($visitas as $visita)
-            <p> {{ todayDate($visita->created_at) }}</p>
+            <p id="visita{{ $visita->id }}" onclick="deleteVisita('{{ $visita->id }}',false)"> {{ todayDate($visita->created_at) }} - <strong>{{ $visita->ip }}</strong></p>
             @empty
             <p>Sin visitas</p>
             @endforelse

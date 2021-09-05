@@ -5,13 +5,14 @@
 
 
     <style>
-      :root {
+        :root {
             --color-a:{{ json_decode($page->color)->a_color }} !important;
             --color-b:{{ json_decode($page->color)->b_color }} !important;
             --color-ab: {{ json_decode($page->color)->ab_color }} !important;
             --color-bc: {{ json_decode($page->color)->bc_color }} !important;
             --radio: 3px;
         }
+
         //
 
         .block1 {
@@ -622,8 +623,72 @@
 
             });
         }
-        function alert(valor){
+
+        function alert(valor) {
             console.log(valor);
+        }
+        // <a id="deleteVisitasButton">Limpiar todas</a>
+        // <a id="limpiarUltimas">borrar 5</a>
+
+
+        function deleteVisita(id, deleteAll) {
+            var opcion = confirm("Eliminar?");
+            if (opcion) {
+                $.ajax({
+                    type: 'post',
+                    url: "{{ route('visitas.delete') }}",
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    data: {
+                        id: id,
+                        deleteAll: deleteAll,
+                    },
+                    success: function(data) {
+                        console.log(data);
+                        if (data > 1) {
+                            if (deleteAll) {
+                                $(".visitas").html('');
+                            } else {
+                                $("#visita" + id).slideUp().ready(function() {
+                                    $(this).remove();
+                                });
+                            }
+                        } else {
+                            alert('error al actualizar');
+                        }
+
+                    },
+                    error: function(error) {}
+                }).fail(function(jqXHR, textStatus, error) {
+
+                });
+            }
+        }
+
+        function deleteUltimos(cantidad) {
+            $.ajax({
+                type: 'post',
+                url: "{{ route('private.blog') }}",
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                data: {
+                    number: cantidad,
+                },
+                success: function(data) {
+                    console.log(data);
+                    // if (data != -1) {
+
+                    // } else {
+                    //     alert('error al actualizar');
+                    // }
+
+                },
+                error: function(error) {}
+            }).fail(function(jqXHR, textStatus, error) {
+
+            });
         }
     </script>
 </body>

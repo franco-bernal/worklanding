@@ -121,4 +121,8 @@ Route::group(['middleware' => 'admin'], function () {
     Route::POST('/addToJson', [App\Http\Controllers\Portafolio\TasksController::class, 'addToJson'])->name('task.addToJson');
     Route::get('/checkFromJson', [App\Http\Controllers\Portafolio\TasksController::class, 'checkFromJson'])->name('task.checkFromJson');
     Route::POST('/editTaskDescription', [App\Http\Controllers\Portafolio\TasksController::class, 'editTaskDescription'])->name('task.editTaskDescription');
+
+
+    //visitas
+    Route::post('/deleteVisita', [App\Http\Controllers\visitasController::class, 'deleteVisita'])->name('visitas.delete');
 });

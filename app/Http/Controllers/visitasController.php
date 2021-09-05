@@ -12,6 +12,7 @@ class visitasController extends Controller
     {
         // dd($request, $nameLogo, $nameBack);
         DB::table('visitas')->insert([
+            "ip" => $request->ip(),
             "created_at" => Carbon::now(),
             "updated_at" => Carbon::now(),
         ]);
@@ -20,11 +21,17 @@ class visitasController extends Controller
 
     public function deleteVisita(Request $request)
     {
-        $idDelete = $request->input('idDelete');
-        $resp = DB::table('visitas')
-            ->select('visitas.*')
-            ->Where('visitas.id', '=', $idDelete)->delete();
+        if ($request->deleteAll) {
+            $resp = DB::table('visitas')
+                ->select('visitas.*')
+                ->delete();
+        } else {
+            $idDelete = $request->input('id');
+            $resp = DB::table('visitas')
+                ->select('visitas.*')
+                ->Where('visitas.id', '=', $idDelete)->delete();
+        }
 
-        return redirect()->back();
+        return $resp;
     }
 }
