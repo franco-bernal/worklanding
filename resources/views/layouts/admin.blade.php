@@ -646,7 +646,7 @@
                     },
                     success: function(data) {
                         console.log(data);
-                        if (data > 1) {
+                        if (data > 0) {
                             if (deleteAll) {
                                 $(".visitas").html('');
                             } else {
@@ -666,30 +666,7 @@
             }
         }
 
-        function deleteUltimos(cantidad) {
-            $.ajax({
-                type: 'post',
-                url: "{{ route('private.blog') }}",
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
-                data: {
-                    number: cantidad,
-                },
-                success: function(data) {
-                    console.log(data);
-                    // if (data != -1) {
-
-                    // } else {
-                    //     alert('error al actualizar');
-                    // }
-
-                },
-                error: function(error) {}
-            }).fail(function(jqXHR, textStatus, error) {
-
-            });
-        }
+       
     </script>
 </body>
 
