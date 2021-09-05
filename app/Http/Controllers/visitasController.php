@@ -15,7 +15,7 @@ class visitasController extends Controller
             "created_at" => Carbon::now(),
             "updated_at" => Carbon::now(),
         ]);
-        return redirect()->back();
+        return $request->ip();
     }
 
     public function deleteVisita(Request $request)

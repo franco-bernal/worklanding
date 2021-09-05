@@ -622,6 +622,9 @@
 
             });
         }
+        function alert(valor){
+            console.log(valor);
+        }
     </script>
 </body>
 
