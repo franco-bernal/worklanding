@@ -117,10 +117,13 @@ Route::group(['middleware' => 'admin'], function () {
     //task from Json
     Route::get('/addTask', [App\Http\Controllers\Portafolio\TasksController::class, 'addTask'])->name('task.addtask');
     Route::get('/getTask', [App\Http\Controllers\Portafolio\TasksController::class, 'getTask'])->name('task.getTask');
+    Route::POST('/editTaskDescription', [App\Http\Controllers\Portafolio\TasksController::class, 'editTaskDescription'])->name('task.editTaskDescription');
+    Route::POST('/editTaskStep', [App\Http\Controllers\Portafolio\TasksController::class, 'editTaskStep'])->name('task.editTaskStep');
+    
+    
     Route::get('/deleteFromJson', [App\Http\Controllers\Portafolio\TasksController::class, 'deleteFromJson'])->name('task.deleteFromJson');
     Route::POST('/addToJson', [App\Http\Controllers\Portafolio\TasksController::class, 'addToJson'])->name('task.addToJson');
     Route::get('/checkFromJson', [App\Http\Controllers\Portafolio\TasksController::class, 'checkFromJson'])->name('task.checkFromJson');
-    Route::POST('/editTaskDescription', [App\Http\Controllers\Portafolio\TasksController::class, 'editTaskDescription'])->name('task.editTaskDescription');
 
 
     //visitas

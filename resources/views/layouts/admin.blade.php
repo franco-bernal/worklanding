@@ -89,6 +89,7 @@
     <link href="{{ asset('carrusel/slick-theme.css') }}" rel="stylesheet">
 
     <link href="{{ asset('css/tasks/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/global.css') }}" rel="stylesheet">
 
 
 </head>
@@ -340,7 +341,7 @@
             nextArrow: '<button type="button" class="slick-next"></button>',
         });
         $(".process").slick({
-            infinite: true,
+            infinite: false,
             speed: 300,
             slidesToShow: 3,
             adaptiveHeight: true,
@@ -623,9 +624,25 @@
 
             });
         }
+        var cont;
 
         function alert(valor) {
+            cont = cont + 1;
             console.log(valor);
+            let obj = document.createElement('div');
+            obj.setAttribute('class', 'notificationAlert');
+            obj.id = "noti" + cont;
+            obj.innerText = valor;
+            $("html").append(obj);
+            setTimeout(() => {
+                // $("#noti"+cont).slideUp().ready(function() {
+                $("#noti" + cont).slideUp();
+                setTimeout(() => {
+                $("#noti" + cont).remove();
+                }, 5000);
+
+                // });
+            }, 3000);
         }
         // <a id="deleteVisitasButton">Limpiar todas</a>
         // <a id="limpiarUltimas">borrar 5</a>
@@ -665,8 +682,6 @@
                 });
             }
         }
-
-       
     </script>
 </body>
 

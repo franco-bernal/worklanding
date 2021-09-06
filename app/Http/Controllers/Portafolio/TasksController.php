@@ -277,4 +277,14 @@ class TasksController extends Controller
                 "updated_at" => Carbon::now(),
             ]);
     }
+    public function editTaskStep(Request $request)
+    {
+        $resp = DB::table('tasks')
+            ->where('id', '=', $request->idTAsk)
+            ->update([
+                'step' => $request->step,
+                "updated_at" => Carbon::now(),
+            ]);
+        return $resp;
+    }
 }

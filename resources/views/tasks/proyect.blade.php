@@ -49,10 +49,16 @@
             <div id="stepSpace">
                 @foreach( $proyect->tasks as $task)
                 @if($task->step == $step)
-                <a class="task" onclick="taskTab('{{ $task->id }}')" style="padding:10px !important;">{{ $task->name }}</a>
+                <a class="task" id="taskElement{{ $task->id }}">
+                    <div class="selectStepInput">
+                        @foreach(json_decode($proyect->steps) as $stepe)
+                        <span onclick="moveTo('{{ $task->id }}','{{ $stepe }}','#taskElement{{ $task->id }}')">{{ $stepe }}</span>
+                        @endforeach
+                    </div>
+                    <p onclick="taskTab('{{ $task->id }}')">{{ $task->name }}</p>
+                </a>
                 @endif
                 @endforeach
-
             </div>
             <div class="taskADD">
                 <a onclick="addStep('{{ $step }}')"><img id="btn-img" class="centrar" src="{{ asset('img/circulo-plus.png') }}" alt=""></a>
@@ -74,7 +80,7 @@
         <div>
             <h4>Agregar Step</h4>
         </div>
-        
+
     </div>
 </div>
 
@@ -83,12 +89,9 @@
         <span onclick="closeTask('.taskSpace')" class="close-task">&#10060</span>
         <h4 id="idNameTask" data-id="">Nombre tarea</h4>
         <div class='columns is-mobile is-gapless is-multiline proyects'>
-            <div class='column is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile' style='margin: 10px 0;'>
+            <div class='column is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile stepModal' style='margin: 10px 0;'>
 
-                @forelse(json_decode($proyect->steps) as $step)
-                <span class='stepTask'>{{ $step }}</span>
-                @empty
-                @endforelse
+
 
             </div>
             <div class='column is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile'>
@@ -204,13 +207,29 @@
                 },
                 success: function(data) {
                     if (data != null) {
-                        let divj = $('<a>', {
-                            'html': text,
-                            'class': 'task',
-                            'onclick': `taskTab('${data.id}')`,
-                            'style': 'padding:10px !important;'
-                        });
-                        $('#step-' + step + ' #stepSpace').append(divj);
+                        let taskA = document.createElement('a');
+                        taskA.setAttribute('class', 'task');
+                        taskA.id = `taskElement${data.id}`;
+
+                        let divSelect = document.createElement('div');
+                        divSelect.setAttribute('class', 'selectStepInput');
+
+                        steps.map(function(step) {
+                            let spanClick = document.createElement('span');
+                            // spanClick.setAttribute('onclick', `moveTo('${data.id}','${step}','#taskElement${data.id}')`);
+                            spanClick.innerText = step;
+                            divSelect.appendChild(spanClick);
+                        })
+
+                        let openTab= document.createElement('p');
+                        openTab.setAttribute('onclick',`taskTab('${data.id}')`);
+                        openTab.innerText=text;
+                      
+                        taskA.appendChild(divSelect);
+                        taskA.appendChild(openTab);
+                        stepActive(data.step);
+                      
+                        $('#step-' + step + ' #stepSpace').append(taskA);
                         $('#txt' + step + '-name').val('');
                     } else {
                         alert('error al agregar');
@@ -227,6 +246,11 @@
         }
     }
 
+    var steps = [];
+    '@foreach( json_decode($proyect->steps) as $step)'
+    steps.push('{{ $step }}');
+    '@endforeach'
+
     function taskTab(id) {
         $.ajax({
             type: 'get',
@@ -239,14 +263,22 @@
             },
             success: function(data) {
 
-                console.log(data);
                 $("#htmlSubTasks").html('');
                 $("#htmlLists").html('');
                 $("#htmlComments").html('');
+                $(".stepModal").html('');
                 if (data != null) {
                     $('#idDescriptionTask').attr('data-taskid', data.id);
                     $('#idDescriptionTask').text(data.description);
                     $("#idNameTask").text(data.name);
+
+
+                    steps.map(function(step) {
+                        $(".stepModal").append(`<span id="target${step}" class='stepTask'  onclick="moveTo('${data.id}','${step}','#taskElement${data.id}')">${step}</span>`);
+                    })
+
+                    stepActive(data.step);
+
 
                     // <button class="btn-solid" id="btn-addSubTask" onclick="addSubTask('#input-subtask', 'subTasks')"><img src="{{ asset('img/circulo-plus.png') }}" alt=""></button>
                     $("#btn-addSubTask").attr('onclick', `addJsonHtml('input-subTask', 'subTasks','${data.id}')`);
@@ -307,5 +339,43 @@
         let token = $('meta[name="csrf-token"]').attr('content');
         editDescription(route, token, $(this).attr('data-taskid'), $(this).val());
     })
+
+
+    function moveTo(idTAsk, step, elementId) {
+
+        $.ajax({
+            type: 'post',
+            url: "{{ route('task.editTaskStep') }}",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data: {
+                idTAsk: idTAsk,
+                step: step,
+                elementId: elementId,
+            },
+            success: function(data) {
+                if (data > 0) {
+                    alert("cambiado a " + step);
+                    $("#step-" + step + " #stepSpace").append($(elementId));
+                    stepActive(step);
+                } else {
+                    alert('error al agregar');
+                }
+            },
+            error: function(error) {
+                alert('error al agregar');
+            }
+        }).fail(function(jqXHR, textStatus, error) {
+            alert('error al agregar');
+        });
+
+
+    }
+
+    function stepActive(step) {
+        $(".stepModal span").removeClass("stepActive")
+        $("#target" + step).addClass("stepActive");
+    }
 </script>
 @endsection

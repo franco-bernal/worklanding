@@ -1,0 +1,17 @@
+.notificationAlert {
+    background-color: rgba(0, 0, 49, 0.849);
+    color: rgb(255, 250, 228);
+    width: 300px;
+    height: auto;
+    padding: 30px 10px !important;
+    text-align: center;
+    position: fixed;
+    top: 3px;
+    left:3px;
+    z-index: 99999;
+    display: block;
+    margin: 0 auto;
+    border-bottom: 10px solid rgb(255, 250, 228);
+    border-radius: 0 10px 10px 10px;
+    text-transform: uppercase;    
+}
