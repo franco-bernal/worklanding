@@ -366,6 +366,7 @@
             responsive: [{
                 breakpoint: 480,
                 settings: {
+                    infinite: false,
                     slidesToShow: 2,
                     slidesToScroll: 1,
                 },
