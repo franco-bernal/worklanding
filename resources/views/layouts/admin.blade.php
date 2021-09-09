@@ -6,8 +6,8 @@
 
     <style>
         :root {
-            --color-a:{{ json_decode($page->color)->a_color }} !important;
-            --color-b:{{ json_decode($page->color)->b_color }} !important;
+            --color-a: {{ json_decode($page->color)->a_color }} !important;
+            --color-b: {{ json_decode($page->color)->b_color }} !important;
             --color-ab: {{ json_decode($page->color)->ab_color }} !important;
             --color-bc: {{ json_decode($page->color)->bc_color }} !important;
             --radio: 3px;
@@ -17,23 +17,23 @@
 
         .block1 {
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-            url('{{ json_decode($page->img)->header_back_img }}');
+                url('{{ json_decode($page->img)->header_back_img }}');
         }
 
         .promo {
             background-image: linear-gradient(rgba(2, 0, 1, 0.966), rgba(83, 26, 83, 0.747)),
-            url('{{ json_decode($page->img)->necesitas_back_img }}');
+                url('{{ json_decode($page->img)->necesitas_back_img }}');
         }
 
         .viewTecnologies {
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
-            url('{{ json_decode($page->img)->tecnologias_img }}');
+                url('{{ json_decode($page->img)->tecnologias_img }}');
 
         }
 
         .viewTecnologies2 {
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
-            url('{{ json_decode($page->img)->tecnologias_img }}');
+                url('{{ json_decode($page->img)->tecnologias_img }}');
 
         }
 
@@ -41,7 +41,7 @@
         html {
             background-color: black !important;
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-            url('{{ json_decode($page->img)->header_back_img }}') !important;
+                url('{{ json_decode($page->img)->header_back_img }}') !important;
             background-position: bottom;
             background-repeat: no-repeat;
             background-size: cover;
@@ -51,10 +51,11 @@
         @media(max-width:769px) {
             html {
                 background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-                url('{{ json_decode($page->img)->header_back_img }}') !important;
+                    url('{{ json_decode($page->img)->header_back_img }}') !important;
                 background-size: auto 100vh !important;
             }
         }
+
     </style>
 
 
@@ -133,27 +134,28 @@
                         <div class="navbar-end">
 
                             @guest
-                            @if (Route::has('login'))
-                            <a class="navbar-item" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            @endif
+                                @if (Route::has('login'))
+                                    <a class="navbar-item" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                @endif
 
-                            @if (Route::has('register'))
-                            <a class="navbar-item" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            @endif
+                                @if (Route::has('register'))
+                                    <a class="navbar-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                @endif
                             @else
-                            <a class="navbar-item">
-                                {{ Auth::user()->name }}
-                            </a>
+                                <a class="navbar-item">
+                                    {{ Auth::user()->name }}
+                                </a>
 
 
-                            <a class="navbar-item " href=" {{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
+                                <a class="navbar-item " href=" {{ route('logout') }}" onclick="event.preventDefault();
+                                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    class="d-none">
+                                    @csrf
+                                </form>
                             @endguest
 
                         </div>
@@ -178,13 +180,21 @@
                                 General
                             </p>
                             <ul class="menu-list">
-                                <li><a href="{{ route('dashboard') }}" class=" {{(request()->is('dashboard')) ? 'is-active' : '' }}">Dashboard</a></li>
-                                <li><a href=" {{ route('pageConfig') }}" class=" {{(request()->is('pageConfig')) ? 'is-active' : '' }}">Page</a></li>
-                                <li><a href="{{ route('slidersConfig') }}" class=" {{(request()->is('slidersConfig')) ? 'is-active' : '' }}">Sliders</a></li>
-                                <li><a href="{{ route('profileConfig') }}" class=" {{(request()->is('profileConfig')) ? 'is-active' : '' }}">profile</a></li>
-                                <li><a href="{{ route('blogs.home') }}" class=" {{(request()->is('blogs.home')) ? 'is-active' : '' }}">Blogs</a></li>
+                                <li><a href="{{ route('dashboard') }}"
+                                        class=" {{ request()->is('dashboard') ? 'is-active' : '' }}">Dashboard</a>
+                                </li>
+                                <li><a href=" {{ route('pageConfig') }}"
+                                        class=" {{ request()->is('pageConfig') ? 'is-active' : '' }}">Page</a></li>
+                                <li><a href="{{ route('slidersConfig') }}"
+                                        class=" {{ request()->is('slidersConfig') ? 'is-active' : '' }}">Sliders</a>
+                                </li>
+                                <li><a href="{{ route('profileConfig') }}"
+                                        class=" {{ request()->is('profileConfig') ? 'is-active' : '' }}">profile</a>
+                                </li>
+                                <li><a href="{{ route('blogs.home') }}"
+                                        class=" {{ request()->is('blogs.home') ? 'is-active' : '' }}">Blogs</a></li>
                             </ul>
-                            <!-- 
+
                             <p class="menu-label">
                                 Administration
                             </p>
@@ -212,7 +222,7 @@
                                 <li><a>Transfers</a></li>
                                 <li><a>Balance</a></li>
                                 <li><a>Reports</a></li>
-                            </ul> -->
+                            </ul>
                         </aside>
                     </div>
 
@@ -488,7 +498,8 @@
                 let paragraph = document.createElement('p');
                 paragraph.innerText = value;
                 let deleteButton = document.createElement('a');
-                deleteButton.setAttribute("onclick", "deleteRelatedUpdate('" + value + "','" + "tag" + value + "')");
+                deleteButton.setAttribute("onclick", "deleteRelatedUpdate('" + value + "','" + "tag" + value +
+                    "')");
                 deleteButton.innerText = "x";
 
                 item.appendChild(paragraph);
@@ -550,7 +561,8 @@
                             let paragraph = document.createElement('p');
                             paragraph.innerText = value;
                             let deleteButton = document.createElement('a');
-                            deleteButton.setAttribute("onclick", "deleteRelatedUpdate('" + value + "','" + "tag" + value + "')");
+                            deleteButton.setAttribute("onclick", "deleteRelatedUpdate('" + value +
+                                "','" + "tag" + value + "')");
                             deleteButton.innerText = "x";
 
                             item.appendChild(paragraph);
@@ -638,7 +650,7 @@
                 // $("#noti"+cont).slideUp().ready(function() {
                 $("#noti" + cont).slideUp();
                 setTimeout(() => {
-                $("#noti" + cont).remove();
+                    $("#noti" + cont).remove();
                 }, 5000);
 
                 // });

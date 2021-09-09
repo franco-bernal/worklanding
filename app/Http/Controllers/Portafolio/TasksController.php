@@ -26,12 +26,13 @@ class TasksController extends Controller
     {
 
         $proyect = Proyects::select(
-            // 'tasks.*',
             'proyects.*'
         )
+            ->where('proyects.id', '=', $request->id)
             ->orderBy('proyects.created_at', 'desc')
             ->with('tasks')
             ->first();
+
         // dd($proyect[0]->title);
         $id = $request->id;
         // $proyect = Proyects::where('id', '=', $id)->first();
