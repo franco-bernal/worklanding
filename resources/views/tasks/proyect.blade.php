@@ -161,7 +161,7 @@
     <style>
         .taskSpace {
             /* background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-                            url('{{ $proyect->img_link }}'); */
+                                url('{{ $proyect->img_link }}'); */
 
         }
 
