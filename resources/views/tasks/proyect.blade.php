@@ -257,7 +257,7 @@
         }
 
         var steps = [];
-        @foreach (json_decode($proyect->steps) as $step)'
+        '@foreach (json_decode($proyect->steps) as $step)'
             steps.push('{{ $step }}');
             '@endforeach '
 
