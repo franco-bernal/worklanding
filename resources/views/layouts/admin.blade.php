@@ -148,7 +148,7 @@
 
 
                                 <a class="navbar-item " href=" {{ route('logout') }}" onclick="event.preventDefault();
-                                                                 document.getElementById('logout-form').submit();">
+                                                                     document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -167,42 +167,42 @@
             <!-- END NAV -->
             <div class="container mt-2">
                 <div class="columns">
-                    <div class="column is-9">
+                    <div class="column is-12">
 
 
                         @yield('content')
 
                     </div>
-
-                    <div class="column is-3 mt-6">
-                        <aside class="menu is-hidden-mobile">
-                            <p class="menu-label">
-                                General
-                            </p>
-                            <ul class="menu-list">
-                                <li><a href="{{ route('dashboard') }}"
-                                        class=" {{ request()->is('dashboard') ? 'is-active' : '' }}">Dashboard</a>
-                                </li>
-                                <li><a href=" {{ route('pageConfig') }}"
-                                        class=" {{ request()->is('pageConfig') ? 'is-active' : '' }}">Page</a></li>
-                                <li><a href="{{ route('slidersConfig') }}"
-                                        class=" {{ request()->is('slidersConfig') ? 'is-active' : '' }}">Sliders</a>
-                                </li>
-                                <li><a href="{{ route('profileConfig') }}"
-                                        class=" {{ request()->is('profileConfig') ? 'is-active' : '' }}">profile</a>
-                                </li>
-                                <li><a href="{{ route('blogs.home') }}"
-                                        class=" {{ request()->is('blogs.home') ? 'is-active' : '' }}">Blogs</a></li>
-                            </ul>
-
-                            <p class="menu-label">
-                                Administration
-                            </p>
-                            <ul class="menu-list">
-                                <li><a>Team Settings</a></li>
-                                <li>
-                                    <a>Manage Your Team</a>
-                                    <ul>
+                    <!--
+    <div class="column is-12 mt-6">
+        <aside class="menu is-hidden-mobile">
+            <p class="menu-label">
+                General
+            </p>
+            <ul class="menu-list">
+                <li><a href="{{ route('dashboard') }}"
+                    class=" {{ request()->is('dashboard') ? 'is-active' : '' }}">Dashboard</a>
+                </li>
+                <li><a href=" {{ route('pageConfig') }}"
+                    class=" {{ request()->is('pageConfig') ? 'is-active' : '' }}">Page</a></li>
+                    <li><a href="{{ route('slidersConfig') }}"
+                        class=" {{ request()->is('slidersConfig') ? 'is-active' : '' }}">Sliders</a>
+                    </li>
+                    <li><a href="{{ route('profileConfig') }}"
+                        class=" {{ request()->is('profileConfig') ? 'is-active' : '' }}">profile</a>
+                    </li>
+                    <li><a href="{{ route('blogs.home') }}"
+                        class=" {{ request()->is('blogs.home') ? 'is-active' : '' }}">Blogs</a></li>
+                    </ul>
+                    
+                    <p class="menu-label">
+                        Administration
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Team Settings</a></li>
+                        <li>
+                            <a>Manage Your Team</a>
+                            <ul>
                                         <li><a>Members</a></li>
                                         <li><a>Plugins</a></li>
                                         <li><a>Add a member</a></li>
@@ -225,9 +225,10 @@
                             </ul>
                         </aside>
                     </div>
-
+        -->             
                 </div>
             </div>
+       
 
         </main>
 
@@ -353,7 +354,7 @@
         $(".process").slick({
             infinite: false,
             speed: 300,
-            slidesToShow: 3,
+            slidesToShow: 5,
             adaptiveHeight: true,
             autoplay: false,
             autoplaySpeed: 2000,
@@ -365,7 +366,7 @@
             responsive: [{
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 },
             }, ],
