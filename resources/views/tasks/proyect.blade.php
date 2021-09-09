@@ -143,7 +143,7 @@
                             <textarea id="input-comment" style="width:100%;padding:5px;" rows="1"></textarea>
                             <button class="btn-solid" id="btn-addComment">Comentar</button>
                         </div>
-                        <div class="comments" id="htmlComments">
+                        <div class="comments" id="htmlComments" style="white-space: break-spaces;">
 
                         </div>
                         <!-- usuario,fecha, comentario, -->
@@ -313,7 +313,7 @@
                         });
                         JSON.parse(data.comments).map((coment) => {
                             $("#htmlComments").append(
-                                `<div id='${coment.id}comments'><span>${coment.user}, ${coment.created_at}</span><p>${coment.detail}</p><a onclick="deleteJsonHtml('comments','${data.id}',${coment.id},'${coment.created_at}')">Eliminar</a></div>`
+                                `<div id='${coment.id}comments'><span>${coment.user}, ${coment.created_at}</span><p><code>${coment.detail}</code></p><a onclick="deleteJsonHtml('comments','${data.id}',${coment.id},'${coment.created_at}')">Eliminar</a></div>`
                             );
                         });
 
