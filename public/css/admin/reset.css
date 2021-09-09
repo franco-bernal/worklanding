@@ -3,7 +3,9 @@
     src: url('../../fonts/Champagne\ &\ Limousines.ttf');
     /* src: url('../../fonts/CaviarDreams.ttf'); */
 }
-
+code{
+    background-color: transparent;
+}
 * {
     font-family: 'caviar';
 }
