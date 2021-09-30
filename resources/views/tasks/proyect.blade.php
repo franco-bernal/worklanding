@@ -313,7 +313,7 @@
                         });
                         JSON.parse(data.comments).map((coment) => {
                             $("#htmlComments").append(
-                                `<div id='${coment.id}comments'><span>${coment.user}, ${coment.created_at}</span><p><code>${coment.detail}</code></p><a onclick="deleteJsonHtml('comments','${data.id}',${coment.id},'${coment.created_at}')">Eliminar</a></div>`
+                                `<div id='${coment.id}comments'><span>${coment.user}, ${coment.created_at}</span><p>${String(coment.detail)}</p><a onclick="deleteJsonHtml('comments','${data.id}',${coment.id},'${coment.created_at}')">Eliminar</a></div>`
                             );
                         });
 

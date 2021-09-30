@@ -72,10 +72,12 @@
         min-height: 0;
         padding-bottom: 10px;
     }
+
     .proyect a {
         font-size: 20px;
         line-height: 20px;
     }
+
     .proyect .star {
         top: 5px;
         right: 5px !important;
@@ -112,8 +114,9 @@
 }
 
 .taskSpace {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(338deg, rgba(2, 0, 36, 1) 1%, rgba(1, 85, 124, 1) 46%, rgba(1, 85, 124, 1) 88%, rgba(1, 85, 124, 1) 92%);
+    /* background: rgb(2, 0, 36); */
+    /* background: linear-gradient(338deg, rgba(2, 0, 36, 1) 1%, rgba(1, 85, 124, 1) 46%, rgba(1, 85, 124, 1) 88%, rgba(1, 85, 124, 1) 92%); */
+    background-color: #0e0e0e !important;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,13 +128,14 @@
 .step .task {
     /* background-color: #f0f0f0e3; */
     background: rgb(2, 0, 36);
-    background: linear-gradient(338deg, rgba(2, 0, 36, 1) 1%, rgb(255, 247, 233) 46%, rgb(0, 29, 43) 88%, rgba(1, 85, 124, 1) 92%);
+    /* background: linear-gradient(338deg, rgba(2, 0, 36, 1) 1%, rgb(255, 247, 233) 46%, rgb(0, 29, 43) 88%, rgba(1, 85, 124, 1) 92%); */
+    background-color: #000000;
     color: rgb(248, 247, 255) !important;
     font-weight: 800 !important;
     width: 100% !important;
     border-radius: 5px;
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     padding: 10px;
     font-size: 14px;
     transition: background-color 0.2s;
@@ -186,9 +190,13 @@
     background-color: rgb(131, 0, 0);
     position: absolute;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: auto;
     z-index: 999;
+    display: block;
+    margin: 0 auto !important;
+    width: 97%;
 }
 
 /* AGREGAR TAREA */
@@ -267,6 +275,10 @@
     padding: 4px;
 }
 
+.task-coment .comments p{
+    white-space: break-spaces;
+}
+
 .task-coment .comments div span {
     font-size: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.247);
@@ -328,8 +340,8 @@
 }
 
 .selectStepInput span {
-    background-color: black;
-    color: white;
+    background-color: #001c3a;
+    color:rgba(0, 255, 255, 0.589) !important;
     border-radius: 1px;
     padding: 0px 5px;
     font-size: 8px;
@@ -340,11 +352,15 @@
 
 .step p {
     margin-top: 10px !important;
-    color: black !important; 
+    color: rgb(255, 253, 249) !important;
+    font-family: fangsong !important;
+    font-weight: 100;
+    font-size: 12px;
 }
 
 .selectStepInput span:hover {
     font-size: 14px;
+    color: aqua !important;
 }
 
 .stepActive {
