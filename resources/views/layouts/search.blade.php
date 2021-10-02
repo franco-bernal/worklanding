@@ -17,9 +17,21 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)), url('');
 
         }
+
     </style>
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EPTW6JSVM3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EPTW6JSVM3');
+    </script>
 
     <link id="shor" rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <meta charset="utf-8">
@@ -52,7 +64,7 @@
             background-size: cover;
             background-attachment: fixed; */
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-            url('{{ json_decode($page->img)->header_back_img }}');
+                url('{{ json_decode($page->img)->header_back_img }}');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -64,6 +76,7 @@
         h4 {
             /* -webkit-text-stroke: 2px white; */
         }
+
     </style>
 
 </head>
@@ -72,10 +85,11 @@
     <nav class="menu-header">
         <ul class="header-links burge" id="burge">
             <li class="header-logo">
-                <a href="{{ route('welcome') }}"><img src="{{ asset('img/logo-franco-blanco.png') }}" style="width:70px !important" alt=""></a>
+                <a href="{{ route('welcome') }}"><img src="{{ asset('img/logo-franco-blanco.png') }}"
+                        style="width:70px !important" alt=""></a>
             </li>
             <li class="">
-                <a href="{{ route('welcome') }}">Landing</a>
+                <a href=" {{ route('welcome') }}">Landing</a>
             </li>
 
             <li>
@@ -99,30 +113,31 @@
                 <br>
 
             </div>
-            @if($blogs!=null)
+            @if ($blogs != null)
 
-            <div class='column is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile'>
-                <div class='columns is-mobile is-gapless is-multiline pt-6 '>
-                    @forelse ($blogs as $blog)
-                    <div class='column is-8-fullhd is-8-desktop  is-12-tablet  is-12-mobile'>
-                        <div class='searched'>
-                            <a href="{{ url('blog/'.$blog->title) }}" class="mb-4">
-                                <img src="{{ asset('img/star-off.png') }}" alt="">
-                                {{ $blog->title }}
-                                <p class='url-description'>{{ url('blog/'.$blog->title) }}</p>
-                            </a>
+                <div class='column is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile'>
+                    <div class='columns is-mobile is-gapless is-multiline pt-6 '>
+                        @forelse ($blogs as $blog)
+                            <div class='column is-8-fullhd is-8-desktop  is-12-tablet  is-12-mobile'>
+                                <div class='searched'>
+                                    <a href="{{ url('blog/' . $blog->title) }}" class="mb-4">
+                                        <img src="{{ asset('img/star-off.png') }}" alt="">
+                                        {{ $blog->title }}
+                                        <p class='url-description'>{{ url('blog/' . $blog->title) }}</p>
+                                    </a>
 
-                            <p class="created_at">{{ $blog->created_at }}</p>
-                            <p class="description" style="word-break: break-all;">{{ substr($blog->description, 0, 80)  }}</p>
-                        </div>
-                        <hr style="opacity:0">
+                                    <p class="created_at">{{ $blog->created_at }}</p>
+                                    <p class="description" style="word-break: break-all;">
+                                        {{ substr($blog->description, 0, 80) }}</p>
+                                </div>
+                                <hr style="opacity:0">
+                            </div>
+                        @empty
+                            <h4 style=" width: 100%;">No se encontraron coincidencias</h4>
+                        @endforelse
                     </div>
-                    @empty
-                    <h4 style=" width: 100%;">No se encontraron coincidencias</h4>
-                    @endforelse
-                </div>
 
-            </div>
+                </div>
             @endif
 
         </div>
