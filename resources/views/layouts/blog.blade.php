@@ -37,7 +37,7 @@
 
     <!--Open Graph data-->
     <meta property="og:title" content="{{ $blogs->title }}" />
-    <meta property="og:url" content="https://inndev.cf/blog/{{ $blogs->title }}" />
+    <meta property="og:url" content="https://francobernal.net/blog/{{ $blogs->title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="{{ $blogs->description }}" />
     <meta property="og:image" content="{{ asset($blogs->header_img) }}" />
@@ -46,13 +46,13 @@
     <meta name=" twitter:card" content="summary">
     <meta name="twitter:title" content="{{ $blogs->title }}">
     <meta name="twitter:description" content="{{ $blogs->description }}">
-    <meta name="twitter:url" content="https://inndev.cf/blog/{{ $blogs->title }}">
+    <meta name="twitter:url" content="https://francobernal.net/blog/{{ $blogs->title }}">
     <meta name="twitter:image" content="{{ asset($blogs->header_img) }}">
 
     <script type="application/ld+json">
         {
-            "name": "inndev.cf",
-            "homepage": "https://www.inndev.cf/blog"
+            "name": "francobernal.net",
+            "homepage": "https://www.francobernal.net/blog"
         }
     </script>
 

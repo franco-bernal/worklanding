@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link id="shor" rel="shortcut icon" href="{{ asset('favicon.png') }}">
     <title>Franco Bernal - desarrollador web</title>
-    <meta name="keywords" content="Desarrollador web, Analista programador, Análisis y programación de software, Técnico informatico, chile, Diseño Web,,Desarrollo Aplicaciones,Desarrollo APP,Desarrollo Aplicación Web,Desarrollo Web,Diseño Sitio Web,Desarrollo Sitio Web,Diseño Aplicaciones,Diseño APP,Diseño Aplicación Web,Diseño Android,Diseño Ios,Diseño Apple,Diseño Iphone,Diseño Ecommerce,Diseño Comercio Electrónico,Diseño Programas Web" />
+    <meta name="keywords" content=",Franco Bernal, Desarrollador web, Analista programador, Análisis y programación de software, Técnico informatico, chile, Diseño Web,,Desarrollo Aplicaciones,Desarrollo APP,Desarrollo Aplicación Web,Desarrollo Web,Diseño Sitio Web,Desarrollo Sitio Web,Diseño Aplicaciones,Diseño APP,Diseño Aplicación Web,Diseño Android,Diseño Ios,Diseño Apple,Diseño Iphone,Diseño Ecommerce,Diseño Comercio Electrónico,Diseño Programas Web" />
     <meta name="description" content="Desarrollador web, junior ,Desarrollador de páginas web responsive, one page, landing, páginas con administrador, sistemas. Página de contacto y muestra.">
 
     <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
@@ -16,7 +16,7 @@
 
     <!--Open Graph data-->
     <meta property="og:title" content="Franco bernal desarrollo de Sitio web" />
-    <meta property="og:url" content="https://inndev.cf" />
+    <meta property="og:url" content="https://francobernal.net" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Desarrollador web, junior ,Desarrollador de páginas web responsive, one page, landing, páginas con administrador, sistemas. Página de contacto y muestra." />
     <meta property="og:image" content="{{ asset(json_decode($page->img)->tarjeta_pre_img) }}" />
@@ -27,13 +27,13 @@
     <meta name=" twitter:card" content="summary">
     <meta name="twitter:title" content="Franco bernal desarrollo de Sitio web">
     <meta name="twitter:description" content="Desarrollador web, junior ,Desarrollador de páginas web responsive, one page, landing, páginas con administrador, sistemas. Página de contacto y muestra.">
-    <meta name="twitter:url" content="https://inndev.cf">
+    <meta name="twitter:url" content="https://francobernal.net">
     <meta name="twitter:image" content="{{ asset(json_decode($page->img)->tarjeta_pre_img )}}">
 
     <script type="application/ld+json">
         {
-            "name": "inndev.cf",
-            "homepage": "https://www.inndev.cf",
+            "name": "francobernal.net",
+            "homepage": "https://www.francobernal.net",
         }
     </script>
 
