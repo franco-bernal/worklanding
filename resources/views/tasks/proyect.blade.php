@@ -160,7 +160,7 @@
 @section('js')
     <style>
         .taskSpace {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
+            background-image:linear-gradient(rgba(0, 0, 0, 0.747), rgb(43 0 65 / 75%)),
                                 url('{{ $proyect->img_link }}') !important;
 
         }
