@@ -134,10 +134,7 @@ Route::group(['middleware' => 'admin'], function () {
 Route::get('/clear-cache', function () {
     // echo shell_exec('git status');
 
-    echo shell_exec('cd ../');
-    echo "<br>-------<br>";
-    echo shell_exec('ls .');
-    echo "<br>-------<br>";
+    echo chdir('/var/www/html/worklanding');
     echo "<pre>" . shell_exec('git pull origin master 2>&1') . "</pre>";
 
 
