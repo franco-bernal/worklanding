@@ -134,18 +134,17 @@ Route::group(['middleware' => 'admin'], function () {
 Route::get('/clear-cache', function () {
     // echo shell_exec('git status');
 
-    echo chdir('/var/www/html/worklanding');
-    echo "<pre>" . shell_exec('git pull origin master 2>&1') . "</pre>";
+     chdir('/var/www/html/worklanding');
+    echo "<pre>" . shell_exec('git pull origin main 2>&1') . "</pre>";
 
 
-    echo Artisan::call('config:clear');
-    echo Artisan::call('config:cache');
-    echo Artisan::call('cache:clear');
-    echo Artisan::call('route:clear');
+    // echo Artisan::call('config:clear');
+    // echo Artisan::call('config:cache');
+    // echo Artisan::call('cache:clear');
+    // echo Artisan::call('route:clear');
     echo shell_exec('php artisan cache:clear');
     echo shell_exec('php artisan config:clear');
     echo shell_exec('php artisan config:cache');
     echo shell_exec('php artisan route:clear');
     echo shell_exec('php artisan optimize');
-    echo "bkn";
 });
