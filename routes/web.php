@@ -139,9 +139,8 @@ Route::get('/clear-cache', function () {
     echo shell_exec('ls .');
     echo "<br>-------<br>";
     echo "<pre>" . shell_exec('git pull origin main') . "</pre>";
-    echo shell_exec('php artisan cache:clear');
-    echo shell_exec('php artisan config:clear');
-    echo shell_exec('php artisan config:cache');
-    echo shell_exec('php artisan route:clear');
-    echo shell_exec('php artisan optimize');
+    echo Artisan::call('config:clear');
+    echo Artisan::call('config:cache');
+    echo Artisan::call('cache:clear');
+    echo Artisan::call('route:clear');
 });
