@@ -6,6 +6,7 @@ use App\Models\Page;
 use App\Models\Product;
 use App\Models\Tecnologies;
 use App\Models\User;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -119,8 +120,8 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/getTask', [App\Http\Controllers\Portafolio\TasksController::class, 'getTask'])->name('task.getTask');
     Route::POST('/editTaskDescription', [App\Http\Controllers\Portafolio\TasksController::class, 'editTaskDescription'])->name('task.editTaskDescription');
     Route::POST('/editTaskStep', [App\Http\Controllers\Portafolio\TasksController::class, 'editTaskStep'])->name('task.editTaskStep');
-    
-    
+
+
     Route::get('/deleteFromJson', [App\Http\Controllers\Portafolio\TasksController::class, 'deleteFromJson'])->name('task.deleteFromJson');
     Route::POST('/addToJson', [App\Http\Controllers\Portafolio\TasksController::class, 'addToJson'])->name('task.addToJson');
     Route::get('/checkFromJson', [App\Http\Controllers\Portafolio\TasksController::class, 'checkFromJson'])->name('task.checkFromJson');
@@ -128,4 +129,19 @@ Route::group(['middleware' => 'admin'], function () {
 
     //visitas
     Route::post('/deleteVisita', [App\Http\Controllers\visitasController::class, 'deleteVisita'])->name('visitas.delete');
+});
+
+Route::get('/clear-cache', function () {
+    // echo shell_exec('git status');
+
+    echo shell_exec('cd ../');
+    echo "<br>-------<br>";
+    echo shell_exec('ls .');
+    echo "<br>-------<br>";
+    echo "<pre>" . shell_exec('git pull origin main') . "</pre>";
+    echo shell_exec('php artisan cache:clear');
+    echo shell_exec('php artisan config:clear');
+    echo shell_exec('php artisan config:cache');
+    echo shell_exec('php artisan route:clear');
+    echo shell_exec('php artisan optimize');
 });
