@@ -147,4 +147,5 @@ Route::get('/clear-cache', function () {
     echo shell_exec('php artisan config:cache');
     echo shell_exec('php artisan route:clear');
     echo shell_exec('php artisan optimize');
+    echo "prueba fatal";
 });
