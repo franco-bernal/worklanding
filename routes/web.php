@@ -135,7 +135,7 @@ Route::get('/clear-cache', function () {
     // echo shell_exec('git status');
 
      chdir('/var/www/html/worklanding');
-    echo "<pre>" . shell_exec('sudo git pull origin main 2>&1') . "</pre>";
+    echo "<pre>" . shell_exec('git pull origin main 2>&1') . "</pre>";
 
 
     // echo Artisan::call('config:clear');
