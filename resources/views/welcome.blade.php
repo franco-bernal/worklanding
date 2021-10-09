@@ -174,7 +174,7 @@ background: linear-gradient(144deg, rgba(2,0,2,0.919502835313813) 51%, rgba(70,1
     <div class='columns is-mobile is-gapless is-multiline'>
         @forelse($blog_noticias as $noticia)
         <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile'>
-            <div class="blog_noticia" style="background-image:linear-gradient(rgb(251 222 18 / 49%), rgb(73 2 74)),  url('{{ $noticia->header_img }}') !important;">
+            <div class="blog_noticia" style="background-image:linear-gradient(87deg, rgba(0,54,50,0.7598389697675946) 60%, rgba(88,226,255,0.21081936192445727) 64%, rgba(167,67,132,1) 9985%),  url('{{ $noticia->header_img }}') !important;">
                 <p>{{ $noticia->created_at }}</p>
                 <h5>{{ $noticia->title }}</h5>
                 <a class="btn-solid" href="{{ url('blog/'.$noticia->title) }}">Ver</a>
