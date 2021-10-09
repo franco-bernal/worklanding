@@ -13,7 +13,7 @@
     padding: 0px 4vw;
     padding-top: 30vh;
 }
-  
+
 
 
 .noticia h3 {
@@ -26,9 +26,8 @@
     display: block;
     font-weight: bolder;
     border-bottom: 10px solid var(--color-b);
-    background: rgb(175,88,255);
-    background: linear-gradient( 
-87deg, rgba(175,88,255,0.9755252442773985) 23%, rgba(255,231,85,1) 91%, rgba(167,67,132,1) 9985%);
+    background: rgb(175, 88, 255);
+    background: linear-gradient(87deg, rgba(175, 88, 255, 0.9755252442773985) 23%, rgba(255, 231, 85, 1) 91%, rgba(167, 67, 132, 1) 9985%);
     -webkit-background-clip: text;
     color: white;
     font-weight: bolder;
@@ -56,12 +55,14 @@
         padding: 0vw 8vw;
         padding-top: 37vh;
     }
+
     .noticia h3 {
         font-size: 50px;
         line-height: 52px;
         width: 100%;
         padding: 5px;
     }
+
     .noticia p {
         font-size: 25px;
         line-height: 30px;
@@ -135,6 +136,7 @@
     /* border: 1px solid rgb(75, 75, 75);
     box-shadow: 0px 0px 9px -6px rgb(3, 3, 3);
     padding: 30px 0; */
+    box-shadow: 0px 0px 1px 1px #ffffff4d
 }
 
 .tecnyTarget p {
@@ -259,6 +261,7 @@
     #productos {
         padding: 50px 0;
     }
+
     #productos h2 {
         margin-bottom: 30px;
         text-align: left !important;
@@ -266,21 +269,26 @@
         width: 100%;
         padding-left: 20px;
     }
+
     .productTarget {
         padding: 5px 10px;
         height: auto;
     }
+
     .product-back {
         height: 100px;
     }
+
     .product-description img {
         width: 25px;
         filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7)) !important;
         border-radius: 5px;
     }
+
     .productTarget p {
         font-size: 11px;
     }
+
     /* .slick-slider {
         margin-bottom: 50px;
     } */
@@ -290,21 +298,26 @@
     .block1 {
         border-bottom: 20px solid var(--color-b);
     }
+
     .block1 img {
         padding: 80px 20px !important;
     }
+
     #tecnologias {
         padding: 20vw 0 !important;
     }
+
     .tecnyTarget span {
         font-size: 10px;
         overflow-y: auto;
         border-right: 1px solid var(--color-b);
     }
+
     .tecnyTarget span p {
         margin-top: 10px;
         padding: 3px !important;
     }
+
     .promo {
         background-image: linear-gradient(rgba(2, 0, 1, 0.966), rgba(83, 26, 83, 0.747)), url('https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
         background-position: center center;
@@ -313,15 +326,18 @@
         width: 100%;
         text-align: center;
     }
+
     #promo {
         padding: 100px 10px !important;
     }
+
     .promo h2 {
         font-size: 40px;
         line-height: 40px;
         margin-bottom: 50px;
         text-align: left;
     }
+
     .promo p {
         font-size: 20px;
         line-height: 20px;
@@ -441,7 +457,9 @@
     transition: background-color 0.4s;
 }
 
-.whatsapp, .linkedin, .email {
+.whatsapp,
+.linkedin,
+.email {
     text-align: center;
     font-size: 20px;
     color: white;
@@ -523,6 +541,7 @@
     border-radius: 2px !important;
     margin-right: 1px;
     margin-bottom: 15px;
+    box-shadow: 0 0 4px 1px black;
 }
 
 .blog_noticia p {
@@ -538,6 +557,8 @@
     top: 60px;
     padding-right: 0.6vw;
     transition: top 0.2s;
+    text-shadow: 0px 0px 8px black;
+    line-height: 25px;
 }
 
 .blog_noticia:hover h5 {
@@ -550,14 +571,17 @@
         padding: 20px;
         min-height: 150px;
     }
+
     .blog_noticia p {
         font-size: 12px;
     }
+
     .blog_noticia h5 {
         font-size: 16px !important;
         top: 50px;
         text-shadow: 0px 0px 3px black;
     }
+
     .blog_noticia:hover h5 {
         top: 40px;
     }
