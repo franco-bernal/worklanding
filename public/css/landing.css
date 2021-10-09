@@ -11,7 +11,7 @@
     width: 100% !important;
     height: 100vh !important;
     padding: 0px 4vw;
-    padding-top: 14vw;
+    padding-top: 30vh;
 }
   
 
@@ -52,11 +52,12 @@
     .noticia {
         height: 100vh !important;
         background-color: aqua;
-        padding: 50vw 10vw;
+        padding: 0vw 8vw;
+        padding-top: 30vh;
     }
     .noticia h3 {
-        font-size: 51px;
-        line-height: 48px;
+        font-size: 50px;
+        line-height: 52px;
         width: 100%;
         padding: 5px;
     }
