@@ -556,6 +556,7 @@
     .blog_noticia h5 {
         font-size: 16px !important;
         top: 50px;
+        text-shadow: 0px 0px 3px black;
     }
     .blog_noticia:hover h5 {
         top: 40px;
