@@ -10,15 +10,16 @@
     background-size: cover !important;
     width: 100% !important;
     height: 100vh !important;
-    padding: 15vw;
+    padding: 0px 4vw;
+    padding-top: 14vw;
 }
   
 
 
 .noticia h3 {
-    font-size: 5vw;
-    line-height: 70px;
-    width: max-content;
+    font-size: 130px;
+    line-height: 116px;
+    width: 100%;
     padding: 10px;
     color: var(--color-a);
     /* background-color: var(--color-b); */
@@ -26,11 +27,12 @@
     font-weight: bolder;
     border-bottom: 10px solid var(--color-b);
     background: rgb(175,88,255);
-    background: linear-gradient(87deg, rgba(175,88,255,0.9755252442773985) 23%, rgba(255,231,85,1) 91%, rgba(167,67,132,1) 9985%);
+    background: linear-gradient( 
+87deg, rgba(175,88,255,0.9755252442773985) 23%, rgba(255,231,85,1) 91%, rgba(167,67,132,1) 9985%);
     -webkit-background-clip: text;
-    color: transparent;
-    
- 
+    color: white;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .noticia p {

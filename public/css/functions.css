@@ -30,11 +30,11 @@
     color: var(--color-a);
     border: 1px solid var(--color-b) !important;
     border-radius: var(--radio);
-    padding: 12px 33px;
+    padding: 1px 6px;
     transition: background-color 0.4s;
     cursor: pointer;
     outline: none !important;
-    box-shadow: 0px 0px 4px 1px var(--color-b);
+    font-weight: bolder;
 }
 
 .btn-solid:hover {
@@ -142,33 +142,41 @@
         line-height: 35px;
         text-align: left;
     }
+
     ._title-2 {
         font-size: 29px;
         line-height: 33px;
     }
+
     ._title-1 br {
         display: none;
     }
+
     .px-7 {
         padding-left: 5vw;
         padding-right: 5vw;
     }
+
     ._title-section {
         font-size: 25px;
         line-height: 25px;
     }
+
     .nopaddingY {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
+
     .nopaddingX {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
+
     .minpaddingY {
         padding-top: 1vw !important;
         padding-bottom: 1vw !important;
     }
+
     .minpaddingX {
         padding-left: 1vw !important;
         padding-right: 1vw !important;
