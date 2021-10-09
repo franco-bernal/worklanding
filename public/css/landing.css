@@ -519,7 +519,8 @@
     background-repeat: no-repeat !important;
     background-size: cover;
     overflow: hidden !important;
-    /* border-radius: 5px !important; */
+    border-radius: 2px !important;
+    margin-right: 1px;
 }
 
 .blog_noticia p {
