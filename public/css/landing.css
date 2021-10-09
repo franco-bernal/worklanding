@@ -486,7 +486,7 @@
 }
 
 .blog_noticias {
-    background-color: rgb(0, 23, 44);
+    background-color: white;
     padding: 4vw 10vw;
     padding-bottom: 10vw;
     clear: both !important;
@@ -499,7 +499,7 @@
     margin: 50px 0 !important;
     margin-bottom: 40px !important;
     font-weight: bolder !important;
-    color: white;
+    color: black;
 }
 
 .blog_noticias a {
