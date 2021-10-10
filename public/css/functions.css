@@ -134,6 +134,7 @@
 
 .subraya {
     border-bottom: 5px solid var(--color-b);
+    border-right: 5px solid var(--color-b);
 }
 
 @media(max-width:700px) {

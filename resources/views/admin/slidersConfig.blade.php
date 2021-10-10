@@ -11,7 +11,7 @@
 <div class='columns is-mobile is-gapless is-multiline slide-notices'>
     @foreach($noticias as $noticia)
     <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile ' style='padding:20px !important;'>
-        <button onclick="deleteSlider('{{ $noticia->id }}',`{{ route('notice.delete',['idDelete'=>$noticia->id]) }}`)">Eliminar</button>
+        <button onclick="deleteSlider('{{ $noticia->id }}',`{{ route('notice.delete',['idDelete'=>$noticia->id]) }}`)" style="color:black !important;">Eliminar</button>
         <form method='post' action="{{ route('notice.edit') }}" class="form space-x" id="formProduct" enctype="multipart/form-data">
             @csrf
 

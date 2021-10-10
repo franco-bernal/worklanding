@@ -9,7 +9,7 @@
 
     <h3 class="mt-6">Configuración de página</h3>
 
-    <h4 class="py-6"><strong>Configuración de Colores</strong></h4>
+    <h4 class="py-3"><strong>Configuración de Colores</strong></h4>
 
     <div class='columns is-mobile is-gapless is-multiline '>
         @foreach(json_decode($page->color) as $name => $color)
@@ -20,10 +20,10 @@
         @endforeach
     </div>
 
-    <h4 class="py-6"><strong>Configuración de Imagenes</strong></h4>
+    <h4 class="py-3"><strong>Configuración de Imagenes</strong></h4>
     <div class='columns is-mobile is-gapless is-multiline '>
         @foreach(json_decode($page->img) as $name => $imagen)
-        <div class='column is-3-fullhd is-3-desktop  is-12-tablet  is-12-mobile ' style='padding:20px !important;'>
+        <div class='column is-3-fullhd is-3-desktop  is-12-tablet  is-12-mobile ' style='padding:5px !important;'>
             <img src="{{ asset($imagen) }}" style="height:100px;" class="mt-5 admin-img-form" alt="{{ $name }}">
             <p style="color:white">{{ $name }}</p>
             <input  type="text" value="{{ $imagen }}" name="{{ $name }}" placeholder="{{ $name }}*"> <br>
@@ -35,20 +35,20 @@
     </div>
 
 
-    <h4 class="py-6"><strong>Configuración de Texto</strong></h4>
+    <h4 class="py-3"><strong>Configuración de Texto</strong></h4>
     <h5 class="subraya mb-2" style="width:max-content;">No usar comillas dobles</h5>
 
     <div class='columns is-mobile is-gapless is-multiline conftext'>
         @foreach(json_decode($page->text) as $name => $text)
-        <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile ' style='padding:20px !important;'>
-            <p class="mt-5"><strong>{{ $name }}</strong>  <span class="subraya">(actual)</span>:<br></p>
+        <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile ' style='padding:5px !important;'>
+            <p class="mt-2"><strong>{{ $name }}</strong>  <span class="subraya">(actual)</span>:<br></p>
             <label> {{ $text }}</p>
             <input required type="text" name="{{ $name }}" placeholder="cambiar {{ $name }}*" value="{{ $text }}"> <br>
         </div>
         @endforeach
     </div>
 
-    <h4 class="py-6"><strong>Settings</strong></h4>
+    <h4 class="py-3"><strong>Settings</strong></h4>
     @foreach(json_decode($page->settings) as $name => $set)
     <p><strong>{{ $name }}</strong>: {{ $set }}</p>
     <input required type="text" name="{{ $name }}" value="{{ $set }}" placeholder="cambiar {{ $name }}*"> <br>

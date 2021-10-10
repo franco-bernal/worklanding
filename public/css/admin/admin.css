@@ -253,7 +253,7 @@ input[type="file"] {
     background-color: transparent;
 }
 .listBlogs td{
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.425);
     padding: 3px;
     text-align: center !important
 }

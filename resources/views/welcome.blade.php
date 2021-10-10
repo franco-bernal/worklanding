@@ -179,7 +179,7 @@
 
     <div class="blog_noticias">
         <h2>NOTI<span class="subraya">CIAS</span></h2>
-        <a class="text-center" style="color: white !important;
+        <a class="text-center" style="color: black !important;
         position: static;
         width: 100%;
         margin-bottom: 30px;
