@@ -178,7 +178,7 @@
     </div>
 
     <div class="blog_noticias">
-        <h2>NOTI<span class="subraya">CIAS</span></h2>
+        <h2><span class="subraya">BLOGS</span></h2>
         <a class="text-center" style="color: black !important;
         position: static;
         width: 100%;
