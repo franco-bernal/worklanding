@@ -129,7 +129,7 @@
     /* background-color: #f0f0f0e3; */
     background: rgb(2, 0, 36);
     /* background: linear-gradient(338deg, rgba(2, 0, 36, 1) 1%, rgb(255, 247, 233) 46%, rgb(0, 29, 43) 88%, rgba(1, 85, 124, 1) 92%); */
-    background-color: #000000;
+    background-color: #ff6f09;
     color: rgb(248, 247, 255) !important;
     font-weight: 800 !important;
     width: 100% !important;
@@ -266,22 +266,48 @@
     background-color: #363636c7;
     overflow-y: auto;
 }
+.task-coment a:first-child{
+    color: white;
+}
+
+.comments * {
+    color: black;
+    font-family: monospace;
+    font-size: 10px;
+}
+.comments a {
+    color: black;
+    font-family: 'caviar';
+    font-size: 10px;
+    background-color: red;
+    border-radius: 11px;
+    padding: 2px 8px;
+    color: white;
+    font-weight: bolder;
+}
+ 
 
 .task-coment .comments div {
-    background-color: rgb(31, 31, 31);
+    background-color: #fced73;
     margin: 5px 0;
     border-radius: 3px;
     border-bottom-right-radius: 30px;
     padding: 4px;
 }
 
-.task-coment .comments p{
+.task-coment .comments p {
     white-space: break-spaces;
+    padding: 26px 7px;
 }
 
 .task-coment .comments div span {
-    font-size: 12px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.247);
+    background: black;
+    font-family: monospace;
+    color: greenyellow;
+    padding: 2px;
+    font-size: 8px;
+}
 }
 
 .task-coment .comments div a {
@@ -341,7 +367,7 @@
 
 .selectStepInput span {
     background-color: #001c3a;
-    color:rgba(0, 255, 255, 0.589) !important;
+    color: rgba(0, 255, 255, 0.589) !important;
     border-radius: 1px;
     padding: 0px 5px;
     font-size: 8px;
