@@ -207,6 +207,7 @@
 
 #productos {
     padding: 80px 0;
+    background-color: var(--color-bc);
 }
 
 .productTarget {
@@ -232,7 +233,7 @@
     display: block;
     width: 100%;
     height: auto;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-top: 10px;
 }
 
@@ -506,7 +507,7 @@
 }
 
 .blog_noticias {
-    background-color: #d3d1c3;
+    background-color: #F5F5EC;
     padding: 4vw 10vw;
     padding-bottom: 10vw;
     clear: both !important;

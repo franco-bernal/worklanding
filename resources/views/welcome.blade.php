@@ -18,13 +18,13 @@
         }
 
         .ciudad {
-            background-image: linear-gradient(rgba(2, 0, 1, 0.966), rgba(27, 27, 27, 0.555)),
-                url('{{ json_decode($page->img)->necesitas_back_img }}');
+            /* background-image: linear-gradient(rgba(2, 0, 1, 0.966), rgba(27, 27, 27, 0.555)),
+                url('{{ json_decode($page->img)->necesitas_back_img }}'); */
             /* background-image: url('{{ json_decode($page->img)->necesitas_back_img }}'); */
-            background-attachment: fixed;
+            /* background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center;
+            background-position: center; */
         }
 
         .viewTecnologies {

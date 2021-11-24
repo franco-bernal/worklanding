@@ -162,7 +162,6 @@
         .taskSpace {
             background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),
                                 url('{{ $proyect->img_link }}') !important;
-                                
         }
 
         html {
