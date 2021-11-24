@@ -99,7 +99,7 @@
 
     <div class='columns is-mobile is-gapless is-multiline ciudad' id="productos">
 
-        <div class='column centrar-full is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile ' style="color: white;">
+        <div class='column centrar-full is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile ' style="color: #363636;">
             <h2>Produc<span class="subraya">tos</span></h2>
         </div>
         <div class='column is-8-fullhd is-8-desktop  is-12-tablet  is-12-mobile viewProducts'>
