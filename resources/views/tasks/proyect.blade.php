@@ -160,7 +160,7 @@
 @section('js')
     <style>
         .taskSpace {
-            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),      url('https://pa1.narvii.com/7211/04ca79aad7d0db18e8deb7855307f5127f92d7a8r1-500-500_hq.gif') !important;
+            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),      url('https://images.squarespace-cdn.com/content/v1/5c4ece0e3917ee277d32eaf3/1550799355270-Z542EF8SCXLVQ5ZJEBK5/rain1.gif') !important;
         }
 
         html {
