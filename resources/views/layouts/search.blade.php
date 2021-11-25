@@ -63,8 +63,8 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed; */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-                url('{{ json_decode($page->img)->header_back_img }}');
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
+                url('{{ json_decode($page->img)->header_back_img }}'); */
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -130,7 +130,6 @@
                                     <p class="description" style="word-break: break-all;">
                                         {{ substr($blog->description, 0, 80) }}</p>
                                 </div>
-                                <hr style="opacity:0">
                             </div>
                         @empty
                             <h4 style=" width: 100%;">No se encontraron coincidencias</h4>
