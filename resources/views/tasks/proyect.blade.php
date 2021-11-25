@@ -160,8 +160,7 @@
 @section('js')
     <style>
         .taskSpace {
-            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),
-                                url('{{ $proyect->img_link }}') !important;
+            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),                                url('https://cdna.artstation.com/p/assets/images/images/009/128/342/large/philipp-dobrusin-sci-fi-city-philipp-dobrusin.jpg?1517291387') !important;
         }
 
         html {
