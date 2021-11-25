@@ -160,7 +160,7 @@
 @section('js')
     <style>
         .taskSpace {
-            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),      url('https://images.squarespace-cdn.com/content/v1/5c4ece0e3917ee277d32eaf3/1550799355270-Z542EF8SCXLVQ5ZJEBK5/rain1.gif') !important;
+            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),      url('https://p.favim.com/orig/2018/10/03/anime-scenery-rain-gif-Favim.com-6391016.gif') !important;
         }
 
         html {
