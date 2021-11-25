@@ -160,7 +160,7 @@
 @section('js')
     <style>
         .taskSpace {
-            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),                                url('https://cdna.artstation.com/p/assets/images/images/009/128/342/large/philipp-dobrusin-sci-fi-city-philipp-dobrusin.jpg?1517291387') !important;
+            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),      url('https://pa1.narvii.com/7211/04ca79aad7d0db18e8deb7855307f5127f92d7a8r1-500-500_hq.gif') !important;
         }
 
         html {
