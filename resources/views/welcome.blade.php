@@ -189,7 +189,7 @@
             @forelse($blog_noticias as $noticia)
                 <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile'>
                     <div class="blog_noticia"
-                        style="background-image: linear-gradient(332deg, rgba(0,0,0,0.5777661406359419) 52%, rgba(255,255,255,0.23602944595807074) 54%, rgba(167,67,132,1) 9985%), url('{{ $noticia->header_img }}') !important;">
+                        style="background: rgb(19,5,70);   background: linear-gradient(90deg, rgb(0 0 0 / 63%) 0%, var(--color-b), url('{{ $noticia->header_img }}') !important;">
                         <p>{{ $noticia->created_at }}</p>
                         <h5>{{ $noticia->title }}</h5>
                         <a class="btn-solid" href="{{ url('blog/' . $noticia->title) }}">Ver</a>
@@ -199,7 +199,7 @@
             @endforelse
         </div>
     </div>
-
+    
     <div class='columns is-mobile is-gapless is-multiline promo' id="formulario">
         <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile curriculum centrar-full'>
             <img width="100px" class="centrar "

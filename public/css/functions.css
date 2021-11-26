@@ -134,9 +134,9 @@
 
 .subraya {
     border-bottom: 5px solid var(--color-b);
-    border-right: 5px solid var(--color-b);
+    /* border-right: 5px solid var(--color-b); */
+    padding: 0px 10px 7px 0px;
 }
-
 @media(max-width:700px) {
     ._title-1 {
         font-size: 30px;

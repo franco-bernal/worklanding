@@ -364,7 +364,7 @@
 }
 
 .bar-contact {
-    background-color: rgb(44, 44, 44);
+    background-color: var(--color-b);
     width: 100%;
     display: inline-block;
     padding: 0 1vw;
@@ -541,9 +541,9 @@
     background-size: cover;
     overflow: hidden !important;
     border-radius: 2px !important;
-    margin-right: 1px;
+    margin-right: 7px;
     margin-bottom: 15px;
-    box-shadow: 0 0 4px 1px black;
+    box-shadow: 0 0 6px 0px black;
 }
 
 .blog_noticia p {
