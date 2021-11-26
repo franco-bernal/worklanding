@@ -136,7 +136,7 @@
     /* border: 1px solid rgb(75, 75, 75);
     box-shadow: 0px 0px 9px -6px rgb(3, 3, 3);
     padding: 30px 0; */
-    box-shadow: 0px 0px 1px 1px #ffffff4d
+    box-shadow: 0px 0px 4px 0px #ffffff4d
 }
 
 .tecnyTarget p {
@@ -225,7 +225,7 @@
     background-size: cover;
     height: 200px;
     width: 100%;
-    border-radius: 28px;
+    border-radius: 23px;
     position: relative;
 }
 
@@ -507,7 +507,7 @@
 }
 
 .blog_noticias {
-    background-color: #F5F5EC;
+    background-color: var(--color-bc);
     padding: 4vw 10vw;
     padding-bottom: 10vw;
     clear: both !important;
