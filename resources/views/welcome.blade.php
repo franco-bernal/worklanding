@@ -189,7 +189,7 @@
             @forelse($blog_noticias as $noticia)
                 <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile'>
                     <div class="blog_noticia"
-                        style="background: rgb(19,5,70);   background-image: linear-gradient(90deg, rgb(0 0 0 / 63%) 0%, var(--color-b), url('{{ $noticia->header_img }}') !important;">
+                        style="background: rgb(19,5,70);   background: linear-gradient(90deg, rgb(0 0 0 / 63%) 0%, rgb(0 128 115) 100%), url('{{ $noticia->header_img }}') !important;">
                         <p>{{ $noticia->created_at }}</p>
                         <h5>{{ $noticia->title }}</h5>
                         <a class="btn-solid" href="{{ url('blog/' . $noticia->title) }}">Ver</a>
