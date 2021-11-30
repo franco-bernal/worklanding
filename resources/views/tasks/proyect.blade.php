@@ -160,7 +160,7 @@
 @section('js')
     <style>
         .taskSpace {
-            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),      url('https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v499-kul-22-abstractbackground_1.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&auto=format&ixlib=js-2.2.1&s=444d8ebdd26be21906f6f10dd5d32646') !important;
+            background-image:linear-gradient(rgb(240 235 235 / 0%), rgb(248 240 240 / 12%)),      url('https://www.wallpapertip.com/wmimgs/81-811946_fondos-de-pantalla-para-pc-8k.jpg') !important;
         }
 
         html {
