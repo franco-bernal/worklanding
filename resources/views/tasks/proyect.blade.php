@@ -301,7 +301,7 @@
                         $("#idDescriptionTask").text(data.description);
                         JSON.parse(data.subTasks).map((sub_task) => {
                             $("#htmlSubTasks").append(
-                                `<span id='${sub_task.id}subTasks'><a onclick="deleteJsonHtml('subTasks','${data.id}',${sub_task.id},'${sub_task.created_at}')">&#10060;</a><p onclick="checkSub('subTasks','${data.id}','${sub_task.id}')"  style="${sub_task.check == 1 ? 'text-decoration: line-through !important;':''}">${sub_task.detail} ${sub_task.check}</p></span>`
+                                `<span id='${sub_task.id}subTasks'><a onclick="deleteJsonHtml('subTasks','${data.id}',${sub_task.id},'${sub_task.created_at}')">&#10060;</a><p onclick="checkSub('subTasks','${data.id}','${sub_task.id}')"  style="${sub_task.check == 1 ? 'text-decoration: line-through !important;':''}">${sub_task.detail}</p></span>`
                             );
                         });
                         JSON.parse(data.checkLists).map((list) => {
