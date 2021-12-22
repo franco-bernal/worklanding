@@ -30,11 +30,12 @@
     color: var(--color-a);
     border: 1px solid var(--color-b) !important;
     border-radius: var(--radio);
-    padding: 1px 6px;
+    padding: 11px 22px;
     transition: background-color 0.4s;
     cursor: pointer;
     outline: none !important;
     font-weight: bolder;
+    letter-spacing: 3px;
 }
 
 .btn-solid:hover {
@@ -137,47 +138,40 @@
     /* border-right: 5px solid var(--color-b); */
     padding: 0px 10px 7px 0px;
 }
+
 @media(max-width:700px) {
     ._title-1 {
         font-size: 30px;
         line-height: 35px;
         text-align: left;
     }
-
     ._title-2 {
         font-size: 29px;
         line-height: 33px;
     }
-
     ._title-1 br {
         display: none;
     }
-
     .px-7 {
         padding-left: 5vw;
         padding-right: 5vw;
     }
-
     ._title-section {
         font-size: 25px;
         line-height: 25px;
     }
-
     .nopaddingY {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
     }
-
     .nopaddingX {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-
     .minpaddingY {
         padding-top: 1vw !important;
         padding-bottom: 1vw !important;
     }
-
     .minpaddingX {
         padding-left: 1vw !important;
         padding-right: 1vw !important;
