@@ -14,8 +14,6 @@
     padding-top: 30vh;
 }
 
-
-
 .noticia h3 {
     font-size: 130px;
     line-height: 116px;
@@ -46,6 +44,7 @@
     display: block;
 }
 
+
 /* MOBILE */
 
 @media (max-width: 768px) {
@@ -55,14 +54,12 @@
         padding: 0vw 8vw;
         padding-top: 37vh;
     }
-
     .noticia h3 {
         font-size: 50px;
         line-height: 52px;
         width: 100%;
         padding: 5px;
     }
-
     .noticia p {
         font-size: 25px;
         line-height: 30px;
@@ -223,10 +220,11 @@
 .product-back {
     display: block;
     background-size: cover;
-    height: 200px;
+    height: 442px;
     width: 100%;
-    border-radius: 23px;
+    border-radius: 8px;
     position: relative;
+    box-shadow: 0 0 7px 0px grey;
 }
 
 .product-description {
@@ -244,7 +242,6 @@
     width: 50px;
     background-color: white;
     padding: 3px;
-    border-radius: 31px;
 }
 
 .productvisitar {
@@ -262,7 +259,6 @@
     #productos {
         padding: 50px 0;
     }
-
     #productos h2 {
         margin-bottom: 30px;
         text-align: left !important;
@@ -270,26 +266,21 @@
         width: 100%;
         padding-left: 20px;
     }
-
     .productTarget {
         padding: 5px 10px;
         height: auto;
     }
-
     .product-back {
-        height: 100px;
+        height: 234px;
     }
-
     .product-description img {
         width: 25px;
         filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7)) !important;
-        border-radius: 5px;
+        border-radius: 0px;
     }
-
     .productTarget p {
         font-size: 11px;
     }
-
     /* .slick-slider {
         margin-bottom: 50px;
     } */
@@ -299,26 +290,21 @@
     .block1 {
         border-bottom: 20px solid var(--color-b);
     }
-
     .block1 img {
         padding: 80px 20px !important;
     }
-
     #tecnologias {
         padding: 20vw 0 !important;
     }
-
     .tecnyTarget span {
         font-size: 10px;
         overflow-y: auto;
         border-right: 1px solid var(--color-b);
     }
-
     .tecnyTarget span p {
         margin-top: 10px;
         padding: 3px !important;
     }
-
     .promo {
         background-image: linear-gradient(rgba(2, 0, 1, 0.966), rgba(83, 26, 83, 0.747)), url('https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
         background-position: center center;
@@ -327,18 +313,15 @@
         width: 100%;
         text-align: center;
     }
-
     #promo {
         padding: 100px 10px !important;
     }
-
     .promo h2 {
         font-size: 40px;
         line-height: 40px;
         margin-bottom: 50px;
         text-align: left;
     }
-
     .promo p {
         font-size: 20px;
         line-height: 20px;
@@ -371,7 +354,7 @@
     position: fixed;
     top: 0;
     z-index: 999;
-    opacity:1;
+    opacity: 1;
 }
 
 .bar-contact p {
@@ -573,17 +556,14 @@
         padding: 20px;
         min-height: 150px;
     }
-
     .blog_noticia p {
         font-size: 12px;
     }
-
     .blog_noticia h5 {
         font-size: 16px !important;
         top: 50px;
         text-shadow: 0px 0px 3px black;
     }
-
     .blog_noticia:hover h5 {
         top: 40px;
     }
