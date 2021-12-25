@@ -261,6 +261,7 @@
             infinite: true,
             dots: true,
             speed: 300,
+            fade: true,
             slidesToShow: 1,
             adaptiveHeight: true,
             autoplay: true,
