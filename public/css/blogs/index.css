@@ -34,8 +34,8 @@ html {
     padding-left: 20px;
     font-weight: bolder;
     border-bottom: 1px solid;
-    border-bottom-left-radius: 13px;
-    border-left: 9px solid;
+    /* border-bottom-left-radius: 13px;
+    border-left: 9px solid; */
 }
 
 .content-section h4 {
@@ -55,10 +55,12 @@ html {
 .content-section h2 {
     font-size: 16px;
     padding: 0.5vw;
-    color: white;
-    background-color: #ba9f7b;
+    color: black;
+    background-color: #b30035;
     margin-bottom: 20px;
     margin-top: 50px;
+    background: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190628/ourmid/pngtree-hand-drawn-plant-leaves-banner-background-psd-image_276876.jpg);
+    font-weight: 900;
 }
 
 .content-section i {
@@ -68,7 +70,7 @@ html {
 }
 
 .content-section h1 {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: left;
     font-weight: bolder;
 }
