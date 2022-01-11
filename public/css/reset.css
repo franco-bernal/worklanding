@@ -6,6 +6,7 @@
 
 * {
     font-family: 'caviar' !important;
+    letter-spacing: 1px;
 }
 
 html {
@@ -121,6 +122,7 @@ h2 {
     font-size: 3vw;
     line-height: 3.1vw;
     font-weight: bolder;
+    letter-spacing: 7px;
 }
 
 h3 {

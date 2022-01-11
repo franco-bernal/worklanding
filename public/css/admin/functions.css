@@ -19,10 +19,11 @@
     color: var(--color-a);
     border: 1px solid var(--color-b) !important;
     border-radius: var(--radio);
-    padding: 2px 31px;
+    padding: 10px 36px;
     transition: background-color 0.4s;
     cursor: pointer;
     outline: none !important;
+    letter-spacing: 3px;
 }
 
 .btn-solid:hover {
@@ -123,7 +124,6 @@
 .subraya {
     border-bottom: 5px solid var(--color-b);
 }
-
 
 .spaceDiv {
     background-color: rgba(245, 222, 179, 0.096);
