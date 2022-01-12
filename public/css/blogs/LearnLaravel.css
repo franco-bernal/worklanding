@@ -3,18 +3,18 @@
 }
 
 .codigo {
-    background: repeating-linear-gradient(
-        45deg
-        , black, transparent 100px);
-    color: white !important;
-    border: 1px dashed rgb(255, 0, 0);
+    background: black;
+    color: #87ffac !important;
+    /* border: 1px dashed rgb(255, 0, 0); */
     height: auto;
     margin-top: 20px;
     margin-bottom: 10px;
     padding-right: 10px;
-    font-size: 14px;
+    font-size: 12px !important;
     font-weight: bolder;
     padding: 10px;
+    font-family: monospace;
+    border-left: 16px solid;
 }
 
 .cmd {

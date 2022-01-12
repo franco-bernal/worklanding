@@ -5,7 +5,7 @@
 .menu-header {
     width: 100%;
     /* position: fixed; */
-    position: absolute;
+    position: relative;
     top: 0;
     transition: background-color 0.2s;
     background-color: rgba(24, 56, 163, 0);

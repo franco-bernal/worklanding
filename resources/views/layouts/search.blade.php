@@ -63,8 +63,8 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed; */
-            /* background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-                url('{{ json_decode($page->img)->header_back_img }}'); */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
+                url('{{ json_decode($page->img)->header_back_img }}');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

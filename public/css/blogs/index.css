@@ -326,9 +326,12 @@ footer {
     display: block;
     line-height: 89px;
     font-weight: bolder;
-    background: linear-gradient(90deg, rgba(149, 65, 147, 1) 26%, rgba(70, 131, 205, 1) 100%, rgba(167, 67, 132, 1) 9985%);
+    background: linear-gradient(
+90deg, rgb(255 254 255) 26%, rgb(31 72 120) 100%, rgb(122 245 155) 9985%);
     -webkit-background-clip: text;
     color: transparent;
+    font-weight: 900;
+    margin-top: 16vw;
 }
 
 .formu p {
