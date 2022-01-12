@@ -25,13 +25,15 @@
     font-weight: bolder;
     border-bottom: 10px solid var(--color-b);
     /* background: rgb(175, 88, 255) !important; */
-    background: linear-gradient( 87deg, rgb(255 255 255 / 98%) 23%, rgb(149 31 31) 91%, rgb(172 33 33) 9985%);
+    background: linear-gradient( 
+87deg, rgb(255 255 255 / 98%) 23%, rgb(255 255 255) 91%, rgb(255 21 21) 9985%);
     -webkit-background-clip: text;
     color: #ffffff40;
     font-weight: 900;
     text-align: center;
-    border: 10px solid;
-    letter-spacing: 2vw;
+    border: 10px solid white;
+    letter-spacing: 1.5vw;
+    margin-top: 4vw;
 }
 
 .noticia p {
