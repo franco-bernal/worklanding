@@ -115,7 +115,7 @@
         </div>
     </div>
     @if (Auth::user() != null && Auth::user()->tipo_usuario == 1)
-        <nav class="menu-header">
+        <div class="menu-header">
             <ul class="header-links burge" id="burge">
                 <!-- <li class="header-logo">
                     <a href="{{ route('welcome') }}"><img src="{{ asset('img/logo-franco-blanco.png') }}" style="width:70px !important" alt=""></a>
@@ -163,7 +163,7 @@
             </ul>
             <img class="burge-ico" id="burge-ico" src="{{ url('img/burger.png') }}" alt="">
 
-        </nav>
+    </div>
     @endif
 
 
