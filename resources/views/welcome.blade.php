@@ -144,11 +144,11 @@
                 </span>
                 <span class="product-description">
                     <img class="centrar" src="{{ $product->img_logo }}" alt="logo">
-                    <div>{{ $product->name }}</div>
+                    <a>{{ $product->name }}</a>
                     <!-- <span class="productspam">Nuevo</span> -->
-                    <div class="productTecno">
+                    <a class="productTecno">
                         {{ $product->tecnology }}
-                    </div>
+                    </a>
                 </span>
             </div>
         </div>
