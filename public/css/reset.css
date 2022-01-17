@@ -4,8 +4,43 @@
     /* src: url('../fonts/CaviarDreams.ttf'); */
 }
 
+@font-face {
+    font-family: 'amaranth';
+    src: url('../fonts/Amaranth-Regular.otf');
+}
+
+@font-face {
+    font-family: 'blanka';
+    src: url('../fonts/Blanka-Regular.otf');
+}
+
+@font-face {
+    font-family: 'caviardreams';
+    src: url('../fonts/CaviarDreams.ttf');
+}
+
+@font-face {
+    font-family: 'circular';
+    src: url('../fonts/CircularStd-Medium.otf');
+}
+
+@font-face {
+    font-family: 'elianto';
+    src: url('../fonts/Elianto-Regular.otf');
+}
+
+@font-face {
+    font-family: 'louis';
+    src: url('../fonts/Louis\ George\ Cafe\ Light.ttf');
+}
+
+@font-face {
+    font-family: 'riviera';
+    src: url('../fonts/Riviera.otf');
+}
+
 * {
-    font-family: 'caviar' !important;
+    font-family: 'caviar';
     letter-spacing: 1px;
 }
 
@@ -154,39 +189,48 @@ strong {
     html {
         padding-top: 0px;
     }
+
     h1 {
         /*ANTES 60PX*/
         font-size: 40px;
         line-height: 40px;
         letter-spacing: 0.1vw;
     }
+
     h2 {
         font-size: 25px;
         line-height: 25px;
     }
+
     h3 {
         font-size: 20px;
         line-height: 20px;
     }
+
     h4 {
         font-size: 17px;
         line-height: 17px;
     }
+
     h6 {
         font-size: 19px;
         line-height: 19px;
     }
+
     .centrar-m {
         display: block !important;
         margin-left: auto !important;
         margin-right: auto !important;
     }
+
     .ctm {
         text-align: center;
     }
+
     .jtm {
         text-align: justify;
     }
+
     .itm {
         text-align: left;
     }

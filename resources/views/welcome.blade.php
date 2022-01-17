@@ -214,10 +214,10 @@
                     <input type="email" name="email" placeholder="email*" maxlength="50" required> <br>
                 </div>
                 <div class='column is-6-fullhd is-6-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
-                    <input type="number" name="numero" placeholder="numero*" maxlength="9" required>
+                    <input type="number" name="numero" placeholder="numero*" required>
                 </div>
                 <div class='column is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
-                    <textarea name="mensaje" placeholder="Mensaje" width="100%" rows="10" maxlength="200"></textarea>
+                    <textarea name="mensaje" placeholder="Mensaje"  rows="10" maxlength="200"></textarea>
                 </div>
             </div>
             <button type="submit" class="btn-solid">Contactar</button>
