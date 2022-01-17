@@ -34,6 +34,7 @@
     border: 10px solid white;
     letter-spacing: 1.5vw;
     margin-top: 4vw;
+    font-family: riviera;
 }
 
 .noticia p {
@@ -118,26 +119,14 @@
 }
 
 .tecnyTarget {
-    padding: 30px 4px;
 }
 
 .tecnyTarget div {
-    /* border: 1px solid rgb(75, 75, 75); */
-    /* background-color: rgba(255, 255, 255, 0.233); */
-    /* box-shadow: 0px 0px 9px -6px rgb(3, 3, 3); */
-    /* border-left: 3px solid rgb(255, 255, 255); */
-    /* border-top: 5px solid rgb(255, 255, 255); */
     padding: 30px 5px !important;
     position: relative;
     transition: opacity 0.4s;
     cursor: pointer;
-    /*  */
     background-color: rgb(3 45 51);
-    /* border: 1px solid rgb(75, 75, 75);
-    box-shadow: 0px 0px 9px -6px rgb(3, 3, 3);
-    padding: 30px 0; */
-    box-shadow: 0px 0px 0px 0px #ffffff4d;
-    border-bottom: 6px solid #ffffff17;
 }
 
 .tecnyTarget p {
@@ -151,11 +140,13 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 21, 37);
+    background-color: rgb(4 4 4);
     top: 0;
     left: 0;
     font-size: 12px;
     overflow-y: auto;
+    color: white;
+    padding: 5px;
 }
 
 .tecnyTarget span p {
@@ -170,7 +161,8 @@
 }
 
 .tecnyTarget p {
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: 900;
 }
 
 .tecnyTarget div:hover .tecnyspam {
