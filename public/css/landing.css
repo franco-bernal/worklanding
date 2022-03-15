@@ -126,13 +126,18 @@
     position: relative;
     transition: opacity 0.4s;
     cursor: pointer;
-    background-color: rgb(250 254 255 / 0%);
+    background-color: #fcfcfc;
+    margin: 3px;
+    border-top-left-radius: 27px;
+    border: 2px solid #1db76f;
 }
 
 .tecnyTarget p {
-    color: var(--color-a) !important;
+    color: #370772 !important;
     margin-top: 10px;
-    font-weight: border !important;
+    font-weight: bolder !important;
+    text-shadow: 0px 0px 1px black;
+    text-transform: uppercase;
 }
 
 .tecnyTarget span {

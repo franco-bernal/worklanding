@@ -28,15 +28,15 @@
     }
 
     .viewTecnologies {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
-        url('{{ json_decode($page->img)->tecnologias_img }}');
-
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
+        url('{{ json_decode($page->img)->tecnologias_img }}'); */
+            background: #51406a;
     }
 
     .viewTecnologies2 {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
-        url('{{ json_decode($page->img)->tecnologias_img }}');
-
+        /* background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
+        url('{{ json_decode($page->img)->tecnologias_img }}'); */
+            background: #51406a;
     }
 </style>
 
