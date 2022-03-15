@@ -11,8 +11,7 @@
     }
 
     .promo {
-        background-image: linear-gradient(rgba(2, 0, 1, 0.966), rgba(27, 27, 27, 0.555)),
-        url('{{ json_decode($page->img)->necesitas_back_img }}');
+        background-image:  url('{{ json_decode($page->img)->necesitas_back_img }}');
         /* background-image: url('{{ json_decode($page->img)->necesitas_back_img }}'); */
         background-attachment: fixed;
     }
@@ -43,7 +42,7 @@
 <div class="noticias" style="    margin-top: -5px;">
     @forelse ($noticias as $notice)
     <div class="noticia" style="background: rgb(2,0,2);
-    background: linear-gradient(144deg, rgba(2,0,2,0.919502835313813) 51%, rgba(70,131,205,0) 100%, rgba(167,67,132,1) 9985%), url('{{ $notice->background }}');">
+    background:  url('{{ $notice->background }}');">
         <h3>{{ $notice->title }}</h3>
         <p>{{ $notice->subtitle }}</p>
         @if ($notice->btn_link != 'no')
@@ -51,24 +50,24 @@
         @endif
     </div>
     @empty
-    <div class="noticia" style="background:linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)), url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+    <div class="noticia" style="background: url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
         <h3>Tecnologías disponibles</h3>
         <p>Nuevas tecnologías disponibles</p>
         <a href="#" class="btn-solid">Ir</a>
     </div>
-    <div class="noticia" style="background:linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)), url('https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
+    <div class="noticia" style="background: url('https://images.pexels.com/photos/802024/pexels-photo-802024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
         <h3>Nuevos productos agregados</h3>
         <p>Visita los productos creados recientemente</p>
         <a href="#" class="btn-solid">Ir</a>
 
     </div>
-    <div class="noticia" style="background-image:linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)), url('https://midu.dev/images/wallpapers/web-technologies-4k-wallpaper.png');">
+    <div class="noticia" style="background-image: url('https://midu.dev/images/wallpapers/web-technologies-4k-wallpaper.png');">
         <h3>Guias programación básica</h3>
         <p>como comenzar en html, js, laravel, etc..</p>
         <a href="#" class="btn-solid">Ir</a>
 
     </div>
-    <div class="noticia" style="background-image:linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)), url('https://images.pexels.com/photos/5836/yellow-metal-design-decoration.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
+    <div class="noticia" style="background-image: url('https://images.pexels.com/photos/5836/yellow-metal-design-decoration.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
         <h3>Portafolios</h3>
         <p>Necesitas diseñador?</p>
         <a href="#" class="btn-solid">Ir</a>
