@@ -199,7 +199,7 @@ strong {
     h2 {
         font-size: 25px;
         line-height: 25px;
-        font-family: 'elianto';
+        font-family: 'elianto' !important;
     }
 
     h3 {
