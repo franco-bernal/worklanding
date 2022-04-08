@@ -11,7 +11,7 @@
     }
 
     .promo {
-        background-image:  url('{{ json_decode($page->img)->necesitas_back_img }}');
+        background-image: url('{{ json_decode($page->img)->necesitas_back_img }}');
         /* background-image: url('{{ json_decode($page->img)->necesitas_back_img }}'); */
         background-attachment: fixed;
     }
@@ -26,23 +26,24 @@
             background-position: center; */
     }
 
-    .viewTecnologies {
-        /* background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
-        url('{{ json_decode($page->img)->tecnologias_img }}'); */
-            background: #51406a;
+    @media(max-width:1023px) {
+        .viewTecnologies {
+            margin-top: 20px !important;
+        }
     }
+
 
     .viewTecnologies2 {
         /* background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 50, 65, 0.747)),
         url('{{ json_decode($page->img)->tecnologias_img }}'); */
-            background: #51406a;
+        background: #2d2d2d;
     }
 </style>
 
 <div class="noticias" style="    margin-top: -5px;">
     @forelse ($noticias as $notice)
     <div class="noticia" style="background: rgb(2,0,2);
-    background: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)), url('{{ $notice->background }}');">
+    background:  url('{{ $notice->background }}');">
         <h3>{{ $notice->title }}</h3>
         <p>{{ $notice->subtitle }}</p>
         @if ($notice->btn_link != 'no')
@@ -106,7 +107,7 @@
 </div>
 <div class='columns is-mobile is-gapless is-multiline  viewTecnologies2' id="tecnologias">
     <div class='column centrar-full is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile '>
-        <h2>Tecno<span class="subraya">logías</span></h2>
+        <h2>Tecnologías</h2>
     </div>
     <div class='column is-8-fullhd is-8-desktop  is-12-tablet  is-12-mobile viewTecnologies'>
 
@@ -176,7 +177,7 @@
     <div class='columns is-mobile is-gapless is-multiline'>
         @forelse($blog_noticias as $noticia)
         <div class='column is-4-fullhd is-4-desktop  is-12-tablet  is-12-mobile'>
-            <div class="blog_noticia" style="background-image: linear-gradient(90deg,rgb(0 0 0 / 29%) 0%, var(--color-b)), url('{{ $noticia->header_img }}') !important;">
+            <div class="blog_noticia" style="background-image: linear-gradient(10deg,rgb(0 0 0 / 49%) 103%, var(--color-b)), url('{{ $noticia->header_img }}') !important;">
                 <p>{{ $noticia->created_at }}</p>
                 <h5>{{ $noticia->title }}</h5>
                 <a class="btn-solid" href="{{ url('blog/' . $noticia->title) }}">Ver</a>
@@ -216,7 +217,7 @@
                     <input type="number" name="numero" placeholder="numero*" required>
                 </div>
                 <div class='column is-12-fullhd is-12-desktop  is-12-tablet  is-12-mobile' style='padding:5px !important;'>
-                    <textarea name="mensaje" placeholder="Mensaje"  rows="10" maxlength="200"></textarea>
+                    <textarea name="mensaje" placeholder="Mensaje" rows="10" maxlength="200"></textarea>
                 </div>
             </div>
             <button type="submit" class="btn-solid">Contactar</button>

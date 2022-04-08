@@ -30,12 +30,13 @@
     color: var(--color-a);
     border: 1px solid var(--color-b) !important;
     border-radius: var(--radio);
-    padding: 11px 22px;
+    padding: 1px 25px;
     transition: background-color 0.4s;
     cursor: pointer;
     outline: none !important;
     font-weight: bolder;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    font-size: 14px;
 }
 
 .btn-solid:hover {
@@ -136,7 +137,7 @@
 .subraya {
     border-bottom: 5px solid var(--color-b);
     /* border-right: 5px solid var(--color-b); */
-    padding: 0px 10px 7px 0px;
+    padding: 0px 10px 1px 0px;
 }
 
 @media(max-width:700px) {
