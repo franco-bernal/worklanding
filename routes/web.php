@@ -1,11 +1,13 @@
 <?php
 
 use App\Models\Blogs;
+use App\Models\Customcss;
 use App\Models\Noticias;
 use App\Models\Page;
 use App\Models\Product;
 use App\Models\Tecnologies;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -34,7 +36,17 @@ Route::get('/', function () {
     $blog_noticias = Blogs::where('related', 'like', "%" . "noticia" . "%")
         ->where('private', '=', 0)->orderBy('created_at', 'desc')->limit(3)->get();
     $contactos = json_decode($usuario->contactos);
-    return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos', 'blog_noticias'));
+    $customCss = Customcss::get();
+        if (count($customCss) == 0) {
+            DB::table('customCsses')->insert([
+                "html_content" => "",
+                "active" => 1,
+                "created_at" => Carbon::now(),
+                "updated_at" => Carbon::now(),
+            ]);
+            $customCss=Customcss::get();
+        }
+    return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos', 'blog_noticias','customCss'));
 })->name('welcome');
 
 // addVisita
@@ -129,6 +141,9 @@ Route::group(['middleware' => 'admin'], function () {
 
     //visitas
     Route::post('/deleteVisita', [App\Http\Controllers\visitasController::class, 'deleteVisita'])->name('visitas.delete');
+
+    // Custom CSS
+    Route::post('/updateCustomCss', [App\Http\Controllers\CssController::class, 'updateCustomCss'])->name('customcss.edit');
 });
 
 Route::get('/clear-cache', function () {

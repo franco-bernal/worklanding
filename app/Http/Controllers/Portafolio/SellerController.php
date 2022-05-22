@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Portafolio;
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Controller\Portafolio;
+use App\Http\Controllers\CssController;
 use App\Models\Email;
 use App\Models\Noticias;
 use App\Models\Page;
@@ -12,6 +13,8 @@ use App\Models\Stadistics;
 use App\Models\Tecnologies;
 use App\Models\User;
 use App\Models\Visitas;
+use App\Models\Customcss;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -20,6 +23,16 @@ class SellerController extends Controller
 {
     public function dashboard()
     {
+        $customCss = Customcss::get();
+        if (count($customCss) == 0) {
+            DB::table('customCsses')->insert([
+                "html_content" => "",
+                "active" => 1,
+                "created_at" => Carbon::now(),
+                "updated_at" => Carbon::now(),
+            ]);
+            $customCss=Customcss::get();
+        }
         $data = Product::orderBy('order', 'desc')->get();
         $users = User::count();
         $tecnologies = Tecnologies::orderBy('order', 'desc')->get();
@@ -27,7 +40,6 @@ class SellerController extends Controller
         $stadistics = Stadistics::select('numbers')->where('id', '=', 1)->first();
         $stadistics = json_decode($stadistics->numbers);
         $emails = Email::get();
-
         $visitas = Visitas::orderBy('created_at', 'desc')->limit(40)->get();
         $visitasAll = count(Visitas::orderBy('created_at', 'desc')->get());
         return view('admin/dashboard', compact(
@@ -38,7 +50,8 @@ class SellerController extends Controller
             'emails',
             'stadistics',
             'visitas',
-            'visitasAll'
+            'visitasAll',
+            'customCss'
         ));
     }
 
@@ -90,9 +103,9 @@ class SellerController extends Controller
         $type = "tecnology";
         $page = Page::where('user', '=', 1)->first();
         $usuario = User::select('contactos')
-        ->where('id', '=', 1)->first();
+            ->where('id', '=', 1)->first();
         $contactos = json_decode($usuario->contactos);
 
-        return view('update', compact('edit', 'type', 'page','contactos'));
+        return view('update', compact('edit', 'type', 'page', 'contactos'));
     }
 }
