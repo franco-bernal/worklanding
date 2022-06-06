@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<style>{{ $customCss[0]->html_content }}</style>
+{{-- <style>{{ $customCss[0]->html_content }}</style> --}}
 <style>
     .block1 {
         /* background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
