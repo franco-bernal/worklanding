@@ -36,18 +36,17 @@ Route::get('/', function () {
     $blog_noticias = Blogs::where('related', 'like', "%" . "noticia" . "%")
         ->where('private', '=', 0)->orderBy('created_at', 'desc')->limit(3)->get();
     $contactos = json_decode($usuario->contactos);
-    // $customCss = Customcss::get();
-    //     if (count($customCss) == 0) {
-    //         DB::table('customCsses')->insert([
-    //             "html_content" => "",
-    //             "active" => 1,
-    //             "created_at" => Carbon::now(),
-    //             "updated_at" => Carbon::now(),
-    //         ]);
-    //         $customCss=Customcss::get();
-    //     }
-    // return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos', 'blog_noticias','customCss'));
-    return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos', 'blog_noticias'));
+    $customCss = Customcss::get();
+        if (count($customCss) == 0) {
+            DB::table('customCsses')->insert([
+                "html_content" => "",
+                "active" => 1,
+                "created_at" => Carbon::now(),
+                "updated_at" => Carbon::now(),
+            ]);
+            $customCss=Customcss::get();
+        }
+    return view('welcome', compact('data', 'tecnologies', 'page', 'noticias', 'contactos', 'blog_noticias','customCss'));
 })->name('welcome');
 
 // addVisita

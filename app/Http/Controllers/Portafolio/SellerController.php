@@ -23,16 +23,16 @@ class SellerController extends Controller
 {
     public function dashboard()
     {
-        // $customCss = Customcss::get();
-        // if (count($customCss) == 0) {
-        //     DB::table('customCsses')->insert([
-        //         "html_content" => "",
-        //         "active" => 1,
-        //         "created_at" => Carbon::now(),
-        //         "updated_at" => Carbon::now(),
-        //     ]);
-        //     $customCss=Customcss::get();
-        // }
+        $customCss = Customcss::get();
+        if (count($customCss) == 0) {
+            DB::table('customCsses')->insert([
+                "html_content" => "",
+                "active" => 1,
+                "created_at" => Carbon::now(),
+                "updated_at" => Carbon::now(),
+            ]);
+            $customCss=Customcss::get();
+        }
         $data = Product::orderBy('order', 'desc')->get();
         $users = User::count();
         $tecnologies = Tecnologies::orderBy('order', 'desc')->get();
@@ -50,8 +50,8 @@ class SellerController extends Controller
             'emails',
             'stadistics',
             'visitas',
-            'visitasAll'
-            // 'customCss'
+            'visitasAll',
+            'customCss'
         ));
     }
 
