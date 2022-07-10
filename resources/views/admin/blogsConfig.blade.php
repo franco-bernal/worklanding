@@ -13,7 +13,7 @@
             <input type="text" name="title">
             <label for="description">Descripción</label>
             <textarea name="description" rows="3"></textarea>
-            <label for="html_content">Contenido</label>
+            <label for="html_content">Contenido</label><br><br>
             <textarea name="html_content" rows="10" style="overflow:auto;resize:vertical; min-height: 100px;"></textarea>
 
             <label for="header_img">Imagen header</label>
@@ -44,14 +44,17 @@
 
                 <label for="title">Titulo</label>
                 <input type="text" name="title">
-                <label for="description">Descripción</label>
+                <br><br>
+                <label for="description">Descripción</label><br><br>
                 <textarea name="description" rows="3"></textarea>
                 <label for="html_content">Contenido</label>
                 <textarea name="html_content" rows="10" style="overflow:auto;resize:vertical; min-height: 100px;"></textarea>
+                <br><br>
                 <label for="header_img">Imagen header</label>
-                <hr>
+                
                 <img src="" style="height:70px !important" id="updateImagen" alt="">
                 <input type="file" name="header_img" value="">
+                <br><br>
                 <label for="url_header">Imagen url</label>
                 <input type="text" name="url_header">
                 <input type="hidden" name="url_hidden">
@@ -60,13 +63,14 @@
                     <input type="checkbox" name="private" style="display: inline-block;">
                     <p style="display: inline-block;">Privado (sólo admin lo puede ver)</p>
                 </span>
-                <br>
+                <br><br>
                 <label>Relacionados (presione espacio para insertar tag)</label>
                 <input type="text" id="relatedUpdate" autocomplete="off">
                 <span class="relatedTags">
                 </span>
                 <input type="hidden" id="relatedInputUpdate" name="related" value="">
                 <!--  -->
+                <br><br>
                 <div class="centrar-full">
                     <button id="cancelUpdate" class="btn-transparent mb-2" style="cursor: pointer">Cancelar</button>
                     <button type="submit" class="btn-solid  mb-2">Actualizar</button>

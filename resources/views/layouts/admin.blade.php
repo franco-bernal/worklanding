@@ -17,7 +17,7 @@
 
         .block1 {
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-                url('{{ json_decode($page->img)->header_back_img }}');
+                url('{{ json_decode($page->img)->necesitas_back_img }}');
         }
 
         .promo {
@@ -41,7 +41,7 @@
         html {
             background-color: black !important;
             background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-                url('{{ json_decode($page->img)->header_back_img }}') !important;
+                url('{{ json_decode($page->img)->necesitas_back_img }}') !important;
             background-position: bottom;
             background-repeat: no-repeat;
             background-size: cover;
@@ -51,7 +51,7 @@
         @media(max-width:769px) {
             html {
                 background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 1, 65, 0.747)),
-                    url('{{ json_decode($page->img)->header_back_img }}') !important;
+                    url('{{ json_decode($page->img)->necesitas_back_img }}') !important;
                 background-size: auto 100vh !important;
             }
         }
