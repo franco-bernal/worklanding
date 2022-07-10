@@ -13,6 +13,7 @@
             <input type="text" name="title">
             <label for="description">Descripción</label>
             <textarea name="description" rows="3"></textarea>
+            <br><br>
             <label for="html_content">Contenido</label><br><br>
             <textarea name="html_content" rows="10" style="overflow:auto;resize:vertical; min-height: 100px;"></textarea>
 
@@ -47,7 +48,9 @@
                 <br><br>
                 <label for="description">Descripción</label><br><br>
                 <textarea name="description" rows="3"></textarea>
+                <br><br>
                 <label for="html_content">Contenido</label>
+                <br><br>
                 <textarea name="html_content" rows="10" style="overflow:auto;resize:vertical; min-height: 100px;"></textarea>
                 <br><br>
                 <label for="header_img">Imagen header</label>
